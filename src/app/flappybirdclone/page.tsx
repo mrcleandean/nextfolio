@@ -77,14 +77,13 @@ const FlappyBirdClone = () => {
             }
         }
     }, [])
-    // w-screen h-[100dvh] max-w-screen max-h-[100dvh] 
     return (
         <div className="fixed inset-0 flex justify-center items-center">
             <canvas
                 ref={canvasRef}
-                width={375 * 2}
-                height={665 * 2}
-                className="w-full h-full max-w-fit max-h-fit object-contain block"
+                width={375}
+                height={665}
+                className="w-screen h-[100dvh] max-w-fit max-h-fit object-contain block"
             />
         </div>
     )
