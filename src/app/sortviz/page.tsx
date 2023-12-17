@@ -7,8 +7,6 @@ import type { AlgorithmsMapType, StateType, AlgorithmKeyType, BasicFnType, Chang
 const algorithms: AlgorithmsMapType = {
     bubble: bubbleSort,
     insertion: insertionSort,
-    merge: mergeSort,
-    quick: quickSort,
     selection: selectionSort
 }
 

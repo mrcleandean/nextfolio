@@ -19,7 +19,7 @@ const Projects = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-white text-[17px] max-w-3xl leading-[30px]"
             >
-                Welcome to my corner of creativity and tech. I've put together a bunch of projects that blend smart design with a personal touch. I like building fun things, so take a look around and try things out!
+                Welcome to my corner of creativity and tech. I&apos;ve put together a bunch of projects that blend smart design with a personal touch. I like building fun things, so take a look around and try things out!
             </motion.p>
             <div className="mt-20 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {projects.map((project, i) => {
@@ -60,7 +60,7 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                             onClick={() => window.open(source_code_link, '_blank')}
                             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-2 border-white"
                         >
-                            <img
+                            <Image
                                 src={github.src}
                                 alt="github"
                                 className="w-1/2 h-1/2  object-contain"

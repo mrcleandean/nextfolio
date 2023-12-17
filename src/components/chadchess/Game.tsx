@@ -7,6 +7,7 @@ import { Square } from "react-chessboard/dist/chessboard/types"
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import { usePlayerContext } from "@/contexts";
 import { gigachad } from "@/assets/chadchess";
+import Image from "next/image";
 
 function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> }) {
     const { player, socket } = usePlayerContext();
@@ -63,7 +64,7 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
             <div className="w-[90%] flex justify-center flex-col relative">
                 <div className="flex justify-between h-18 w-full mb-2 p-2 rounded-lg">
                     <div className="flex gap-3">
-                        <img
+                        <Image
                             alt="opponent profile picture"
                             src={opponent.pic ? opponent.pic : gigachad.src}
                             className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
@@ -93,9 +94,9 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
                 </div>
                 <div className="flex justify-between h-18 w-full mt-2 p-2 rounded-lg">
                     <div className="flex gap-3">
-                        <img
+                        <Image
                             alt="opponent profile picture"
-                            src={player.pic ? player.pic : undefined}
+                            src={player.pic ? player.pic : gigachad.src}
                             className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
                         />
                         <div>

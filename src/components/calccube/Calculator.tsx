@@ -36,7 +36,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         'Escape': nodes['AC'], ',': nodes['PlusOrMinus'], '%': nodes['Percent'],
         '`': nodes['IO'], 'Backspace': nodes['Del'], 'r': nodes['Rand'],
         'p': nodes['Pi']
-    }) as NodeKeyMapType, [])
+    }) as NodeKeyMapType, [nodes]);
 
 
     const click = useCallback((e: PointerEvent & { object: Mesh }) => {
@@ -45,7 +45,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         if (node.name === 'Case' || node.name === 'Display') return
         animate(node)
         behaviour.runOperation(node, calc, setCalc)
-    }, [calc])
+    }, [calc, behaviour])
 
     calcRef.current = { calc, setCalc };
     const press = useCallback(({ key }: { key: string }) => {
@@ -54,7 +54,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         if (!node) return
         animate(node)
         behaviour.runOperation(node, calcRef.current.calc, calcRef.current.setCalc)
-    }, []);
+    }, [behaviour]);
 
     useEffect(() => {
         retrieveCamera(camera);
@@ -67,7 +67,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         return () => {
             window.removeEventListener('keydown', press)
         }
-    }, [])
+    }, [camera, map, press, retrieveCamera, scene])
     const animate = (node: Mesh) => {
         audio.current.currentTime = 0
         audio.current.play()

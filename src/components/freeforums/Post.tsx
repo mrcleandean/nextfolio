@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ReplyTab, VoteButtons, PostLoading } from "@/components/freeforums";
-import type { PostType } from "@/models/PostModel";
+import type { PostType } from "@/types/models";
 import { Suspense } from "react";
 
 const Post = async ({ isFocused, post }: { isFocused: boolean; post: PostType; }) => {

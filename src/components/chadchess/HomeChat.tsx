@@ -5,6 +5,7 @@ import { ChatType } from "@/types/chadchess";
 import { type Dispatch, type SetStateAction, useEffect, useRef, useState } from "react";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import moment from "moment";
+import Image from "next/image";
 
 function formatDate(date: Date) {
     const inputDate = moment(date);
@@ -82,7 +83,7 @@ const HomeChat = ({ chatOpen, setChatOpen }: { chatOpen: boolean, setChatOpen: D
                         <div className='flex justify-between items-center p-1 bg-csecondary text-sm text-white rounded-t-xl'>
                             <div className="flex gap-1 justify-center items-center">
                                 <div className='w-7 h-7 rounded-full overflow-hidden'>
-                                    <img
+                                    <Image
                                         alt='dev logo'
                                         src={chat.pic}
                                         className='object-contain w-full h-full'

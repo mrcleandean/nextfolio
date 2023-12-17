@@ -7,6 +7,7 @@ import { ChangeEvent, Dispatch, KeyboardEvent, SetStateAction, useEffect, useSta
 import { useRouter } from "next/navigation";
 import { usePlayerContext } from "../../contexts/PlayerContext";
 import { BsFillChatDotsFill } from 'react-icons/bs'
+import Image from "next/image";
 const characters = [rambo.src, stewie.src, tate.src, mega.src, chest.src, squidward.src, liam.src, gigachad.src];
 
 const Menu = ({ chatOpen, setChatOpen }: { chatOpen: boolean; setChatOpen: Dispatch<SetStateAction<boolean>> }) => {
@@ -75,15 +76,15 @@ const Menu = ({ chatOpen, setChatOpen }: { chatOpen: boolean; setChatOpen: Dispa
             socket?.off('pairFound');
             socket?.off('noPairFound');
         }
-    }, [socket]);
+    }, [socket, router]);
     return (
         <div className="relative w-full mt-5 max-w-3xl">
             <div className="flex flex-col items-center">
                 <div className="w-full h-fit flex flex-wrap gap-2 justify-evenly">
                     <div className="relative">
-                        <img
+                        <Image
                             alt="profile picture"
-                            src={player.pic ? player.pic : undefined}
+                            src={player.pic ? player.pic : gigachad.src}
                             className="object-contain w-28 h-28 rounded-lg cursor-pointer hover:w-[7.35rem] hover:h-[7.35rem] transition-all origin-center z-20 relative"
                             onClick={togglePictureDisplay}
                         />
@@ -125,7 +126,7 @@ const Menu = ({ chatOpen, setChatOpen }: { chatOpen: boolean; setChatOpen: Dispa
                             <div className="flex gap-1">
                                 {characters.map((character, i) => {
                                     return (
-                                        <img
+                                        <Image
                                             alt="picture option"
                                             key={i}
                                             src={character}
