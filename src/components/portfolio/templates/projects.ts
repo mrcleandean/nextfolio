@@ -127,7 +127,7 @@ const projects: ProjectsType[] = [
     ],
     image: flappybird.src,
     source_code_link: "https://github.com/",
-    site_link: "http://localhost:3000/flappybirdclone",
+    site_link: "/flappybirdclone",
   },
 ];
 
