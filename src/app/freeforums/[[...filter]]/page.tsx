@@ -1,12 +1,6 @@
 import { Filters, Post, SearchBar, LoadMoreButton } from "@/components/freeforums";
 import { PostType } from "@/types/models";
 import { FilterStringType } from "@/types/freeforums";
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'FreeForums',
-  description: 'Speak Your Mind!',
-};
 
 const getPosts = async (filter: FilterStringType) => {
   try {
