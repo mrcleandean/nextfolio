@@ -79,7 +79,7 @@ const FlappyBirdClone = () => {
         }
     }, [])
     return (
-        <div className="relative w-screen h-screen max-w-screen max-h-screen flex justify-center items-center">
+        <div className="relative w-screen h-[100dvh] max-w-screen max-h-screen flex justify-center items-center">
             <div className="absolute top-5 left-5">
                 <FolioLink title="Flappy Bird Clone" />
             </div>
