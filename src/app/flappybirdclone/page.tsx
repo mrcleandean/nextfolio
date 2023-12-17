@@ -1,7 +1,6 @@
 "use client";
 import { Game } from "@/util/flappybird";
 import { useEffect, useRef } from "react"
-import { FolioLink } from "@/components/shared";
 
 const FlappyBirdClone = () => {
     const canvasRef = useRef<null | HTMLCanvasElement>(null)
@@ -80,9 +79,6 @@ const FlappyBirdClone = () => {
     }, [])
     return (
         <div className="relative w-screen h-[100dvh] max-w-screen max-h-screen flex justify-center items-center box-content">
-            <div className="absolute top-5 left-5">
-                <FolioLink title="Flappy Bird Clone" />
-            </div>
             <canvas
                 ref={canvasRef}
                 width={375}
