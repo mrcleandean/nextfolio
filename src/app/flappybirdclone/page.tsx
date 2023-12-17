@@ -83,7 +83,6 @@ const FlappyBirdClone = () => {
             <div className="absolute top-5 left-5">
                 <FolioLink title="Flappy Bird Clone" />
             </div>
-
             <canvas
                 ref={canvasRef}
                 width={375}
