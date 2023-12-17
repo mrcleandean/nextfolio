@@ -77,8 +77,9 @@ const FlappyBirdClone = () => {
             }
         }
     }, [])
+    // w-screen h-[100dvh] max-w-screen max-h-[100dvh] 
     return (
-        <div className="fixed inset-0 w-screen h-[100dvh] max-w-screen max-h-[100dvh] flex justify-center items-center">
+        <div className="fixed inset-0 flex justify-center items-center">
             <canvas
                 ref={canvasRef}
                 width={375}
