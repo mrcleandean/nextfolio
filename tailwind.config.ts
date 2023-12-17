@@ -8,11 +8,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: "#11151c",
+        secondary: "#83cbe3",
+        tertiary: "#344966",
+        "black-100": "#100d25",
+        "black-200": "#090325",
+        "white-100": "#f3f3f3",
+        dprimary: 'white',
+        csecondary: '#6380e4'
       },
+      boxShadow: {
+        card: "0px 35px 120px -15px #211e35",
+      },
+      screens: {
+        xs: "450px",
+      },
+      backgroundImage: {
+        "hero-img": "url('/src/Portfolio/assets/herobg4.png')"
+      },
+      fontSize: {
+        clamp: 'clamp(24px, 16vw, 200px)'
+      }
     },
   },
   plugins: [],

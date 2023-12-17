@@ -1,0 +1,1 @@
+export type FilterStringType = 'newest' | 'negative' | 'positive' | 'admin';
