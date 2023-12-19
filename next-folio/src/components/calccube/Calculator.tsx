@@ -2,7 +2,7 @@
 import { Screen } from "@/components/calccube";
 import { useRef, useCallback, useEffect, useMemo, useState, type PointerEvent } from "react";
 import { Behaviour } from "@/util";
-import { Color, MeshBasicMaterial, Mesh } from "three";
+import { Color, MeshBasicMaterial, Mesh, Object3D } from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { bakedsym } from "../../assets/calcube";
 import gsap from "gsap"
@@ -60,7 +60,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         const color = new Color(0.53, 0.53, 0.53)
         const mat = new MeshBasicMaterial({ map, color })
         scene.traverse(node => {
-            if (node instanceof Mesh && node.isMesh) node.material = mat
+            // if (node instanceof Mesh && node.isMesh) node.material = mat
         })
         window.addEventListener('keydown', press)
         return () => {
