@@ -24,9 +24,6 @@ const config: Config = {
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-img": "url('/src/Portfolio/assets/herobg4.png')"
-      },
       fontSize: {
         clamp: 'clamp(24px, 16vw, 200px)'
       }
