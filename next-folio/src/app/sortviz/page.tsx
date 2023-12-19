@@ -43,7 +43,7 @@ const SortViz = () => {
         })
     }
     const isAlgorithmKey = (key: string): key is AlgorithmKeyType => {
-        return ['bubble', 'insertion', 'merge', 'quick', 'selection'].includes(key);
+        return ['bubble', 'insertion', 'selection'].includes(key);
     }
 
     const changeAlgorithm: ChangeSelectFnType = (e) => {
