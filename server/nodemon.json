@@ -1,0 +1,10 @@
+{
+    "watch": [
+        "./"
+    ],
+    "ext": "ts",
+    "ignore": [
+        "./src/chadchess/**/*.spec.ts"
+    ],
+    "exec": "node --loader ts-node/esm ./server.ts"
+}

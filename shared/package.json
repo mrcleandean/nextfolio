@@ -1,0 +1,24 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.0.3",
+    "react": "^18.2.0",
+    "socket.io-client": "^4.7.2",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/react": "^18.2.45",
+    "@types/socket.io-client": "^3.0.0",
+    "@types/three": "^0.159.0"
+  }
+}
