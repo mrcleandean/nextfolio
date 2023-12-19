@@ -2,7 +2,7 @@
 import { Header } from '@/components/sortviz';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { bubbleSort, insertionSort, randomArray, selectionSort } from '@/util';
-import type { AlgorithmsMapType, StateType, AlgorithmKeyType, BasicFnType, ChangeSelectFnType, ChangeInputFnType } from '@/types/sortviz';
+import type { AlgorithmsMapType, StateType, AlgorithmKeyType, BasicFnType, ChangeSelectFnType, ChangeInputFnType } from '@/shared/types/sortviz';
 
 const algorithms: AlgorithmsMapType = {
     bubble: bubbleSort,

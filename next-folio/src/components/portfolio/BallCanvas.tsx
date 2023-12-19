@@ -2,7 +2,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Decal, Float, OrbitControls, Preload, useTexture } from "@react-three/drei"
 import { LocalLoader } from '@/components/shared'
-import type { CanvasPropTypes } from "@/types/portfolio";
+import type { CanvasPropTypes } from "@/shared/types/portfolio";
 
 const BallCanvas = ({ icon, id, setLoadingState }: CanvasPropTypes & { icon: string }) => {
     return (

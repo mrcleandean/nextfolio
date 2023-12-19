@@ -1,5 +1,5 @@
 import { Game } from "./index.ts";
-import type { UserObjectType, ChatType } from "@/types/chadchess.ts";
+import type { UserObjectType, ChatType } from "@/shared/types/chadchess.ts";
 
 class Lobby {
     games: { [playerId: string]: Game };

@@ -3,7 +3,7 @@ import SectionWrapper from "./SectionWrapper";
 import { motion } from "framer-motion";
 import { BallCanvas, technologies, styles } from ".";
 import { titleVariant } from "@/util/motion";
-import type { CanvasPropTypes } from "@/types/portfolio";
+import type { CanvasPropTypes } from "@/shared/types/portfolio";
 
 const Techs: React.FC<CanvasPropTypes> = ({ id, setLoadingState }) => {
   return (

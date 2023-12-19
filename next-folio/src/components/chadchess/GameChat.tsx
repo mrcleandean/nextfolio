@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState, type Dispatch, type SetStateAction, useEffect } from "react";
 import { usePlayerContext } from "@/contexts";
-import { type GameChatType } from "@/types/chadchess";
+import { type GameChatType } from "@/shared/types/chadchess";
 import { BsFillChatDotsFill } from "react-icons/bs";
 
 const GameChat = ({ chatOpen, setChatOpen }: { chatOpen: boolean, setChatOpen: Dispatch<SetStateAction<boolean>> }) => {
