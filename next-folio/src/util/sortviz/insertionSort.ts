@@ -1,4 +1,4 @@
-import type { AlgorithmFnType, AlgorithmHashType } from "@/shared/types/sortviz"
+import type { AlgorithmFnType, AlgorithmHashType } from "@/types/sortviz"
 
 const insertionSort: AlgorithmFnType = (arr) => {
     const steps = []

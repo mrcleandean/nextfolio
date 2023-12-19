@@ -4,7 +4,7 @@ import type {
     GameChatType,
     ServerToClientSocketEventTypes,
     UserObjectType
-} from '@/shared/types/chadchess.ts';
+} from '@/types/chadchess.ts';
 import { Lobby } from './index.ts';
 import { Server, Socket } from 'socket.io';
 import type http from 'http';

@@ -2,7 +2,7 @@
 import { Chessboard } from "react-chessboard"
 import { BsFillChatDotsFill, BsFlagFill } from 'react-icons/bs'
 import { FaHandshake } from 'react-icons/fa'
-import type { GameDisplayType, MoveObjectType, UserObjectType } from "@/shared/types/chadchess"
+import type { GameDisplayType, MoveObjectType, UserObjectType } from "@/types/chadchess"
 import { Square } from "react-chessboard/dist/chessboard/types"
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import { usePlayerContext } from "@/contexts";

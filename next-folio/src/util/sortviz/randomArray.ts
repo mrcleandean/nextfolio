@@ -1,4 +1,4 @@
-import type { RandomArrayFnType } from "@/shared/types/sortviz";
+import type { RandomArrayFnType } from "@/types/sortviz";
 
 const randomArray: RandomArrayFnType = (amount) => {
     let arr = [];

@@ -1,6 +1,6 @@
 import { Filters, Post, SearchBar, LoadMoreButton } from "@/components/freeforums";
-import { PostType } from "@/shared/types/models";
-import { FilterStringType } from "@/shared/types/freeforums";
+import { PostType } from "@/types/models";
+import { FilterStringType } from "@/types/freeforums";
 
 const getPosts = async (filter: FilterStringType) => {
   try {

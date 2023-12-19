@@ -1,7 +1,7 @@
 "use client";
 import { styles, BuddhaCanvas } from "."
 import { motion } from "framer-motion"
-import type { CanvasPropTypes } from "@/shared/types/portfolio";
+import type { CanvasPropTypes } from "@/types/portfolio";
 
 const Hero = ({ id, setLoadingState }: CanvasPropTypes) => {
     return (

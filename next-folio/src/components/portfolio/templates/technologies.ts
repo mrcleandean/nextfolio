@@ -13,7 +13,7 @@ import {
     threejs
 } from "../../../assets/portfolio"
 
-import { TechnologyType } from "@/shared/types/portfolio";
+import { TechnologyType } from "@/types/portfolio";
 
 const technologies: TechnologyType[] = [
     {

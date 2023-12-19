@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { Float, Preload, useGLTF, Environment, Text } from "@react-three/drei"
 import { LocalLoader } from '@/components/shared';
-import type { CanvasPropTypes } from '@/shared/types/portfolio';
+import type { CanvasPropTypes } from '@/types/portfolio';
 
 const Raygun = () => {
     const { scene } = useGLTF('/models/raygun/scene.gltf')

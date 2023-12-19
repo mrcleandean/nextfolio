@@ -1,7 +1,7 @@
 "use client";
 import { gigachad } from "@/assets/chadchess";
 import { usePlayerContext } from "@/contexts";
-import { ChatType } from "@/shared/types/chadchess";
+import { ChatType } from "@/types/chadchess";
 import { type Dispatch, type SetStateAction, useEffect, useRef, useState } from "react";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import moment from "moment";

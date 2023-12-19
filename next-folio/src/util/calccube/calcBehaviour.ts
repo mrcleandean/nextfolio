@@ -1,5 +1,5 @@
 "use client";
-import { NodeOperatorKeyType, CalcType, SetCalcType } from "@/shared/types/calccube";
+import { NodeOperatorKeyType, CalcType, SetCalcType } from "@/types/calccube";
 import { Mesh } from "three";
 
 class Behaviour {

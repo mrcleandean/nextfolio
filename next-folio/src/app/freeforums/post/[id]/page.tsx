@@ -1,5 +1,5 @@
 import { Post } from "@/components/freeforums";
-import type { PostType } from "@/shared/types/models";
+import type { PostType } from "@/types/models";
 import type { Metadata } from 'next';
 
 const getPost = async (id: string) => {

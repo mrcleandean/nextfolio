@@ -1,5 +1,5 @@
 "use client";
-import { AudioObjectType } from "@/shared/types/portfolio";
+import { AudioObjectType } from "@/types/portfolio";
 
 const audioObjects: AudioObjectType[] = [
     {

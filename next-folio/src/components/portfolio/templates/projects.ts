@@ -1,6 +1,6 @@
 "use client";
 import { sortviz, chadchess, minecraft, flappybird, calccube, af } from "../../../assets/portfolio";
-import { ProjectsType } from "@/shared/types/portfolio";
+import { ProjectsType } from "@/types/portfolio";
 
 
 const projects: ProjectsType[] = [

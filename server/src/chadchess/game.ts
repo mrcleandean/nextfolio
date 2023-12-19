@@ -1,4 +1,4 @@
-import type { UserObjectType } from '@/shared/types/chadchess.ts';
+import type { UserObjectType } from '@/types/chadchess.ts';
 import { Chess, Move, Square } from "chess.js";
 
 class Game {

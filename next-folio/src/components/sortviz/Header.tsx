@@ -1,7 +1,7 @@
 "use client";
 import { BsPlayFill, BsPauseFill } from 'react-icons/bs'
 import { BiReset } from 'react-icons/bi'
-import { HeaderPropType } from '@/shared/types/sortviz'
+import { HeaderPropType } from '@/types/sortviz'
 import { FolioLink } from '../shared';
 
 const timeComplexities = {

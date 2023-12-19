@@ -1,5 +1,5 @@
 "use client";
-import { StylesType } from "@/shared/types/portfolio";
+import { StylesType } from "@/types/portfolio";
 
 const styles: StylesType = {
     paddingX: "sm:px-8 px-4",

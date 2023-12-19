@@ -1,9 +1,9 @@
 "use client";
 import { gigachad } from "@/assets/chadchess";
-import { ClientToServerSocketEventTypes, ServerToClientSocketEventTypes, UserObjectType } from "@/shared/types/chadchess";
+import { ClientToServerSocketEventTypes, ServerToClientSocketEventTypes, UserObjectType } from "@/types/chadchess";
 import { createContext, useContext, useEffect, useState } from "react";
 import { Socket, io } from "socket.io-client";
-import type { PlayerContextType } from "@/shared/types/chadchess";
+import type { PlayerContextType } from "@/types/chadchess";
 
 export const PlayerContext = createContext<PlayerContextType | undefined>(undefined);
 
