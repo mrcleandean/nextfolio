@@ -1,0 +1,22 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.0.3",
+    "react": "^18.2.0",
+    "socket.io-client": "^4.7.2",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/three": "^0.159.0"
+  }
+}

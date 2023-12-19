@@ -23,9 +23,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@/types/*": [
+        "../shared/types/*.ts"
       ]
     }
   },
@@ -34,9 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/models/PostModel.ts",
-    "src/util/freeforums/dbConnect.ts",
-    "src/util/dbConnect.js"
+    "../shared/types/*.ts"
   ],
   "exclude": [
     "node_modules"
