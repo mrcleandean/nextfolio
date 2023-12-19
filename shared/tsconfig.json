@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "composite": true,
-        "declaration": true
+        "declaration": true,
+        "module": "ES6"
     },
     "include": [
         "**/*.ts"
