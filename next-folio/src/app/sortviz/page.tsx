@@ -49,7 +49,7 @@ const SortViz = () => {
     const changeAlgorithm: ChangeSelectFnType = (e) => {
         const arr = randomArray(state.amount)
         if (!isAlgorithmKey(e.target.value)) return;
-        const { steps, key } = algorithms[e.target.value](arr)
+        const { steps, key } = algorithms[e.target.value as AlgorithmKeyType](arr) // Had to assert type here because it was causing build errors in vercel
         if (state.interval !== null) clearInterval(state.interval)
         setState({
             ...state,
