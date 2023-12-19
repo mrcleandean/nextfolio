@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,7 +12,7 @@
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ES6",
+    "module": "ESNext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -23,22 +23,21 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/shared/*": [
-        "../shared/*"
-      ],
       "@/*": [
         "./src/*"
       ],
-    },
+      "@/shared/*": [
+        "../shared/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "../shared/types/*.ts"
+    "../shared/**/*.ts"
   ],
   "exclude": [
     "node_modules"
