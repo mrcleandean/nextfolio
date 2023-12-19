@@ -48,14 +48,15 @@ const SortViz = () => {
 
     const changeAlgorithm: ChangeSelectFnType = (e) => {
         const arr = randomArray(state.amount)
-        if (!isAlgorithmKey(e.target.value)) return;
-        const { steps, key } = algorithms[e.target.value](arr)
+        const targetVal = e.target.value;
+        if (!isAlgorithmKey(targetVal)) return;
+        const { steps, key } = algorithms[targetVal](arr)
         if (state.interval !== null) clearInterval(state.interval)
         setState({
             ...state,
             arraySteps: steps,
             colorKey: key,
-            algorithm: e.target.value,
+            algorithm: targetVal,
             play: false,
             currentStep: 0,
             interval: null
