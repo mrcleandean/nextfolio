@@ -16,11 +16,6 @@
             ]
         }
     },
-    "references": [
-        {
-            "path": "../shared"
-        }
-    ],
     "include": [
         "**/*.ts" // Include all TypeScript files in the project
     ],
