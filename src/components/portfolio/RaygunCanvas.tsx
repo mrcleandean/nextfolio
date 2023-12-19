@@ -7,7 +7,7 @@ import { LocalLoader } from '@/components/shared';
 import type { CanvasPropTypes } from '@/types/portfolio';
 
 const Raygun = () => {
-    const { scene } = useGLTF('/raygun/scene.gltf')
+    const { scene } = useGLTF('/models/raygun/scene.gltf')
     const { size } = useThree();
     const [scale, setScale] = useState(1);
     const baseWidth = 1280;
@@ -63,7 +63,7 @@ const RaygunCanvas = ({ id, setLoadingState }: CanvasPropTypes) => {
                     rotation: [0, 0, Math.PI * 0.2]
                 }}
             >
-                <Environment files="freebie1.hdr" />
+                <Environment files="environment.hdr" />
                 <Raygun />
                 <Preload all />
             </Canvas>

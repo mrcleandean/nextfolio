@@ -9,7 +9,7 @@ import { CanvasPropTypes } from "@/types/portfolio";
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);
-    const headModel = useLoader(OBJLoader, '/buddha/buddha.mtl');
+    const headModel = useLoader(OBJLoader, '/models/buddha/buddha.mtl');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
     const baseWidth = 1280;
@@ -56,7 +56,7 @@ const BuddhaCanvas = ({ id, setLoadingState }: CanvasPropTypes) => {
                     position: [0, 0, 10],
                 }}
             >
-                <Environment files="freebie1.hdr" />
+                <Environment files="environment.hdr" />
                 <pointLight args={['#85ccb8', 7.5, 20]} position={[0, 3, 2]} />
                 <pointLight args={['#9f85cc', 7.5, 20]} position={[0, 3, 2]} />
                 <Buddha />

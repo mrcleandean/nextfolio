@@ -20,9 +20,9 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
     });
     const calcRef = useRef<null | { calc: CalcType, setCalc: SetCalcType }>(null);
     const behaviour = useMemo(() => new Behaviour(), []);
-    const { nodes, scene } = useGLTF('/calc/calculator.glb') as unknown as GLTFType;
+    const { nodes, scene } = useGLTF('/models/calccube/calculator.glb') as unknown as GLTFType;
     const map = useTexture(bakedsym.src);
-    const audio = useRef(new Audio('/audio/keypress.mp3'));
+    const audio = useRef(new Audio('/audio/calccube/keypress.mp3'));
     map.flipY = false
     audio.current.volume = 0.25
 

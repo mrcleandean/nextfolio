@@ -18,8 +18,8 @@ class Behaviour {
             'Plus': '+',
             'Minus': '-'
         };
-        this.powerDownAudio = new Audio('/audio/powerdown.mp3');
-        this.powerUpAudio = new Audio('/audio/powerup.mp3');
+        this.powerDownAudio = new Audio('/audio/calccube/powerdown.mp3');
+        this.powerUpAudio = new Audio('/audio/calccube/powerup.mp3');
         this.powerDownAudio.volume = 0.4;
         this.powerUpAudio.volume = 0.4;
     }

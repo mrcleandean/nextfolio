@@ -35,9 +35,9 @@ class Game {
         this.ground = new Ground(ctx, canvasWidth, canvasHeight, baseHeight);
         this.score = new Score(ctx, canvasWidth, canvasHeight);
         this.pipes = new Pipes(ctx, canvasWidth, canvasHeight, baseHeight, this.bird, this.score);
-        this.hitAudio = new Audio('/audio/hit.ogg');;
+        this.hitAudio = new Audio('/audio/flappybirdclone/hit.ogg');;
         this.hitAudio.volume = 0.1;
-        this.fallAudio = new Audio('/audio/die.ogg');;
+        this.fallAudio = new Audio('/audio/flappybirdclone/die.ogg');;
         this.fallAudio.volume = 0.1;
         this.runState = 'initial';
     }

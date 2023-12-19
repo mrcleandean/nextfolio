@@ -52,7 +52,7 @@ class Bird {
         this.downflap = new Image(this.spriteWidth, this.spriteHeight)
         this.downflap.src = downflap.src
         this.currentImg = this.midflap
-        this.jumpAudio = new Audio('/audio/wing.ogg'); // public folder
+        this.jumpAudio = new Audio('/audio/flappybirdclone/wing.ogg'); // public folder
         this.jumpAudio.volume = 0.1
         this.imageMap = new Map()
         this.imageMap.set(this.upflap, this.midflap)

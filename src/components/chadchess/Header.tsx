@@ -9,15 +9,18 @@ const Header = () => {
                 <Image
                     alt="chess logo"
                     src={logo.src}
+                    width={28}
+                    height={28}
                     className="ml-[5px] object-contain w-7 h-7 origin-center -rotate-12 drop-shadow-[0.35px_0.35px_2px_black]"
                 />
                 <h1 className="text-csecondary -ml-1 drop-shadow-[0.5px_0.5px_1px_black] font-bold text-md tracking-wide uppercase">CHESS CHAD</h1>
             </div>
             <div className="mr-3 flex items-center">
-                <div className='w-6 h-6 mr-1 rounded-full bg-black'>
+                <div className='w-6 h-6 mr-1 rounded-full bg-black relative'>
                     <Image
                         alt='dev logo'
                         src={'/demdevvy.png'}
+                        fill
                         className='object-contain w-full h-full translate-y-[0.06rem]'
                     />
                 </div>

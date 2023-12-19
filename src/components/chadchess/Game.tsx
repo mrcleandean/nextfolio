@@ -67,6 +67,8 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
                         <Image
                             alt="opponent profile picture"
                             src={opponent.pic ? opponent.pic : gigachad.src}
+                            width={64}
+                            height={64}
                             className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
                         />
                         <div>
@@ -97,6 +99,8 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
                         <Image
                             alt="opponent profile picture"
                             src={player.pic ? player.pic : gigachad.src}
+                            width={64}
+                            height={64}
                             className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
                         />
                         <div>

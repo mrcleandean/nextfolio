@@ -11,9 +11,9 @@ const LoadingText = () => {
 }
 
 const Pieces3D = () => {
-    const rook = useGLTF('/rook/scene.gltf')
-    const knight = useGLTF('/knight/scene.gltf')
-    const board = useGLTF('/board.gltf')
+    const rook = useGLTF('/models/rook/scene.gltf')
+    const knight = useGLTF('/models/knight/scene.gltf')
+    const board = useGLTF('/models/board/board.gltf')
     useEffect(() => {
         const color = new THREE.Color("#6380e4")
         rook.scene.traverse((obj) => {

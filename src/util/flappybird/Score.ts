@@ -48,7 +48,7 @@ class Score {
             image.src = String(this.imgSrcArr[i])
             this.imageMap.set(String(i), image)
         }
-        this.scoreAudio = new Audio('/audio/point.ogg');
+        this.scoreAudio = new Audio('/audio/flappybirdclone/point.ogg');
         this.scoreAudio.volume = 0.1
     }
     getXCoors(string: string) {

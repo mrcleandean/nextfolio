@@ -84,9 +84,11 @@ const HomeChat = ({ chatOpen, setChatOpen }: { chatOpen: boolean, setChatOpen: D
                             <div className="flex gap-1 justify-center items-center">
                                 <div className='w-7 h-7 rounded-full overflow-hidden'>
                                     <Image
-                                        alt='dev logo'
                                         src={chat.pic}
-                                        className='object-contain w-full h-full'
+                                        alt="Player profile picture"
+                                        width={28}
+                                        height={28}
+                                        className="object-contain w-full h-full"
                                     />
                                 </div>
                                 <h1>{chat.username ? chat.username : 'Anonymous Chad'}</h1>

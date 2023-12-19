@@ -1,5 +1,5 @@
 import { Schema, model, models } from "mongoose";
-import type { PostType } from "../types/models";
+import { PostType } from "@/types/models";
 
 
 const trimExtraSpaces = (value: string) => value.replace(/\s\s+/g, " ").trim();
