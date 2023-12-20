@@ -25,11 +25,9 @@
     ],
     "baseUrl": "../",
     "paths": {
-      "@/types/*": [
-        "./shared/types/*.ts"
-      ],
       "@/*": [
-        "./next/src/*"
+        "./next/src/*",
+        "./shared/*"
       ]
     }
   },
