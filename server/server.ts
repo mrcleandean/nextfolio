@@ -1,6 +1,6 @@
 import http from 'http';
 import express from 'express';
-import { setupSocket } from './index.ts';
+import { setupSocket } from './chadchess/index.ts';
 import cors from 'cors';
 
 const app = express();
