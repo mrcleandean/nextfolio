@@ -47,4 +47,3 @@ export type HeaderPropType = {
     delay: number,
     play: boolean
 }
-
