@@ -1,4 +1,4 @@
-import { AlgorithmFnType, AlgorithmHashType } from "@/types/sortviz";
+import { AlgorithmFnType, AlgorithmHashType } from "demdevvyshared/sortviz";
 
 const mergeSort: AlgorithmFnType = (init) => {
     const arr = init.slice()

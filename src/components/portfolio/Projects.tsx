@@ -6,7 +6,7 @@ import { titleVariant, fadeIn } from "@/util/motion"
 import { styles, projects } from "."
 import Image from "next/image"
 import Link from "next/link";
-import { ProjectCardPropTypes } from "@/types/portfolio";
+import { ProjectCardPropTypes } from "demdevvyshared/portfolio";
 
 const Projects = () => {
     return (

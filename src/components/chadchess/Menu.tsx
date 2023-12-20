@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { AiOutlineArrowRight, AiOutlineLoading3Quarters } from 'react-icons/ai'
 import { chest, gigachad, liam, mega, rambo, squidward, stewie, tate } from "@/assets/chadchess";
-import { MenuDisplayType } from "@/types/chadchess";
+import { MenuDisplayType } from "demdevvyshared/chadchess";
 import { ChangeEvent, Dispatch, KeyboardEvent, SetStateAction, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { usePlayerContext } from "../../contexts/PlayerContext";

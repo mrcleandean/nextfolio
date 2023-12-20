@@ -5,7 +5,7 @@ import {
     creator
 } from "../../../assets/portfolio"
 
-import { SkillType } from "@/types/portfolio";
+import { SkillType } from "demdevvyshared/portfolio";
 
 const skills: SkillType[] = [
     {

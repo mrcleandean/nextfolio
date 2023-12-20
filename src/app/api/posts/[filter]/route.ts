@@ -1,4 +1,4 @@
-import type { FilterStringType } from '@/types/freeforums';
+import type { FilterStringType } from 'demdevvyshared/freeforums';
 import { dbConnect } from "@/util";
 import Post from "@/models/PostModel";
 

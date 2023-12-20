@@ -1,5 +1,5 @@
 import { Server, Socket } from 'socket.io';
-import { ChatType, ClientToServerSocketEventTypes, GameChatType, ServerToClientSocketEventTypes } from '@/types/chadchess.ts';
+import { ChatType, ClientToServerSocketEventTypes, GameChatType, ServerToClientSocketEventTypes } from 'demdevvyshared/chadchess.ts';
 import { Lobby } from './index.ts';
 import type http from 'http';
 import { Move } from 'chess.js';

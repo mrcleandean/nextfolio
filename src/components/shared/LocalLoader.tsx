@@ -1,7 +1,7 @@
 "use client";
 import { useProgress } from "@react-three/drei";
 import { useEffect } from "react";
-import type { CanvasPropTypes } from "@/types/portfolio";
+import type { CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const LocalLoader = ({ id, setLoadingState }: CanvasPropTypes) => {
     const state = useProgress();

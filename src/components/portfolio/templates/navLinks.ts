@@ -1,5 +1,5 @@
 "use client";
-import { NavLinkType } from "@/types/portfolio";
+import { NavLinkType } from "demdevvyshared/portfolio";
 
 const navLinks: NavLinkType[] = [
     {

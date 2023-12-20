@@ -1,6 +1,5 @@
-import { Thasadith } from "next/font/google/index";
 import { Game } from "./index.ts";
-import type { UserObjectType, ChatType } from "@/types/chadchess.ts";
+import type { UserObjectType, ChatType } from "demdevvyshared/chadchess";
 
 class Lobby {
     games: { [playerId: string]: Game };

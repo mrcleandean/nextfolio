@@ -5,7 +5,7 @@ import { Environment, Preload } from "@react-three/drei"
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { useRef, useState, useEffect } from "react"
 import { LocalLoader } from '@/components/shared'
-import { CanvasPropTypes } from "@/types/portfolio";
+import { CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);

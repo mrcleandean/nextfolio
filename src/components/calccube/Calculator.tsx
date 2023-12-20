@@ -8,8 +8,9 @@ import { Color, MeshBasicMaterial, Mesh } from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { bakedsym } from "../../assets/calcube";
 import gsap from "gsap"
-import type { CalcType, GLTFType, NodeKeyMapType, RetrieveCameraType, SetCalcType } from '@/types/calccube'; import { useThree } from "@react-three/fiber";
-;
+import type { CalcType, GLTFType, NodeKeyMapType, RetrieveCameraType, SetCalcType } from 'demdevvyshared/calccube';
+import { useThree } from "@react-three/fiber";
+
 const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) => {
     const { camera } = useThree();
     const [calc, setCalc] = useState<CalcType>({

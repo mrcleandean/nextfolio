@@ -3,8 +3,7 @@ import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { slideIn } from "@/util/motion"
 import { styles, RaygunCanvas } from "@/components/portfolio";
-import type { CanvasPropTypes } from "@/types/portfolio";
-import type { FormDataType } from "@/types/portfolio";
+import type { FormDataType, CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
     const formRef = useRef<HTMLFormElement | null>(null)

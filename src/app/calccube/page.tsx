@@ -2,7 +2,7 @@
 import { Canvas } from "@react-three/fiber"
 import { Calculator } from "@/components/calccube"
 import { useState, useCallback, useRef } from "react";
-import type { CameraType, ObjVectorType } from "@/types/calccube";
+import type { CameraType, ObjVectorType } from "demdevvyshared/calccube";
 import { Vector3 } from "three";
 import gsap from "gsap";
 import { FolioLink, Loader, LocalLoader } from '@/components/shared';
