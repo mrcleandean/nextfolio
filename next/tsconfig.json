@@ -27,10 +27,10 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ],
-      "@/types/*": [
-        "../shared/types/*.ts"
       ]
+      // "@/types/*": [
+      //   "src/types/*.ts"
+      // ]
     }
   },
   "include": [
@@ -38,7 +38,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "../shared/types/*.ts"
+    // "src/types/*.ts"
   ],
   "exclude": [
     "node_modules"
