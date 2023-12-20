@@ -82,11 +82,12 @@ const HomeChat = ({ chatOpen, setChatOpen }: { chatOpen: boolean, setChatOpen: D
                     <div className='w-full bg-gray-200 rounded-xl' key={i}>
                         <div className='flex justify-between items-center p-1 bg-csecondary text-sm text-white rounded-t-xl'>
                             <div className="flex gap-1 justify-center items-center">
-                                <div className='w-7 h-7 rounded-full overflow-hidden'>
+                                <div className='w-7 h-7 rounded-full overflow-hidden relative'>
                                     <Image
                                         alt='dev logo'
                                         src={chat.pic}
-                                        className='object-contain w-full h-full'
+                                        fill={true}
+                                        className='object-contain'
                                     />
                                 </div>
                                 <h1>{chat.username ? chat.username : 'Anonymous Chad'}</h1>

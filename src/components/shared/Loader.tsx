@@ -1,6 +1,7 @@
 "use client";
 import { ImSpinner2 } from "react-icons/im";
 import { AnimatePresence, motion } from 'framer-motion';
+import { LoaderPropTypes } from "demdevvyshared/base";
 
 const TitleSpan = ({ char, i, length }: { char: string, i: number, length: number }) => {
     const animationDuration = 2 * 1.75;
@@ -38,8 +39,9 @@ const TitleSpan = ({ char, i, length }: { char: string, i: number, length: numbe
     )
 }
 
-const Loader = ({ globalLoading, entered, setEntered, letters, subTitle = null }: { globalLoading: boolean, entered: boolean, setEntered: React.Dispatch<React.SetStateAction<boolean>>, letters: string[], subTitle?: string | null }) => {
+const Loader = ({ globalLoading, entered, setEntered, letters, subTitle = null }: LoaderPropTypes) => {
     let adjustedLetterIndex = 0;
+
     return (
         <>
             <AnimatePresence>

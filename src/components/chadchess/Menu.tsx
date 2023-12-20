@@ -85,7 +85,9 @@ const Menu = ({ chatOpen, setChatOpen }: { chatOpen: boolean; setChatOpen: Dispa
                         <Image
                             alt="profile picture"
                             src={player.pic ? player.pic : gigachad.src}
-                            className="object-contain w-28 h-28 rounded-lg cursor-pointer hover:w-[7.35rem] hover:h-[7.35rem] transition-all origin-center z-20 relative"
+                            width={112}
+                            height={112}
+                            className="object-contain rounded-lg cursor-pointer hover:w-[7.35rem] hover:h-[7.35rem] transition-all origin-center z-20 relative"
                             onClick={togglePictureDisplay}
                         />
                         <motion.p
@@ -130,7 +132,9 @@ const Menu = ({ chatOpen, setChatOpen }: { chatOpen: boolean; setChatOpen: Dispa
                                             alt="picture option"
                                             key={i}
                                             src={character}
-                                            className="object-contain w-14 h-14 rounded-xl cursor-pointer z-0 border-2 border-dprimary"
+                                            width={56}
+                                            height={56}
+                                            className="object-contain rounded-xl cursor-pointer z-0 border-2 border-dprimary"
                                             onClick={() => changePicture(character)}
                                         />
                                     )

@@ -67,7 +67,9 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
                         <Image
                             alt="opponent profile picture"
                             src={opponent.pic ? opponent.pic : gigachad.src}
-                            className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
+                            width={64}
+                            height={64}
+                            className="rounded-lg border-[1px] border-csecondary"
                         />
                         <div>
                             <p className="bg-csecondary text-white rounded-lg mt-[0.0725rem] pr-1 pl-1 pt-0.5 pb-0.5">{opponent.name === '' ? 'Unnamed Chad' : opponent.name}</p>
@@ -97,7 +99,9 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
                         <Image
                             alt="opponent profile picture"
                             src={player.pic ? player.pic : gigachad.src}
-                            className="w-16 h-16 rounded-lg border-[1px] border-csecondary"
+                            width={64}
+                            height={64}
+                            className="rounded-lg border-[1px] border-csecondary"
                         />
                         <div>
                             <p className="bg-csecondary text-white rounded-lg mt-[0.0725rem] pr-1 pl-1 pt-0.5 pb-0.5">{player.name === '' ? 'Unnamed Chad' : player.name}</p>

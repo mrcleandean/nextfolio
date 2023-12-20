@@ -1,8 +1,5 @@
-import { Dispatch, SetStateAction } from "react"
 import { Socket } from "socket.io-client"
-
-
-export type SetStateType<T> = Dispatch<SetStateAction<T>>
+import { SetStateType } from "./base"
 
 export type UserObjectType = {
     pic: string | null,

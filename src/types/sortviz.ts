@@ -1,4 +1,4 @@
-import type { ChangeEvent, Dispatch, SetStateAction } from "react";
+import type { ChangeEvent } from "react";
 
 export type AlgorithmHashType = {
     [key: number]: 'red' | 'gray' | 'green' | 'lightgreen'
@@ -27,8 +27,6 @@ export type StateType = {
     currentStep: number,
     interval: null | NodeJS.Timeout
 }
-
-export type SetStateType<T> = Dispatch<SetStateAction<T>>
 
 export type ChangeInputFnType = (e: ChangeEvent<HTMLInputElement>) => void;
 

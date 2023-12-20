@@ -50,8 +50,8 @@ const ServiceCard = ({ index, title, icon }: { index: number, title: string, ico
                     <Image
                         src={icon}
                         alt={title}
-                        width={64} // Example size
-                        height={64} // Example size
+                        width={64}
+                        height={64}
                         className="object-contain"
                     />
                     <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>

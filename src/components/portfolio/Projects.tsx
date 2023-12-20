@@ -63,7 +63,9 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                             <Image
                                 src={github.src}
                                 alt="github"
-                                className="w-1/2 h-1/2  object-contain"
+                                width={20}
+                                height={20}
+                                className="object-contain"
                             />
                         </div>
                     </div>

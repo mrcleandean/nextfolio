@@ -1,3 +1,5 @@
+import { SetStateType } from "./base";
+
 export type ProjectCardPropTypes = {
     index: number,
     name: string;

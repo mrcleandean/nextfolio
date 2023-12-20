@@ -32,7 +32,6 @@ const CalcCube = () => {
                 z: camPos.z
             }, '<')
     }, [camera])
-
     const [loadingStates, setLoadingStates] = useState({
         calculator: true
     });

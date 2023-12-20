@@ -24,7 +24,6 @@ export default function Home() {
     setLoadingStates(prevStates => ({ ...prevStates, [canvasId]: isLoading }));
   }, []);
   const globalLoading = Object.values(loadingStates).some(isLoading => isLoading);
-
   return (
     <>
       <div className={`${entered ? '' : 'pointer-events-none h-screen overflow-hidden'}`}>

@@ -1,7 +1,6 @@
 "use client";
 import { navLinks } from "."
 import { useState } from "react"
-import { demdevvy as logo } from "../../assets/portfolio"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from "next/image";
@@ -25,7 +24,7 @@ const Navbar = () => {
             ">
                 <Link href="/#hero" className="flex justify-center items-center" onClick={() => setActive('')}>
                     <Image
-                        src={logo.src}
+                        src={'/demdevvy.png'}
                         alt="logo"
                         width={96}
                         height={96}
