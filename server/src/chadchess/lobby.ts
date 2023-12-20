@@ -1,4 +1,4 @@
-import { Game } from "./index.ts";
+import { Game } from "./index";
 import type { UserObjectType, ChatType } from "demdevvyshared/chadchess";
 
 class Lobby {

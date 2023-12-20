@@ -1,10 +1,10 @@
 {
     "watch": [
-        "server/chadchess/"
+        "server/src/"
     ],
     "ext": "ts",
     "ignore": [
-        "server/chadchess/**/*.spec.ts"
+        "server/src/**/*.spec.ts"
     ],
-    "exec": "node --loader ts-node/esm ./server/server.ts"
+    "exec": "node --loader ts-node/esm ./server/src/server.ts"
 }

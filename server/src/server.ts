@@ -1,6 +1,7 @@
+import 'dotenv/config';
 import http from 'http';
 import express from 'express';
-import { setupSocket } from './chadchess/index.ts';
+import { setupSocket } from './chadchess/index';
 import cors from 'cors';
 
 const app = express();

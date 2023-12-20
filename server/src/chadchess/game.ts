@@ -1,4 +1,4 @@
-import type { UserObjectType } from "demdevvyshared/chadchess";
+import type { UserObjectType } from "./demdevvyshared/chadchess";
 import { Chess, Move, Square } from "chess.js";
 
 class Game {

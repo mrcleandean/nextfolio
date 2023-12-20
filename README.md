@@ -33,6 +33,8 @@ For tasks which are easier with Express, such as socket connections and other fu
 
 ### To run
 ```
-pending
+npm run start
+npm run build
+npm run dev
 ```
 
