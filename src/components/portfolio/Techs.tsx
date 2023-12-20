@@ -1,5 +1,4 @@
 "use client";
-import SectionWrapper from "./SectionWrapper";
 import { motion } from "framer-motion";
 import { BallCanvas, technologies, styles } from ".";
 import { titleVariant } from "@/util/motion";

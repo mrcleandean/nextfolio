@@ -1,7 +1,7 @@
 "use client";
 import { Header } from '@/components/sortviz';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { bubbleSort, insertionSort, mergeSort, quickSort, randomArray, selectionSort } from '@/util';
+import { bubbleSort, insertionSort, randomArray, selectionSort } from '@/util';
 import type { AlgorithmsMapType, StateType, AlgorithmKeyType, BasicFnType, ChangeSelectFnType, ChangeInputFnType } from '@/types/sortviz';
 
 const algorithms: AlgorithmsMapType = {

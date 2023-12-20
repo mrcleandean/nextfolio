@@ -1,5 +1,5 @@
 "use client";
-import { sortviz, chadchess, minecraft, flappybird, calccube, af } from "../../../assets/portfolio";
+import { sortviz, chadchess, flappybird, calccube, af } from "../../../assets/portfolio";
 import { ProjectsType } from "@/types/portfolio";
 
 
