@@ -1,0 +1,55 @@
+{
+  "name": "demdevvyshared",
+  "version": "1.0.9",
+  "description": "Shared TypeScript types for various components of the DemDevvy project",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./base": {
+      "import": "./dist/base.js",
+      "require": "./dist/base.js"
+    },
+    "./calccube": {
+      "import": "./dist/calccube.js",
+      "require": "./dist/calccube.js"
+    },
+    "./chadchess": {
+      "import": "./dist/chadchess.js",
+      "require": "./dist/chadchess.js"
+    },
+    "./freeforums": {
+      "import": "./dist/freeforums.js",
+      "require": "./dist/freeforums.js"
+    },
+    "./models": {
+      "import": "./dist/models.js",
+      "require": "./dist/models.js"
+    },
+    "./portfolio": {
+      "import": "./dist/portfolio.js",
+      "require": "./dist/portfolio.js"
+    },
+    "./sortviz": {
+      "import": "./dist/sortviz.js",
+      "require": "./dist/sortviz.js"
+    }
+  },
+  "dependencies": {
+    "mongoose": "^8.0.3",
+    "react": "^18.2.0",
+    "socket.io-client": "^4.7.2",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/react": "^18.2.45",
+    "@types/socket.io-client": "^3.0.0",
+    "@types/three": "^0.159.0",
+    "typescript": "^5.3.3"
+  }
+}
