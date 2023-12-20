@@ -4,12 +4,11 @@ import { useState } from "react";
 import type { PointerEvent } from "react";
 import { useRef, useCallback, useEffect, useMemo } from "react";
 import { Behaviour } from "@/util";
-import { Color, MeshBasicMaterial, Mesh, Object3D } from "three";
+import { Color, MeshBasicMaterial, Mesh } from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { bakedsym } from "../../assets/calcube";
 import gsap from "gsap"
-import type { CalcType, GLTFType, NodeKeyMapType, RetrieveCameraType, SetCalcType } from '@/types/calccube';
-import { useThree } from "@react-three/fiber";
+import type { CalcType, GLTFType, NodeKeyMapType, RetrieveCameraType, SetCalcType } from '@/types/calccube'; import { useThree } from "@react-three/fiber";
 ;
 const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) => {
     const { camera } = useThree();
@@ -61,7 +60,7 @@ const Calculator = ({ retrieveCamera }: { retrieveCamera: RetrieveCameraType }) 
         retrieveCamera(camera);
         const color = new Color(0.53, 0.53, 0.53)
         const mat = new MeshBasicMaterial({ map, color })
-        scene.traverse((node: Object3D) => {
+        scene.traverse(node => {
             if (node instanceof Mesh && node.isMesh) node.material = mat
         })
         window.addEventListener('keydown', press)
