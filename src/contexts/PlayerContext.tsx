@@ -24,7 +24,7 @@ const PlayerContextProvider = ({ children }: { children: React.ReactNode }) => {
     const [socket, setSocket] = useState<null | Socket<ServerToClientSocketEventTypes, ClientToServerSocketEventTypes>>(null);
     useEffect(() => {
         const serverUrl = process.env.NEXT_PUBLIC_SOCKET_LINK;
-        const initSocket: Socket<ServerToClientSocketEventTypes, ClientToServerSocketEventTypes> = io(serverUrl ? serverUrl : '');
+        const initSocket: Socket<ServerToClientSocketEventTypes, ClientToServerSocketEventTypes> = io(serverUrl ? serverUrl : 'http://localhost:8080');
         initSocket.on('connect', () => {
             setSocket(initSocket)
         })

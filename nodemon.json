@@ -6,5 +6,5 @@
     "ignore": [
         "server/chadchess/**/*.spec.ts"
     ],
-    "exec": "node --loader ts-node/esm ./server/chadchess/server.ts"
+    "exec": "node --loader ts-node/esm ./server/server.ts"
 }
