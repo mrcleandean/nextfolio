@@ -1,5 +1,5 @@
 "use client";
-import { staggerVariant } from "@/util/motion"
+import { staggerVariant } from "@/util/shared/motion"
 import { styles } from "."
 import { motion } from "framer-motion"
 

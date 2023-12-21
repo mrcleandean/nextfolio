@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { slideIn } from "@/util/motion"
+import { slideIn } from "@/util/shared/motion"
 import { styles, RaygunCanvas } from "@/components/portfolio";
 import type { FormDataType, CanvasPropTypes } from "demdevvyshared/portfolio";
 

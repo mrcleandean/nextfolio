@@ -4,25 +4,8 @@ import { usePlayerContext } from "@/contexts";
 import { ChatType } from "demdevvyshared/chadchess";
 import { type Dispatch, type SetStateAction, useEffect, useRef, useState } from "react";
 import { BsFillChatDotsFill } from "react-icons/bs";
-import moment from "moment";
 import Image from "next/image";
-
-function formatDate(date: Date) {
-    const inputDate = moment(date);
-    const today = moment();
-    const yesterday = moment().subtract(1, 'day');
-
-    if (inputDate.isSame(today, 'day')) {
-        // Date is today: return time in AM/PM format
-        return inputDate.format('h:mm A');
-    } else if (inputDate.isSame(yesterday, 'day')) {
-        // Date is yesterday: return 'Yesterday'
-        return 'Yesterday';
-    } else {
-        // Date is before yesterday: return date in 'MMM DD' format
-        return inputDate.format('MMM DD');
-    }
-}
+import { formatDate } from "@/util";
 
 const HomeChat = ({ chatOpen, setChatOpen }: { chatOpen: boolean, setChatOpen: Dispatch<SetStateAction<boolean>> }) => {
     const { player, socket } = usePlayerContext();

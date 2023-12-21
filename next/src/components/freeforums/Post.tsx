@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ReplyTab, VoteButtons, PostLoading } from "@/components/freeforums";
 import type { PostType } from "demdevvyshared/models";
 import { Suspense } from "react";
+import { formatDate } from "@/util";
 
 const Post = async ({ isFocused, post }: { isFocused: boolean; post: PostType; }) => {
   const { _id, title, username, content, dateTime, score, parent, children } = post;
@@ -23,7 +24,7 @@ const Post = async ({ isFocused, post }: { isFocused: boolean; post: PostType; }
           </div>
         </div>
         <div className="w-full flex justify-between items-center py-2 px-4 text-white text-[14px]">
-          <h1>{String(dateTime)}</h1>
+          <h1>{formatDate(dateTime)}</h1>
           <div className="flex justify-evenly items-center gap-0.5">
             <VoteButtons id={_id} score={score} />
           </div>

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt"
 import { github } from "../../assets/portfolio"
-import { titleVariant, fadeIn } from "@/util/motion"
+import { titleVariant, fadeIn } from "@/util/shared/motion"
 import { styles, projects } from "."
 import Image from "next/image"
 import Link from "next/link";

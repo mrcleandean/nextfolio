@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { BallCanvas, technologies, styles } from ".";
-import { titleVariant } from "@/util/motion";
+import { titleVariant } from "@/util/shared/motion";
 import type { CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const Techs: React.FC<CanvasPropTypes> = ({ id, setLoadingState }) => {
