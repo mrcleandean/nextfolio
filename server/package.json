@@ -2,11 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Express server for Demdevvy Portfolio",
-  "main": "index.js",
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Dean Kadri - Demdevvy",
   "license": "ISC",
