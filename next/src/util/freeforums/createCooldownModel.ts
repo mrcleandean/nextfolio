@@ -10,8 +10,8 @@ const createCooldownSchema = (cooldownInSeconds: number) => {
         expiresAt: {
             type: Date,
             default: () => Date.now() + 1000 * cooldownInSeconds,
-        },
-        index: { expires: cooldownInSeconds }
+            expires: cooldownInSeconds
+        }
     });
 }
 
