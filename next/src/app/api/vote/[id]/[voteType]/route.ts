@@ -23,6 +23,11 @@ async function createVote(id: string, voteType: 'upvote' | 'downvote') {
   await post.save();
 }
 
+async function createCooldown(ip: string) {
+  const newCooldown = new VoteCooldown({ ip });
+  await newCooldown.save();
+}
+
 export async function POST(req: NextRequest, { params }: { params: { id: string; voteType: string } }) {
   try {
     await dbConnect();
@@ -34,7 +39,8 @@ export async function POST(req: NextRequest, { params }: { params: { id: string;
     if (isCooling !== false) return Response.json({ message: `Vote Cooldown: Try again in ${isCooling} seconds` }, { status: 500 });
 
     if (params.voteType !== "upvote" && params.voteType !== "downvote") return Response.json({ message: "Vote Failed: Invalid vote type" }, { status: 500 });
-    createVote(params.id, params.voteType)
+    await createCooldown(ip);
+    await createVote(params.id, params.voteType);
 
     return Response.json({ message: "Voted successfully" }, { status: 200 });
   } catch (error) {

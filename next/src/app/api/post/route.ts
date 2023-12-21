@@ -12,6 +12,11 @@ async function detectCooldown(ip: string): Promise<false | number> {
   return Math.floor(furthestCooldownDoc.expiresAt.getTime() / 1000);
 }
 
+async function createCooldown(ip: string) {
+  const newCooldown = new PostCooldown({ ip });
+  await newCooldown.save();
+}
+
 export async function POST(request: NextRequest) {
   try {
     await dbConnect();
@@ -21,6 +26,8 @@ export async function POST(request: NextRequest) {
 
     const isCooling = await detectCooldown(ip);
     if (isCooling !== false) return Response.json({ message: `Post Cooldown: Try again in ${isCooling}` }, { status: 500 });
+
+    await createCooldown(ip);
 
     const req = await request.json();
     let newPost = new Post(req);
