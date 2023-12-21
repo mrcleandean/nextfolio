@@ -1,4 +1,5 @@
 import dbConnect from './freeforums/dbConnect.ts';
+import createCooldownSchema from './freeforums/createCooldownModel.ts';
 import Behaviour from './calccube/calcBehaviour.ts';
 import bubbleSort from './sortviz/bubbleSort.ts';
 import insertionSort from './sortviz/insertionSort.ts';
@@ -7,6 +8,7 @@ import quickSort from './sortviz/quickSort.ts';
 import randomArray from './sortviz/randomArray.ts';
 import selectionSort from './sortviz/selectionSort.ts';
 import formatDate from './shared/formatDate.ts';
+import hasMessageKey from './shared/hasMessageKey.ts';
 import { titleVariant, staggerVariant, fadeIn, slideIn } from './shared/motion.ts';
 
 export {
@@ -15,6 +17,7 @@ export {
     fadeIn,
     slideIn,
     dbConnect,
+    createCooldownSchema,
     Behaviour,
     bubbleSort,
     insertionSort,
@@ -22,5 +25,6 @@ export {
     quickSort,
     randomArray,
     selectionSort,
-    formatDate
+    formatDate,
+    hasMessageKey
 }

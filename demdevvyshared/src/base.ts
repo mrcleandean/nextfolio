@@ -9,3 +9,7 @@ export type LoaderPropTypes = {
     letters: string[];
     subTitle?: string | null
 }
+
+export type MessageObject = {
+    message: string;
+}

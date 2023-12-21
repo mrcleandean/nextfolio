@@ -8,4 +8,5 @@ import ReplyTab from "@/components/freeforums/ReplyTab";
 import VoteButtons from "@/components/freeforums/VoteButton";
 import LoadMoreButton from "@/components/freeforums/LoadMoreButton";
 import PostLoading from "@/components/freeforums/PostLoading";
-export { Filters, Post, Navbar, NewTab, SearchBar, FilterButton, ReplyTab, VoteButtons, LoadMoreButton, PostLoading };
+import Notification from "./Notification";
+export { Filters, Post, Navbar, NewTab, SearchBar, FilterButton, ReplyTab, VoteButtons, LoadMoreButton, PostLoading, Notification };

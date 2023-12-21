@@ -3,20 +3,24 @@ import { TiArrowForwardOutline } from "react-icons/ti";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import { hasMessageKey } from "@/util";
+import { useNotificationContext } from "@/contexts";
 const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; setNewPostIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const router = useRouter();
+  const { triggerNotification } = useNotificationContext();
   const [inputValues, setInputValues] = useState({
     title: "",
     username: "",
     content: "",
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputValues(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }))
   }
+
   const submit = async () => {
     try {
       const res = await fetch("/api/post", {
@@ -24,17 +28,19 @@ const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; s
         body: JSON.stringify(inputValues),
         headers: { "Content-Type": "application/json" }
       });
-      if (!res.ok) throw new Error("Something went wrong");
+
+      if (!res.ok) {
+        throw new Error(hasMessageKey(res) ? res.message : "Post failed: Internal Server Error");
+      }
+
+      triggerNotification(true, hasMessageKey(res) ? res.message : "Posted successfully");
       setNewPostIsOpen(false);
       router.refresh();
     } catch (error) {
-      if (typeof error === "object" && error !== null && "message" in error) {
-        console.log(error.message);
-      } else {
-        console.log("An unknown error has occured");
-      }
+      triggerNotification(true, hasMessageKey(error) ? error.message : "Post failed: Internal Server Error");
     }
   };
+
   return (
     <div className="w-[32.5rem] flex flex-col items-start gap-2">
       <AnimatePresence>

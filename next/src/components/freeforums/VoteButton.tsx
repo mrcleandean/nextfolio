@@ -1,24 +1,27 @@
 "use client";
 import { BiSolidUpvote, BiSolidDownvote } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import { useNotificationContext } from "@/contexts";
+import { hasMessageKey } from "@/util";
 
 const VoteButtons = ({ id, score }: { id: string; score: number }) => {
   const router = useRouter();
+  const { triggerNotification } = useNotificationContext();
   const vote = async (id: string, voteType: "upvote" | "downvote") => {
     try {
-      const response = await fetch(`/api/vote/${id}/${voteType}`, {
+      const res = await fetch(`/api/vote/${id}/${voteType}`, {
         method: "POST",
         body: JSON.stringify(voteType),
         headers: { "Content-Type": "application/json" }
       });
-      if (!response.ok) throw new Error("Response was not ok while voting");
+      if (!res.ok) {
+        throw new Error(hasMessageKey(res) ? res.message : "Vote Failed: Internal Server Error");
+      }
+
+      triggerNotification(true, hasMessageKey(res) ? res.message : "Vote Successful");
       router.refresh();
     } catch (error) {
-      if (error && typeof error === "object" && "message" in error) {
-        console.log(error.message);
-      } else {
-        console.log("An unknown error has occured while voting");
-      }
+      triggerNotification(true, hasMessageKey(error) ? error.message : "Vote Failed: Internal Server Error")
     }
   };
   return (
