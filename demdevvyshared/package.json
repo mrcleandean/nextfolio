@@ -1,12 +1,12 @@
 {
   "name": "demdevvyshared",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Shared TypeScript types for various components of the DemDevvy project",
   "scripts": {
     "build": "tsc"
   },
   "files": [
-    "dist/**/*"
+    "dist/*"
   ],
   "dependencies": {
     "mongoose": "^8.0.3",
