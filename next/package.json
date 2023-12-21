@@ -13,7 +13,7 @@
     "@react-three/drei": "^9.89.0",
     "@react-three/fiber": "^8.15.11",
     "aws4": "^1.12.0",
-    "demdevvyshared": "^1.0.9",
+    "demdevvyshared": "^1.0.15",
     "framer-motion": "^10.16.4",
     "gsap": "^3.12.2",
     "moment": "^2.29.4",

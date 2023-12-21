@@ -2,7 +2,7 @@ import { dbConnect } from "@/util";
 import Post from "@/models/PostModel";
 import { VoteCooldown } from "@/models";
 import { type NextRequest } from "next/server";
-import { CooldownType } from "../../../../../../../demdevvyshared/src/freeforums";
+import { CooldownType } from "demdevvyshared/freeforums";
 
 async function detectCooldown(ip: string): Promise<false | number> {
   const currentDate = Date.now();

@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useState } from "react";
 import { Notification } from "@/components/freeforums";
-import type { NotificationContextType, NotificationType } from '../../../demdevvyshared/src/freeforums';
+import type { NotificationContextType, NotificationType } from 'demdevvyshared/freeforums';
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 

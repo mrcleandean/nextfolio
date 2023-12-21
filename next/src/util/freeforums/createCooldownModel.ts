@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import type { CooldownType } from '../../../../demdevvyshared/src/freeforums';
+import type { CooldownType } from 'demdevvyshared/freeforums';
 
 const createCooldownSchema = (cooldownInSeconds: number) => {
     return new Schema<CooldownType>({

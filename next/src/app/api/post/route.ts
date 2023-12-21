@@ -1,6 +1,6 @@
 import { dbConnect } from "@/util";
 import { Post, PostCooldown } from "@/models";
-import { CooldownType } from "../../../../../demdevvyshared/src/freeforums";
+import { CooldownType } from "demdevvyshared/freeforums";
 import { NextRequest } from "next/server";
 
 async function detectCooldown(ip: string): Promise<false | number> {
