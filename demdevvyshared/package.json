@@ -1,7 +1,8 @@
 {
   "name": "demdevvyshared",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Shared TypeScript types for various components of the DemDevvy project",
+  "type": "module",
   "scripts": {
     "build": "tsc"
   },
