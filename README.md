@@ -13,6 +13,11 @@ npm pack
 git add .
 git commit -m [new version from package.json]
 git push -u origin main
+```
+Then, copy paste the current package.json to the **/dist** and modify it to include the bare minimum. Add a files
+key which defines ./*.ts and ./*.js.
+```
+cd dist
 npm publish
 ```
 
