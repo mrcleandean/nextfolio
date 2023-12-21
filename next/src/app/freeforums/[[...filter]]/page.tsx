@@ -4,7 +4,7 @@ import { FilterStringType } from "demdevvyshared/freeforums";
 
 const getPosts = async (filter: FilterStringType) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/posts/${filter}`, {
+    const response = await fetch(`https://nextfolio-psi.vercel.app/api/posts/${filter}`, {
       method: "GET",
       cache: 'no-store'
     });

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 const getPost = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/post/${id}`, {
+    const response = await fetch(`https://nextfolio-psi.vercel.app/api/post/${id}`, {
       method: 'GET',
       cache: 'no-store'
     });
@@ -23,7 +23,7 @@ const getPost = async (id: string) => {
 
 const getMetadata = async (id: string) => {
   try {
-    const response = await fetch(`http://localhost:3000/api/post/metadata/${id}`, {
+    const response = await fetch(`https://nextfolio-psi.vercel.app/api/post/metadata/${id}`, {
       method: 'GET',
       cache: 'no-store'
     });
