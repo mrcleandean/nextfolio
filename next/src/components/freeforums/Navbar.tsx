@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GiAnarchy } from "react-icons/gi";
 
 const Navbar = () => {
   return (
@@ -13,18 +12,20 @@ const Navbar = () => {
           <p className="font-semibold text-xl translate-y-0.5">Forums</p>
         </div>
       </Link>
-      <div className="flex gap-1 items-center">
-        <div className="w-10 h-10 rounded-full bg-blue-300 flex justify-center items-center">
-          <Image
-            src='/demdevvy.png'
-            alt='Folio logo'
-            width={48}
-            height={48}
-            className="object-contain rounded-lg cursor-pointer translate-y-0.5"
-          />
+      <Link href="/">
+        <div className="flex gap-2 items-center">
+          <div className="w-8 h-8 rounded-full bg-blue-300 flex justify-center items-center">
+            <Image
+              src='/demdevvy.png'
+              alt='Folio logo'
+              width={48}
+              height={48}
+              className="object-contain rounded-lg cursor-pointer translate-y-0.5"
+            />
+          </div>
+          <p className="text-white text-md font-semibold underline">Folio</p>
         </div>
-        <p className="text-white text-md font-semibold underline">Folio</p>
-      </div>
+      </Link>
     </div>
   );
 };
