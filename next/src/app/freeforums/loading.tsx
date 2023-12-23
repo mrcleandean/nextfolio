@@ -7,7 +7,7 @@ const LoadingPosts = () => {
             <div className="flex flex-col items-center gap-3 mx-10">
                 <div className="flex items-center gap-2 pt-3">
                     <div className="bg-white h-10 w-[30rem] max-w-[100vw] p-2 text-black rounded-lg flex justify-start items-center">
-                        <p className="text-gray-200">Search</p>
+                        <p className="text-gray-300">Search</p>
                     </div>
                 </div>
                 <div className="flex justify-center items-center gap-3 flex-col">
