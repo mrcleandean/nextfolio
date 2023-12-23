@@ -87,7 +87,6 @@ const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
                             name="name"
                             value={form.name}
                             onChange={handleChange}
-                            placeholder="What's your name?"
                             className="bg-primary py-2 px-3 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
                         />
                     </label>
@@ -98,7 +97,6 @@ const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
                             name="email"
                             value={form.email}
                             onChange={handleChange}
-                            placeholder="What's your email?"
                             className="bg-primary py-2 px-3 placeholder:text-white text-white rounded-lg outline-none border-none font-medium"
                         />
                     </label>
@@ -109,7 +107,6 @@ const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
                             name="message"
                             value={form.message}
                             onChange={handleChange}
-                            placeholder="What do you want to say?"
                             className="bg-primary py-2 px-3 placeholder:text-white text-white rounded-lg outline-none border-none font-medium resize-none"
                         />
                     </label>
