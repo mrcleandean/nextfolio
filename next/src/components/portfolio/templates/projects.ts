@@ -83,7 +83,7 @@ const projects: ProjectsType[] = [
   {
     name: "Free Forums",
     description:
-      "Short for Anarchy Forums. This is a self moderating platform where posts are automatically banished based on community votes. No sign up or required.",
+      "Post freely on Free Forums. This is a self moderating platform where posts are automatically banished based on community votes. No sign up or required.",
     tags: [
       {
         name: "ReactJS",
