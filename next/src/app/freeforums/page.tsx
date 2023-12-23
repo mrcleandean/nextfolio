@@ -7,7 +7,7 @@ import { isValidFilter } from "@/util";
 
 const getPosts = async (filter: FilterStringType, search: string, limit: number) => {
   try {
-    const res = await fetch(`nextfolio-psi.vercel.app/api/posts?filter=${filter}&search=${search}&limit=${limit}`, {
+    const res = await fetch(`https://nextfolio-psi.vercel.app/api/posts?filter=${filter}&search=${search}&limit=${limit}`, {
       method: "GET",
       cache: 'no-store'
     });
