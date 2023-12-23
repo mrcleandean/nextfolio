@@ -1,4 +1,4 @@
-import { PostLoading, SearchBar, Filters } from "@/components/freeforums";
+import { PostLoading } from "@/components/freeforums";
 import { FaPlus } from "react-icons/fa";
 const LoadingPosts = () => {
     const loadingPosts = Array.from({ length: 10 }).fill(0);
