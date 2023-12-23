@@ -3,6 +3,7 @@ import Post from "@/models/PostModel";
 import { VoteCooldown } from "@/models";
 import { type NextRequest } from "next/server";
 import { CooldownType } from "demdevvyshared/freeforums";
+import { PostType } from "demdevvyshared/models";
 
 async function detectCooldown(ip: string): Promise<false | number> {
   const currentDate = Date.now();
@@ -10,17 +11,22 @@ async function detectCooldown(ip: string): Promise<false | number> {
   if (activeCooldowns.length === 0) return false;
 
   const furthestCooldownDoc = activeCooldowns.reduce((a, b) => a.expiresAt > b.expiresAt ? a : b);
-  return Math.floor(furthestCooldownDoc.expiresAt.getTime() / 1000);
+  return Math.floor((furthestCooldownDoc.expiresAt.getTime() - currentDate) / 1000);
 }
 
 async function createVote(id: string, voteType: 'upvote' | 'downvote') {
-  const post = await Post.findById(id);
-  if (!post) throw Error("Could not find post");
-
   const incOrDec = voteType === "upvote" ? 1 : -1;
-  post.score += incOrDec;
-
-  await post.save();
+  const updatedPost: PostType | null = await Post.findOneAndUpdate(
+    { _id: id },
+    { $inc: { score: incOrDec } },
+    { new: true }
+  ).exec();
+  if (!updatedPost) return true;
+  if (updatedPost.score < -40) {
+    Post.findByIdAndDelete(id).exec();
+    return true;
+  }
+  return false;
 }
 
 async function createCooldown(ip: string) {
@@ -33,16 +39,18 @@ export async function POST(req: NextRequest, { params }: { params: { id: string;
     await dbConnect();
 
     const ip = req.headers.get('x-forwarded-for') || req.ip;
-    if (!ip) return Response.json({ message: "Vote failed: Could not retrieve ip" }, { status: 500 });
+    if (!ip) return Response.json({ message: "Vote failed: Could not retrieve ip" }, { status: 200 });
 
     const isCooling = await detectCooldown(ip);
-    if (isCooling !== false) return Response.json({ message: `Vote Cooldown: Try again in ${isCooling} seconds` }, { status: 500 });
+    if (isCooling !== false) return Response.json({ message: `Vote Cooldown: Try again in ${isCooling} seconds.` }, { status: 200 });
 
-    if (params.voteType !== "upvote" && params.voteType !== "downvote") return Response.json({ message: "Vote Failed: Invalid vote type" }, { status: 500 });
+    if (params.voteType !== "upvote" && params.voteType !== "downvote") return Response.json({ message: "Vote Failed: Invalid vote type" }, { status: 200 });
     await createCooldown(ip);
-    await createVote(params.id, params.voteType);
 
-    return Response.json({ message: "Voted successfully" }, { status: 200 });
+    const isDeleted = await createVote(params.id, params.voteType);
+    if (isDeleted) return Response.json({ message: "Post Banished Forever" }, { status: 201 });
+
+    return Response.json({ message: "Voted successfully" }, { status: 201 });
   } catch (error) {
     return Response.json({ message: "Vote failed: Internal server error" }, { status: 500 });
   }

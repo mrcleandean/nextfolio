@@ -1,15 +1,16 @@
-import dbConnect from './freeforums/dbConnect.ts';
-import createCooldownSchema from './freeforums/createCooldownModel.ts';
-import Behaviour from './calccube/calcBehaviour.ts';
-import bubbleSort from './sortviz/bubbleSort.ts';
-import insertionSort from './sortviz/insertionSort.ts';
-import mergeSort from './sortviz/mergeSort.ts';
-import quickSort from './sortviz/quickSort.ts';
-import randomArray from './sortviz/randomArray.ts';
-import selectionSort from './sortviz/selectionSort.ts';
-import formatDate from './shared/formatDate.ts';
-import hasMessageKey from './shared/hasMessageKey.ts';
-import { titleVariant, staggerVariant, fadeIn, slideIn } from './shared/motion.ts';
+import dbConnect from './freeforums/dbConnect';
+import createCooldownSchema from './freeforums/createCooldownModel';
+import Behaviour from './calccube/calcBehaviour';
+import bubbleSort from './sortviz/bubbleSort';
+import insertionSort from './sortviz/insertionSort';
+import mergeSort from './sortviz/mergeSort';
+import quickSort from './sortviz/quickSort';
+import randomArray from './sortviz/randomArray';
+import selectionSort from './sortviz/selectionSort';
+import formatDate from './shared/formatDate';
+import hasMessageKey from './shared/hasMessageKey';
+import { titleVariant, staggerVariant, fadeIn, slideIn } from './shared/motion';
+import isValidFilter from './freeforums/isValidFilter';
 
 export {
     titleVariant,
@@ -26,5 +27,6 @@ export {
     randomArray,
     selectionSort,
     formatDate,
-    hasMessageKey
+    hasMessageKey,
+    isValidFilter
 }

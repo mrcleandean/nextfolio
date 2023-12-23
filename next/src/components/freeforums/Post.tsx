@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { ReplyTab, VoteButtons, PostLoading } from "@/components/freeforums";
+import { ReplyTab, VoteButtons } from "@/components/freeforums";
 import type { PostType } from "demdevvyshared/models";
-import { Suspense } from "react";
 import { formatDate } from "@/util";
 
-const Post = async ({ isFocused, post }: { isFocused: boolean; post: PostType; }) => {
+const Post = ({ isFocused, post }: { isFocused: boolean; post: PostType; }) => {
   const { _id, title, username, content, dateTime, score, parent, children } = post;
+
   return (
-    <Suspense fallback={<PostLoading isFocused={isFocused} />}>
+    <>
       <div
-        className={`${isFocused ? "w-full border-b-[0.125rem]" : "w-[32.5rem] rounded-xl border-[1px]"
-          } bg-black flex flex-col border-white`}
+        className={`${isFocused ? "w-full border-b-[0.125rem]" : "w-[32.5rem] rounded-xl"
+          } bg-black border-white border-2 flex flex-col`}
       >
         <Link href={`/freeforums/post/${_id}`} key={`${isFocused ? "focused-" + _id : "unfocused-" + _id}`}>
           <div className={`w-full flex justify-between items-center py-2 px-4 text-white text-[15.5px]`}>
@@ -43,7 +43,7 @@ const Post = async ({ isFocused, post }: { isFocused: boolean; post: PostType; }
           })}
         </div>
       )}
-    </Suspense>
+    </>
   );
 };
 

@@ -9,16 +9,17 @@ const VoteButtons = ({ id, score }: { id: string; score: number }) => {
   const { triggerNotification } = useNotificationContext();
   const vote = async (id: string, voteType: "upvote" | "downvote") => {
     try {
-      const res = await fetch(`/api/vote/${id}/${voteType}`, {
+      let res = await fetch(`/api/vote/${id}/${voteType}`, {
         method: "POST",
         body: JSON.stringify(voteType),
         headers: { "Content-Type": "application/json" }
       });
+      res = await res.json();
+
       if (!res.ok) {
         throw new Error(hasMessageKey(res) ? res.message : "Vote Failed: Internal Server Error");
       }
-
-      triggerNotification(true, hasMessageKey(res) ? res.message : "Vote Successful");
+      triggerNotification(true, hasMessageKey(res) ? res.message : "Voted Successfully");
       router.refresh();
     } catch (error) {
       triggerNotification(true, hasMessageKey(error) ? error.message : "Vote Failed: Internal Server Error")

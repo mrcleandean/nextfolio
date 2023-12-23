@@ -1,11 +1,13 @@
 "use client";
 import { TiArrowForwardOutline } from "react-icons/ti";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { hasMessageKey } from "@/util";
 import { useNotificationContext } from "@/contexts";
-const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; setNewPostIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
+import { SetStateType } from "demdevvyshared/base";
+
+const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; setNewPostIsOpen: SetStateType<boolean> }) => {
   const router = useRouter();
   const { triggerNotification } = useNotificationContext();
   const [inputValues, setInputValues] = useState({
@@ -23,11 +25,12 @@ const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; s
 
   const submit = async () => {
     try {
-      const res = await fetch("/api/post", {
+      let res = await fetch("/api/post", {
         method: "POST",
         body: JSON.stringify(inputValues),
         headers: { "Content-Type": "application/json" }
       });
+      res = await res.json();
 
       if (!res.ok) {
         throw new Error(hasMessageKey(res) ? res.message : "Post failed: Internal Server Error");
@@ -35,7 +38,12 @@ const NewTab = ({ newPostIsOpen, setNewPostIsOpen }: { newPostIsOpen: boolean; s
 
       triggerNotification(true, hasMessageKey(res) ? res.message : "Posted successfully");
       setNewPostIsOpen(false);
-      router.refresh();
+      setInputValues({
+        title: "",
+        username: "",
+        content: ""
+      })
+      // router.refresh();
     } catch (error) {
       triggerNotification(true, hasMessageKey(error) ? error.message : "Post failed: Internal Server Error");
     }

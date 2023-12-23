@@ -55,7 +55,6 @@ function Game({ setChatOpen }: { setChatOpen: Dispatch<SetStateAction<boolean>> 
         return () => {
             socket?.off('gotGame');
             socket?.off('updateBoard');
-            console.log('socket bullshit');
         }
     }, [socket]);
 

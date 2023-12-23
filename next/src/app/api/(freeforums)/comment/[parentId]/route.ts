@@ -7,7 +7,7 @@ export async function POST(request: Request, { params }: { params: { parentId: s
   try {
     const req = await request.json();
     await dbConnect();
-    const parentPost = await Post.findById(params.parentId);
+    const parentPost = await Post.findById(params.parentId).exec();
     if (!parentPost) throw new Error("Could not find post");
     const commentPost = new Post(req);
     parentPost.children.push(commentPost._id);

@@ -55,8 +55,9 @@ postSchema.pre("validate", function (next) {
 });
 
 // Add indexing for faster queries
-postSchema.index({ score: -1, dateTime: -1 });
-
+postSchema.index({ dateTime: -1 });
+postSchema.index({ score: 1 });
+postSchema.index({ score: -1 });
 const Post = models.Post || model<PostType>("Post", postSchema);
 
 export default Post;

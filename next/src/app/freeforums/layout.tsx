@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/freeforums";
 import type { Metadata } from "next";
 import { NotificationContextProvider } from "@/contexts";
+
 export const metadata: Metadata = {
   title: 'Free Forums',
   description: 'A self moderating forum for all your needs.',
@@ -8,12 +9,12 @@ export const metadata: Metadata = {
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-[100vw]">
+    <NotificationContextProvider>
       <Navbar />
-      <NotificationContextProvider>
+      <div className="w-screen min-h-screen bg-primary">
         {children}
-      </NotificationContextProvider>
-    </div>
+      </div>
+    </NotificationContextProvider>
   );
 };
 

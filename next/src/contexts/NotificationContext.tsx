@@ -28,7 +28,7 @@ const NotificationContextProvider = ({ children }: { children: React.ReactNode }
         setNotification(prev => ({
             message: trigger ? (message as string) : prev.message,
             trigger,
-            animationKey: prev.animationKey + 1
+            animationKey: trigger ? prev.animationKey + 1 : prev.animationKey
         }));
     }
     return (
