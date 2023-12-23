@@ -25,8 +25,8 @@ const LoadingPosts = () => {
                             Admin
                         </div>
                         <div className="flex justify-center items-center bg-white hover:bg-lime-300 w-20 h-9 rounded-lg hover:scale-105 transition-all text-black gap-2 cursor-pointer">
-                            <p>New</p>
                             <FaPlus />
+                            <p>New</p>
                         </div>
                     </div>
                 </div>
