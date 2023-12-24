@@ -18,7 +18,7 @@ const Buddha = () => {
         if (window.innerWidth <= 800) {
             baseWidth = 900;
         } else {
-            baseWidth = 1200;
+            baseWidth = 1280;
         }
         const scaleFactor = size.width / baseWidth;
         setScale(scaleFactor);
