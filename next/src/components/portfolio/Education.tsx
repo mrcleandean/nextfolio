@@ -55,7 +55,7 @@ const EducationCard = ({ index, name, issuer, description, imageSrc, download_na
             <Link href={`${imageSrc}`} download={download_name} target="_blank">
                 <motion.div
                     variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
-                    className="green-pink-gradient rounded-lg p-[1px] shadow-card"
+                    className="green-pink-gradient rounded-lg p-[1px] shadow-card max-w-[35rem]"
                 >
                     <div className="bg-tertiary rounded-lg p-6 text-white w-full h-full flex items-center justify-center gap-3">
                         <Image
