@@ -18,6 +18,7 @@ const Education = () => {
                 className="mt-4 text-white text-[17px] max-w-3xl leading-[30px]"
             >
                 In my web development journey, I have learned a wide range of skills, from creating flexible layouts to building interactive websites and managing server-side code. This section highlights the courses I've completed and the practical knowledge I've gained, which I apply to develop user-friendly, efficient, and modern web applications.
+                My knowledge and expertise goes beyond just these areas as you will soon see should we get in contact!
             </motion.p>
             <div className="mt-10 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {education.map((edu, i) => {
