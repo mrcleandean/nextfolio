@@ -6,7 +6,7 @@ import { useRef, useCallback, useEffect, useMemo } from "react";
 import { Behaviour } from "@/util";
 import { Color, MeshBasicMaterial, Mesh } from "three";
 import { useGLTF, useTexture } from "@react-three/drei";
-import { bakedsym } from "../../assets/calcube";
+import { bakedsym } from "@/assets/calcube";
 import gsap from "gsap"
 import type { CalcType, GLTFType, NodeKeyMapType, RetrieveCameraType, SetCalcType } from 'demdevvyshared/calccube';
 import { useThree } from "@react-three/fiber";

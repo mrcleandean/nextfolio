@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt"
-import { github } from "../../assets/portfolio"
+import { github } from "@/assets/portfolio"
 import { titleVariant, fadeIn } from "@/util/shared/motion"
 import { styles, projects } from "."
 import Image from "next/image"

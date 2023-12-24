@@ -5,7 +5,7 @@ import {
     javascriptffc,
     dataffc,
     threejourney
-} from "../../../assets/portfolio";
+} from "@/assets/portfolio";
 
 const education = [
     {

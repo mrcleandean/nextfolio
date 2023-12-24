@@ -3,7 +3,7 @@ import {
     web,
     mobile,
     creator
-} from "../../../assets/portfolio"
+} from "@/assets/portfolio"
 
 import { SkillType } from "demdevvyshared/portfolio";
 
