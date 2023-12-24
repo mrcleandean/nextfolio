@@ -18,8 +18,6 @@ export default function Icon() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'rgb(17, 21, 28)',
-                    borderRadius: '20%',
                 }}
             >
                 <div
