@@ -15,7 +15,7 @@ const Buddha = () => {
 
     useEffect(() => {
         let baseWidth;
-        if (window.innerWidth <= 800) {
+        if (window.innerWidth < 950) {
             baseWidth = 900;
         } else {
             baseWidth = 1280;
