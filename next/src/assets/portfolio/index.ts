@@ -24,6 +24,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import npm from './tech/npm.png';
+import nextjs from './tech/nextjs.png';
 
 import backendffc from './education/backenddevelopmentandapis.png';
 import frontendffc from './education/frontenddevelopmentlibraries.png';
@@ -58,6 +60,8 @@ export {
     tailwind,
     typescript,
     threejs,
+    npm,
+    nextjs,
 
     backendffc,
     frontendffc,

@@ -16,7 +16,7 @@ const Techs: React.FC<CanvasPropTypes> = ({ id, setLoadingState }) => {
           return (
             <div className="w-28 h-28 flex items-center flex-col" key={technology.name}>
               <BallCanvas icon={technology.icon} id={id + i} setLoadingState={setLoadingState} />
-              <p className="text-white">{technology.name}</p>
+              <p className="text-white text-xs">{technology.name}</p>
             </div>
           )
         })}

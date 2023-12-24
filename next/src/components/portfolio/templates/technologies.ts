@@ -10,8 +10,10 @@ import {
     redux,
     tailwind,
     typescript,
-    threejs
-} from "../../../assets/portfolio"
+    threejs,
+    npm,
+    nextjs
+} from "@/assets/portfolio"
 
 import { TechnologyType } from "demdevvyshared/portfolio";
 
@@ -33,7 +35,11 @@ const technologies: TechnologyType[] = [
         icon: typescript.src,
     },
     {
-        name: "React JS",
+        name: 'Next JS',
+        icon: nextjs.src
+    },
+    {
+        name: "React JS & Native",
         icon: reactjs.src,
     },
     {
@@ -59,6 +65,10 @@ const technologies: TechnologyType[] = [
     {
         name: "git",
         icon: git.src,
+    },
+    {
+        name: 'npm',
+        icon: npm.src
     }
 ];
 
