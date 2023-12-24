@@ -22,6 +22,7 @@ const config: Config = {
       },
       screens: {
         xs: "450px",
+        folionav: "880px"
       },
       backgroundImage: {
         "hero-img": "url('/src/Portfolio/assets/herobg4.png')"
