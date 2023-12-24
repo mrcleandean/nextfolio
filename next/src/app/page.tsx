@@ -17,7 +17,9 @@ export default function Home() {
     ball7: true,
     ball8: true,
     ball9: true,
-    ball10: true
+    ball10: true,
+    ball11: true,
+    ball12: true
   });
   const [entered, setEntered] = useState(false);
   const setLoadingState = useCallback((canvasId: string, isLoading: boolean) => {
