@@ -17,7 +17,7 @@ const Education = () => {
                 variants={fadeIn('', '', 0.1, 1)}
                 className="mt-4 text-white text-[17px] max-w-3xl leading-[30px]"
             >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius deleniti, beatae doloribus, et earum minus incidunt iusto qui quod fugit eligendi obcaecati saepe? Nihil dolore beatae quasi eaque, iusto maiores!
+                In my web development journey, I have learned a wide range of skills, from creating flexible layouts to building interactive websites and managing server-side code. This section highlights the courses I've completed and the practical knowledge I've gained, which I apply to develop user-friendly, efficient, and modern web applications.
             </motion.p>
             <div className="mt-10 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {education.map((edu, i) => {
