@@ -1,5 +1,6 @@
 "use client";
 import audioObjects from "./templates/audioObjects";
+import education from "./templates/education";
 import navLinks from "./templates/navLinks";
 import projects from "./templates/projects";
 import skills from "./templates/skills";
@@ -17,9 +18,11 @@ import Projects from "./Projects";
 import RaygunCanvas from "./RaygunCanvas";
 import SectionWrapper from "./SectionWrapper";
 import Techs from "./Techs";
+import Education from "./Education";
 
 export {
     audioObjects,
+    education,
     navLinks,
     projects,
     skills,
@@ -35,5 +38,6 @@ export {
     Projects,
     RaygunCanvas,
     SectionWrapper,
+    Education,
     Techs
 }

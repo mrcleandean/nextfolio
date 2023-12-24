@@ -11,6 +11,14 @@ const navLinks: NavLinkType[] = [
         title: "About",
     },
     {
+        href: '#education',
+        title: "Education"
+    },
+    {
+        href: '#technologies',
+        title: 'Technologies'
+    },
+    {
         href: "#contact",
         title: "Contact",
     },

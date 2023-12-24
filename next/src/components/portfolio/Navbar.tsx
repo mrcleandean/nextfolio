@@ -34,7 +34,7 @@ const Navbar = () => {
                     <h1 className="font-sans font-[800] tracking-wide sm:text-xl text-sm text-white">Creative Dev</h1>
                 </Link>
                 <ul className="
-                hidden sm:flex flex-row justify-evenly gap-10 
+                hidden sm:flex flex-row justify-evenly gap-5
                 list-none 
                 ">
                     {navLinks.map(navLink => {

@@ -5,13 +5,11 @@ const FilterButtons = () => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
-
     const handleClick = (filter: string) => {
         const params = new URLSearchParams(searchParams);
         params.set('filter', filter);
         replace(`${pathname}?${params.toString()}`);
     }
-
     return (
         <>
             <div

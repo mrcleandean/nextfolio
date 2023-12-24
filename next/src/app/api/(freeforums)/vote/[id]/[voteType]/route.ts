@@ -1,9 +1,8 @@
 import { dbConnect } from "@/util";
-import Post from "@/models/PostModel";
-import { VoteCooldown } from "@/models";
+import { VoteCooldown, Post } from "@/models";
 import { type NextRequest } from "next/server";
-import { CooldownType } from "demdevvyshared/freeforums";
-import { PostType } from "demdevvyshared/models";
+import { type CooldownType } from "demdevvyshared/freeforums";
+import { type PostType } from "demdevvyshared/models";
 
 async function detectCooldown(ip: string): Promise<false | number> {
   const currentDate = Date.now();
@@ -48,9 +47,9 @@ export async function POST(req: NextRequest, { params }: { params: { id: string;
     await createCooldown(ip);
 
     const isDeleted = await createVote(params.id, params.voteType);
-    if (isDeleted) return Response.json({ message: "Post Banished Forever" }, { status: 201 });
+    if (isDeleted) return Response.json({ message: "Post Banished Forever", type: 'deleted' }, { status: 200 });
 
-    return Response.json({ message: "Voted successfully" }, { status: 201 });
+    return Response.json({ message: "Voted successfully", type: 'voted' }, { status: 201 });
   } catch (error) {
     return Response.json({ message: "Vote failed: Internal server error" }, { status: 500 });
   }

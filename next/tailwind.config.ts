@@ -27,7 +27,7 @@ const config: Config = {
         "hero-img": "url('/src/Portfolio/assets/herobg4.png')"
       },
       fontSize: {
-        clamp: 'clamp(24px, 16vw, 200px)'
+        clamp: 'clamp(24px, 24vw, 200px)'
       }
     },
   },

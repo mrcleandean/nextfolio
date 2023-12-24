@@ -1,5 +1,5 @@
 import Filters from "@/components/freeforums/Filters";
-import Post from "@/components/freeforums/Post";
+import HomePost from "./HomePost";
 import Navbar from "@/components/freeforums/Navbar";
 import NewTab from "@/components/freeforums/NewTab";
 import SearchBar from "@/components/freeforums/SearchBar";
@@ -10,4 +10,19 @@ import LoadMoreButton from "@/components/freeforums/LoadMoreButton";
 import PostLoading from "@/components/freeforums/PostLoading";
 import Notification from "./Notification";
 import FilterButtons from "@/components/freeforums/FilterButtons";
-export { Filters, Post, Navbar, NewTab, SearchBar, FilterButton, ReplyTab, VoteButtons, LoadMoreButton, PostLoading, Notification, FilterButtons };
+import InitQueries from "./InitQueries";
+export {
+    Filters,
+    HomePost,
+    Navbar,
+    NewTab,
+    SearchBar,
+    FilterButton,
+    ReplyTab,
+    VoteButtons,
+    LoadMoreButton,
+    PostLoading,
+    Notification,
+    FilterButtons,
+    InitQueries
+};

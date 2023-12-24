@@ -1,4 +1,4 @@
-import { Post } from "@/components/freeforums";
+import { HomePost } from "@/components/freeforums";
 import type { PostType } from "demdevvyshared/models";
 import type { Metadata } from 'next';
 
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
 
 const FocusedContent = async ({ params }: { params: { id: string } }) => {
   const post: PostType = await getPost(params.id);
-  return <Post post={post} isFocused={true} />;
+  return <HomePost keyVal={`focused-post-${Date.now()}`} post={post} />;
 };
-
+// UPDATE THIS SO THAT IT IS FOCUSED POST RECURSIVE!
 export default FocusedContent;

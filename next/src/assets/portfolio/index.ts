@@ -25,6 +25,13 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import backendffc from './education/backenddevelopmentandapis.png';
+import frontendffc from './education/frontenddevelopmentlibraries.png';
+import responsiveffc from './education/responsivewebdesign.png';
+import javascriptffc from './education/javascriptalgorithmsanddatastructures.png';
+import dataffc from './education/datavisualization.png';
+import threejourney from './education/threejourney.png';
+
 export {
     web,
     mobile,
@@ -50,5 +57,12 @@ export {
     redux,
     tailwind,
     typescript,
-    threejs
+    threejs,
+
+    backendffc,
+    frontendffc,
+    responsiveffc,
+    javascriptffc,
+    dataffc,
+    threejourney
 }

@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper } from "@/components/portfolio";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education } from "@/components/portfolio";
 import { useState, useCallback } from "react";
 import { Loader } from '@/components/shared'
 
@@ -36,7 +36,10 @@ export default function Home() {
         <SectionWrapper idName="about">
           <About />
         </SectionWrapper>
-        <SectionWrapper>
+        <SectionWrapper idName="education">
+          <Education />
+        </SectionWrapper>
+        <SectionWrapper idName="technologies">
           <Techs id="ball" setLoadingState={setLoadingState} /> {/* Concats index of ball canvas to ball id */}
         </SectionWrapper>
         <SectionWrapper idName="contact">

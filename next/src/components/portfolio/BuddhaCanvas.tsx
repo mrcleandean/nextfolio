@@ -12,7 +12,7 @@ const Buddha = () => {
     const headModel = useLoader(OBJLoader, '/buddha/buddha.mtl');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
-    const baseWidth = 1280;
+    const baseWidth = 1050;
 
     useEffect(() => {
         const scaleFactor = size.width / baseWidth;
