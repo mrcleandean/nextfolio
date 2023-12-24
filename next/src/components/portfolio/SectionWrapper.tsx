@@ -12,7 +12,7 @@ const SectionWrapper = ({ children, idName }: { children: React.ReactNode, idNam
             viewport={{ once: true, amount: 0.08 }}
             className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
         >
-            <span className="hash-span" id={idName ? idName : ''}>
+            <span className="hash-span" id={idName ? idName : '#'}>
                 &nbsp;
             </span>
             {children}
