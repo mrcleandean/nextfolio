@@ -3,6 +3,7 @@ import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrap
 import { useState, useCallback, useEffect } from "react";
 import { Loader } from '@/components/shared'
 import { useDebouncedCallback } from "use-debounce";
+
 export default function Home() {
   const [loadingStates, setLoadingStates] = useState({
     buddha: true,
