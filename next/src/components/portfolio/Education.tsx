@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { styles, education } from ".";
 import { fadeIn, titleVariant } from "@/util";
-import Link from "next/link";
 import Image from "next/image";
 import { Tilt } from "react-tilt";
 
@@ -52,7 +51,7 @@ const EducationCard = ({ index, name, issuer, description, imageSrc, download_na
                 speed: 450
             }}
         >
-            <Link href={`${imageSrc}`} download={download_name} target="_blank">
+            <a href={`${imageSrc}`} download={download_name} target="_blank">
                 <motion.div
                     variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
                     className="green-pink-gradient rounded-lg p-[1px] shadow-card max-w-[35rem]"
@@ -72,7 +71,7 @@ const EducationCard = ({ index, name, issuer, description, imageSrc, download_na
                         </div>
                     </div>
                 </motion.div>
-            </Link>
+            </a>
         </Tilt>
     )
 }
