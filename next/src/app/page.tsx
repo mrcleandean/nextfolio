@@ -1,8 +1,8 @@
 "use client";
 import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education } from "@/components/portfolio";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Loader } from '@/components/shared'
-
+import { useDebouncedCallback } from "use-debounce";
 export default function Home() {
   const [loadingStates, setLoadingStates] = useState({
     buddha: true,
@@ -24,6 +24,19 @@ export default function Home() {
     setLoadingStates(prevStates => ({ ...prevStates, [canvasId]: isLoading }));
   }, []);
   const globalLoading = Object.values(loadingStates).some(isLoading => isLoading);
+  const debouncedHandleResize = useDebouncedCallback(() => {
+    const zoomLevel = window.outerWidth / window.innerWidth;
+    if (zoomLevel !== 1) {
+      alert('For the best viewing experience, please press Ctrl+0 (Windows) or Command+0 (Mac) to set your zoom level to 100%.')
+    }
+  }, 450);
+  useEffect(() => {
+    debouncedHandleResize();
+    window.addEventListener('resize', debouncedHandleResize);
+    return () => {
+      window.removeEventListener('resize', debouncedHandleResize);
+    }
+  }, []);
   return (
     <>
       <div className={`${entered ? '' : 'pointer-events-none h-screen overflow-hidden'}`}>
