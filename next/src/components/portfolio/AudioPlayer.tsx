@@ -12,18 +12,18 @@ const AudioPlayer = ({ entered }: { entered: boolean }) => {
     const [audioObject, setAudioObject] = useState<typeof audioObjects[0]>(audioObjects[0]);
     const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
-    useEffect(() => {
-        setAudioDisplay(true);
-    }, []);
+    // useEffect(() => {
+    //     setAudioDisplay(true);
+    // }, []);
 
-    useEffect(() => {
-        if (entered && audio) {
-            audio.play();
-            audio.loop = true;
-            audio.volume = 0.08;
-            setIsPlaying(true);
-        }
-    }, [entered]);
+    // useEffect(() => {
+    //     if (entered && audio) {
+    //         audio.play();
+    //         audio.loop = true;
+    //         audio.volume = 0.08;
+    //         setIsPlaying(true);
+    //     }
+    // }, [entered]);
 
     useEffect(() => {
         audio?.pause();
@@ -74,7 +74,7 @@ const AudioPlayer = ({ entered }: { entered: boolean }) => {
         >
             <div className="w-full flex justify-center items-center relative">
                 <h1 className="text-black font-extrabold text-center h-6">Play Audio</h1>
-                <div onClick={() => setAudioDisplay(!audioDisplay)} className="absolute -right-7 bg-white h-6 w-7 rounded-br-md flex items-center justify-center cursor-pointer">
+                <div onClick={() => setAudioDisplay(prev => !prev)} className="absolute -right-7 bg-white h-6 w-7 rounded-br-md flex items-center justify-center cursor-pointer">
                     {audioDisplay ? <BiSolidLeftArrowAlt color="black" /> : <BiSolidRightArrowAlt color="black" />}
                 </div>
             </div>
