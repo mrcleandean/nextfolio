@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education } from "@/components/portfolio";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Development } from "@/components/portfolio";
 import { useState, useCallback, useEffect } from "react";
 import { Loader } from '@/components/shared'
 import { useDebouncedCallback } from "use-debounce";
@@ -8,19 +8,7 @@ export default function Home() {
   const [loadingStates, setLoadingStates] = useState({
     buddha: true,
     raygun: true,
-    ball0: true,
-    ball1: true,
-    ball2: true,
-    ball3: true,
-    ball4: true,
-    ball5: true,
-    ball6: true,
-    ball7: true,
-    ball8: true,
-    ball9: true,
-    ball10: true,
-    ball11: true,
-    ball12: true
+    ball: true
   });
   const [entered, setEntered] = useState(false);
   const setLoadingState = useCallback((canvasId: string, isLoading: boolean) => {
@@ -49,6 +37,9 @@ export default function Home() {
         <SectionWrapper idName="projects">
           <Projects />
         </SectionWrapper>
+        {/* <SectionWrapper idName="development">
+          <Development />
+        </SectionWrapper> */}
         <SectionWrapper idName="about">
           <About />
         </SectionWrapper>

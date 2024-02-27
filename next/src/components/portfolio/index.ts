@@ -19,6 +19,8 @@ import RaygunCanvas from "./RaygunCanvas";
 import SectionWrapper from "./SectionWrapper";
 import Techs from "./Techs";
 import Education from "./Education";
+import Development from "./Development";
+import PhoneCanvas from "./PhoneCanvas";
 
 export {
     audioObjects,
@@ -39,5 +41,7 @@ export {
     RaygunCanvas,
     SectionWrapper,
     Education,
+    Development,
+    PhoneCanvas,
     Techs
 }
