@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         className="rounded-2xl object-contain"
                     />
-                    {/* <div className="absolute inset-0 flex justify-end items-end m-3 card-img_hover">
+                    <div className="absolute inset-0 flex justify-end items-end m-3 card-img_hover">
                         <div
                             onClick={() => window.open(source_code_link, '_blank')}
                             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-2 border-white"
@@ -68,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                                 className="object-contain"
                             />
                         </div>
-                    </div> */}
+                    </div>
                 </div>
                 <div className="mt-5">
                     <Link href={site_link}>
