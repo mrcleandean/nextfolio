@@ -168,7 +168,7 @@ const projects: ProjectsType[] = [
   },
   {
     name: "Solo",
-    description: "A Tik Tok style home services marketplace meant to connect users with local service providers, such as hair stylists, barbers, and nail technicians. Meant to modernize the way we find and book services.",
+    description: "A TikTok style home services marketplace in development meant to connect users with local service providers, such as hair stylists, barbers, and nail technicians. Meant to modernize the way we find and book services.",
     tags: [
       {
         name: "React Native",
