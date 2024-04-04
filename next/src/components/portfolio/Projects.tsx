@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion"
 import { Tilt } from "react-tilt"
-import { github } from "@/assets/portfolio"
 import { titleVariant, fadeIn } from "@/util/shared/motion"
 import { styles, projects } from "."
 import Image from "next/image"
@@ -71,9 +70,13 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                     </div> */}
                 </div>
                 <div className="mt-5">
-                    <Link href={site_link}>
-                        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-                    </Link>
+                    {
+                        site_link !== 'development' ?
+                            <Link href={site_link}>
+                                <h3 className="text-white font-bold text-[24px]">{name}</h3>
+                            </Link>
+                            : <h3 onClick={() => alert('This project is currently in development or pending app store deployment. Please come back later to try it out!')} className="text-white font-bold text-[24px]">{name}</h3>
+                    }
                     <p className="mt-2 text-white text-[14px]">{description}</p>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">

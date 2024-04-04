@@ -164,7 +164,7 @@ const projects: ProjectsType[] = [
     ],
     image: click.src,
     source_code_link: '',
-    site_link: "/"
+    site_link: "development"
   },
   {
     name: "Solo",
@@ -189,7 +189,7 @@ const projects: ProjectsType[] = [
     ],
     image: solo.src,
     source_code_link: '',
-    site_link: "/"
+    site_link: "development"
   },
   {
     name: 'This Portfolio',
