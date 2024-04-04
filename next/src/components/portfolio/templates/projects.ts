@@ -122,7 +122,7 @@ const projects: ProjectsType[] = [
   },
   {
     name: "Flappy Bird Clone",
-    description: "You already know!",
+    description: "A clone of the popular Flappy Bird game made with TypeScript and JavaScript Canvas.",
     tags: [
       {
         name: 'TypeScript',
