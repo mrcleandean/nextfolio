@@ -36,7 +36,7 @@ const projects: ProjectsType[] = [
         color: "blue-text-gradient",
       },
       {
-        name: "React Three Fiber & Drei - Three.js",
+        name: "React Three Fiber - Three.js",
         color: "green-text-gradient",
       },
       {
@@ -45,7 +45,7 @@ const projects: ProjectsType[] = [
       },
       {
         name: "TypeScript",
-        color: "blue-text-gradient",
+        color: "orange-text-gradient",
       },
     ],
     image: calccube.src,
@@ -71,15 +71,15 @@ const projects: ProjectsType[] = [
       },
       {
         name: "Chess.js",
-        color: "blue-text-gradient",
+        color: "orange-text-gradient",
       },
       {
         name: "react-chessboard",
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: "TypeScript",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       }
     ],
     image: chadchess.src,
@@ -105,15 +105,15 @@ const projects: ProjectsType[] = [
       },
       {
         name: "Mongoose.js",
-        color: "blue-text-gradient",
+        color: "orange-text-gradient",
       },
       {
         name: 'Moment.js',
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: 'TypeScript',
-        color: "pink-text-gradient"
+        color: "green-text-gradient"
       }
     ],
     image: af.src,
@@ -155,11 +155,11 @@ const projects: ProjectsType[] = [
       },
       {
         name: 'Firebase',
-        color: "blue-text-gradient"
+        color: "orange-text-gradient"
       },
       {
         name: 'TypeScript',
-        color: "green-text-gradient",
+        color: "blue-text-gradient",
       }
     ],
     image: '',
@@ -184,7 +184,7 @@ const projects: ProjectsType[] = [
       },
       {
         name: 'TypeScript',
-        color: "blue-text-gradient"
+        color: "orange-text-gradient"
       }
     ],
     image: '',
@@ -209,15 +209,15 @@ const projects: ProjectsType[] = [
       },
       {
         name: 'TypeScript',
-        color: "blue-text-gradient"
+        color: "orange-text-gradient"
       },
       {
         name: 'Framer Motion',
-        color: "green-text-gradient"
+        color: "blue-text-gradient"
       },
       {
         name: 'React Tilt',
-        color: "pink-text-gradient"
+        color: "green-text-gradient"
       }
     ],
     image: '',
