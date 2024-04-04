@@ -164,7 +164,7 @@ const projects: ProjectsType[] = [
     ],
     image: '',
     source_code_link: '',
-    site_link: "/flappybirdclone"
+    site_link: "/"
   },
   {
     name: "Solo",
@@ -189,7 +189,7 @@ const projects: ProjectsType[] = [
     ],
     image: '',
     source_code_link: '',
-    site_link: "/flappybirdclone"
+    site_link: "/"
   },
   {
     name: 'This Portfolio',
