@@ -23,7 +23,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: sortviz.src,
-    source_code_link: "https://github.com/mrcleandean/nextfolio",
+    source_code_link: '',
     site_link: "/sortviz",
   },
   {
@@ -41,7 +41,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: calccube.src,
-    source_code_link: "https://github.com/mrcleandean/nextfolio",
+    source_code_link: '',
     site_link: "calccube",
   },
   // {
@@ -77,7 +77,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: chadchess.src,
-    source_code_link: "https://github.com/mrcleandean/nextfolio",
+    source_code_link: '',
     site_link: "/chadchess",
   },
   {
@@ -99,7 +99,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: af.src,
-    source_code_link: "https://github.com/mrcleandean/nextfolio",
+    source_code_link: '',
     site_link: "/freeforums",
   },
   // {
@@ -126,9 +126,22 @@ const projects: ProjectsType[] = [
       },
     ],
     image: flappybird.src,
-    source_code_link: "https://github.com/mrcleandean/nextfolio",
+    source_code_link: '',
     site_link: "/flappybirdclone",
   },
+  {
+    name: "Click",
+    description: "You already know!",
+    tags: [
+      {
+        name: "JavaScript Canvas",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: flappybird.src,
+    source_code_link: '',
+    site_link: "/flappybirdclone"
+  }
 ];
 
 export default projects;
