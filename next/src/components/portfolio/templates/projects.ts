@@ -29,7 +29,7 @@ const projects: ProjectsType[] = [
   {
     name: "CalcCube",
     description:
-      "Perhaps you've seen other calculator examples out there. Mine is less practical but more aesthetic because it's 3D! Give it a try.",
+      "Perhaps you've seen other calculator examples out there. Mine is more fun and more aesthetic because it's 3D! Give it a try!",
     tags: [
       {
         name: "React.js",
