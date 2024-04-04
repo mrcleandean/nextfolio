@@ -11,6 +11,8 @@ import flappybird from './projects/flappybird.png';
 import calccube from './projects/calccube.png';
 import af from './projects/af.png';
 import folio from './projects/folio.png';
+import click from './projects/click.jpeg';
+import solo from './projects/solo.png';
 
 import demdevvy from './personal/demdevvy.png';
 
@@ -48,6 +50,8 @@ export {
     calccube,
     af,
     folio,
+    click,
+    solo,
 
     demdevvy,
 
