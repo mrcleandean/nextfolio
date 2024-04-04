@@ -71,11 +71,13 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                 </div>
                 <div className="mt-5">
                     {
-                        site_link !== 'development' ?
+                        site_link !== 'development' ? (
                             <Link href={site_link}>
                                 <h3 className="text-white font-bold text-[24px]">{name}</h3>
                             </Link>
-                            : <h3 onClick={() => alert('This project is currently in development or pending app store deployment. Please come back later to try it out!')} className="text-white font-bold text-[24px]">{name}</h3>
+                        ) : (
+                            <h3 onClick={() => alert('This project is currently in development or pending app store deployment. Please come back later to try it out!')} className="text-white font-bold text-[24px]">{name}</h3>
+                        )
                     }
                     <p className="mt-2 text-white text-[14px]">{description}</p>
                 </div>
