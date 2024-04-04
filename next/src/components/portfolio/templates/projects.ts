@@ -10,17 +10,17 @@ const projects: ProjectsType[] = [
       "Select your algorithm, set the number of elements and iteration speed, watch your computer sort the array visually.",
     tags: [
       {
-        name: "Three.js",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "VanillaJS",
+        name: "D3.js",
         color: "green-text-gradient",
       },
       {
-        name: "D3",
+        name: "TypeScript",
         color: "pink-text-gradient",
-      },
+      }
     ],
     image: sortviz.src,
     source_code_link: '',
@@ -32,32 +32,26 @@ const projects: ProjectsType[] = [
       "Perhaps you've seen other calculator examples out there. Mine is less practical but more aesthetic because it's 3D! Give it a try.",
     tags: [
       {
-        name: "@React-Three/Fiber",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "@React-Three/Drei",
+        name: "React Three Fiber & Drei - Three.js",
         color: "green-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "blue-text-gradient",
       },
     ],
     image: calccube.src,
     source_code_link: '',
     site_link: "calccube",
   },
-  // {
-  //   name: "Agar.io Clone",
-  //   description:
-  //     "A clone of Agar.io. Includes movement, eat, split and capture mechanics. A whole decimeter of fun! Online functionality coming soon.",
-  //   tags: [
-  //     {
-  //       name: "p5.js",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: sortviz.src,
-  //   source_code_link: "https://github.com/",
-  //   site_link: "/agarclone",
-  // },
   {
     name: "ChadChess",
     description:
@@ -72,9 +66,21 @@ const projects: ProjectsType[] = [
         color: "green-text-gradient",
       },
       {
-        name: "Others",
+        name: "Next.js",
         color: "pink-text-gradient",
       },
+      {
+        name: "Chess.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react-chessboard",
+        color: "green-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "pink-text-gradient",
+      }
     ],
     image: chadchess.src,
     source_code_link: '',
@@ -86,7 +92,7 @@ const projects: ProjectsType[] = [
       "Post freely on Free Forums. This is a self moderating platform where posts are automatically banished based on community votes. No sign up or required.",
     tags: [
       {
-        name: "ReactJS",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
@@ -97,32 +103,34 @@ const projects: ProjectsType[] = [
         name: "MongoDB",
         color: "pink-text-gradient",
       },
+      {
+        name: "Mongoose.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: 'Moment.js',
+        color: "green-text-gradient",
+      },
+      {
+        name: 'TypeScript',
+        color: "pink-text-gradient"
+      }
     ],
     image: af.src,
     source_code_link: '',
     site_link: "/freeforums",
   },
-  // {
-  //   name: "Minecraft Clone",
-  //   description:
-  //     "A clone of the iconic game. Includes block placement, block breaking, movement and inventory functionalities.",
-  //   tags: [
-  //     {
-  //       name: "React-three/fiber",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: minecraft.src,
-  //   source_code_link: "https://github.com/",
-  //   site_link: "/minecraftclone",
-  // },
   {
     name: "Flappy Bird Clone",
     description: "You already know!",
     tags: [
       {
-        name: "JavaScript Canvas",
+        name: 'TypeScript',
         color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript Canvas",
+        color: "green-text-gradient",
       },
     ],
     image: flappybird.src,
@@ -131,16 +139,90 @@ const projects: ProjectsType[] = [
   },
   {
     name: "Click",
-    description: "You already know!",
+    description: "A social media platform in development that groups users by collective and displays a global, zoomable interactive heatmap regarding their activity.",
     tags: [
       {
-        name: "JavaScript Canvas",
+        name: "React Native",
         color: "blue-text-gradient",
       },
+      {
+        name: "Mapbox RN",
+        color: "green-text-gradient"
+      },
+      {
+        name: 'Expo',
+        color: "pink-text-gradient"
+      },
+      {
+        name: 'Firebase',
+        color: "blue-text-gradient"
+      },
+      {
+        name: 'TypeScript',
+        color: "green-text-gradient",
+      }
     ],
-    image: flappybird.src,
+    image: '',
     source_code_link: '',
     site_link: "/flappybirdclone"
+  },
+  {
+    name: "Solo",
+    description: "A Tik Tok style home services marketplace meant to connect users with local service providers, such as hair stylists, barbers, and nail technicians. Meant to modernize the way we find and book services.",
+    tags: [
+      {
+        name: "React Native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: 'Expo',
+        color: "green-text-gradient",
+      },
+      {
+        name: 'Firebase',
+        color: "pink-text-gradient"
+      },
+      {
+        name: 'TypeScript',
+        color: "blue-text-gradient"
+      }
+    ],
+    image: '',
+    source_code_link: '',
+    site_link: "/flappybirdclone"
+  },
+  {
+    name: 'This Portfolio',
+    description: 'This portfolio is a Next.js app that showcases my projects and skills. It is a work in progress and will be updated with new projects and features.',
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: 'Tailwind CSS',
+        color: "green-text-gradient",
+      },
+      {
+        name: 'React Three Fiber - Three.js',
+        color: "pink-text-gradient"
+      },
+      {
+        name: 'TypeScript',
+        color: "blue-text-gradient"
+      },
+      {
+        name: 'Framer Motion',
+        color: "green-text-gradient"
+      },
+      {
+        name: 'React Tilt',
+        color: "pink-text-gradient"
+      }
+    ],
+    image: '',
+    source_code_link: '',
+    site_link: "/"
   }
 ];
 
