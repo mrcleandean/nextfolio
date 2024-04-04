@@ -1,5 +1,5 @@
 "use client";
-import { sortviz, chadchess, flappybird, calccube, af } from "@/assets/portfolio";
+import { sortviz, chadchess, flappybird, calccube, af, folio } from "@/assets/portfolio";
 import { ProjectsType } from "demdevvyshared/portfolio";
 
 
@@ -220,7 +220,7 @@ const projects: ProjectsType[] = [
         color: "green-text-gradient"
       }
     ],
-    image: '',
+    image: folio.src,
     source_code_link: '',
     site_link: "/"
   }

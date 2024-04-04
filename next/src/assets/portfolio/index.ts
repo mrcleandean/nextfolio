@@ -10,6 +10,7 @@ import minecraft from './projects/minecraft.png';
 import flappybird from './projects/flappybird.png';
 import calccube from './projects/calccube.png';
 import af from './projects/af.png';
+import folio from './projects/folio.png';
 
 import demdevvy from './personal/demdevvy.png';
 
@@ -46,6 +47,7 @@ export {
     flappybird,
     calccube,
     af,
+    folio,
 
     demdevvy,
 
