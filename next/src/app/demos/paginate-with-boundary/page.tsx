@@ -77,8 +77,9 @@ const PaginateDemo = () => {
                     setPageSize(prev => prev + 1);
                 }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center gap-2">
                 <p className="text-black select-none">Pivot Id: {pivotId}</p>
+                <p className="text-black text-xs">{"(Click on dblist to change pivod Id)"}</p>
             </div>
         </div>
     )
