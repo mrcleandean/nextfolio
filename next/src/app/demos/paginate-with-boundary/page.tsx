@@ -69,21 +69,21 @@ const PaginateDemo = () => {
                     <p className="text-black">Page Num: </p>
                     <div onClick={() => {
                         setPageNum(prev => prev <= 0 ? prev : prev - 1);
-                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
+                    }} className="bg-red-300 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">-</div>
                     <p className="text-black text-lg select-none">{pageNum}</p>
                     <div onClick={() => {
                         setPageNum(prev => prev + 1);
-                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
+                    }} className="bg-lime-400 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">+</div>
                 </div>
                 <div className="flex items-center gap-2">
                     <p className="text-black">Page Size: </p>
                     <div onClick={() => {
                         setPageSize(prev => prev <= 0 ? prev : prev - 1);
-                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
+                    }} className="bg-red-300 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">-</div>
                     <p className="text-black text-lg select-none">{pageSize}</p>
                     <div onClick={() => {
                         setPageSize(prev => prev + 1);
-                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
+                    }} className="bg-lime-400 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">+</div>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <p className="text-black select-none">Pivot Id: {pivotId}</p>
