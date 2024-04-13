@@ -1,5 +1,7 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { IoArrowBack } from "react-icons/io5";
 
 const pageinateWithBoundary = (dblist: number[], pageNum: number, pageSize: number, pivotId: number): { result: number[], colors: { [key: number]: string }, pivotIndex: number } => {
     const result = [];
@@ -31,57 +33,64 @@ const PaginateDemo = () => {
         setPivotI(pivotIndex);
     }, [pageNum, pageSize, pivotId]);
     return (
-        <div className="bg-white min-h-screen flex items-center flex-col gap-5">
-            <h1 className="text-black mt-10 text-2xl">Paginate With Boundary</h1>
-            <div className="flex items-center justify-center gap-2">
-                <h1 className="text-black">Dblist</h1>
-                <h1 className="text-black text-3xl">
-                    {'['}
-                    {dblist.map((item, i) => {
-                        return (
-                            <span
-                                key={`dbitem-${i}`}
-                                className={`cursor-pointer select-none decoration-blue-500 ${outputColors[i] ? outputColors[i] : ' bg-white'} ${i === pivotI ? 'underline' : ''}`}
-                                onClick={() => setPivotId(item)}
-                            >
-                                {item}{i === dblist.length - 1 ? '' : ','}
-                            </span>
-                        )
-                    })}
-                    {']'}
-                </h1>
+        <>
+            <Link href="/demos" className="fixed top-5 left-5">
+                <div className="bg-gray-900 mb-2 p-2 rounded-xl cursor-pointer w-fit flex gap-1.5">
+                    <IoArrowBack className="text-blue-200" size={24} />
+                </div>
+            </Link>
+            <div className="bg-white min-h-screen flex items-center flex-col gap-5">
+                <h1 className="text-black mt-10 text-2xl">Paginate With Boundary</h1>
+                <div className="flex items-center justify-center gap-2">
+                    <h1 className="text-black">Dblist</h1>
+                    <h1 className="text-black text-3xl">
+                        {'['}
+                        {dblist.map((item, i) => {
+                            return (
+                                <span
+                                    key={`dbitem-${i}`}
+                                    className={`cursor-pointer select-none decoration-blue-500 ${outputColors[i] ? outputColors[i] : ' bg-white'} ${i === pivotI ? 'underline' : ''}`}
+                                    onClick={() => setPivotId(item)}
+                                >
+                                    {item}{i === dblist.length - 1 ? '' : ','}
+                                </span>
+                            )
+                        })}
+                        {']'}
+                    </h1>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                    <h1 className="text-black">Output</h1>
+                    <h1 className="text-black text-3xl">
+                        {`[${outputArray.toString()}]`}
+                    </h1>
+                </div>
+                <div className="flex items-center gap-2">
+                    <p className="text-black">Page Num: </p>
+                    <div onClick={() => {
+                        setPageNum(prev => prev <= 0 ? prev : prev - 1);
+                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
+                    <p className="text-black text-lg select-none">{pageNum}</p>
+                    <div onClick={() => {
+                        setPageNum(prev => prev + 1);
+                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
+                </div>
+                <div className="flex items-center gap-2">
+                    <p className="text-black">Page Size: </p>
+                    <div onClick={() => {
+                        setPageSize(prev => prev <= 0 ? prev : prev - 1);
+                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
+                    <p className="text-black text-lg select-none">{pageSize}</p>
+                    <div onClick={() => {
+                        setPageSize(prev => prev + 1);
+                    }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                    <p className="text-black select-none">Pivot Id: {pivotId}</p>
+                    <p className="text-black text-xs">{"(Click on dblist to change pivod Id)"}</p>
+                </div>
             </div>
-            <div className="flex items-center justify-center gap-2">
-                <h1 className="text-black">Output</h1>
-                <h1 className="text-black text-3xl">
-                    {`[${outputArray.toString()}]`}
-                </h1>
-            </div>
-            <div className="flex items-center gap-2">
-                <p className="text-black">Page Num: </p>
-                <div onClick={() => {
-                    setPageNum(prev => prev <= 0 ? prev : prev - 1);
-                }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
-                <p className="text-black text-lg select-none">{pageNum}</p>
-                <div onClick={() => {
-                    setPageNum(prev => prev + 1);
-                }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
-            </div>
-            <div className="flex items-center gap-2">
-                <p className="text-black">Page Size: </p>
-                <div onClick={() => {
-                    setPageSize(prev => prev <= 0 ? prev : prev - 1);
-                }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">-</div>
-                <p className="text-black text-lg select-none">{pageSize}</p>
-                <div onClick={() => {
-                    setPageSize(prev => prev + 1);
-                }} className="bg-violet-300 select-none cursor-pointer w-5 h-5 rounded-lg text-black flex items-center justify-center">+</div>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-                <p className="text-black select-none">Pivot Id: {pivotId}</p>
-                <p className="text-black text-xs">{"(Click on dblist to change pivod Id)"}</p>
-            </div>
-        </div>
+        </>
     )
 }
 
