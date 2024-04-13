@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex gap-2 items-center">
           <div className="w-8 h-8 rounded-full bg-blue-300 flex justify-center items-center">
             <Image
-              src='/demdevvy.png'
+              src='/demdevvy-min.png'
               alt='Folio logo'
               width={48}
               height={48}
