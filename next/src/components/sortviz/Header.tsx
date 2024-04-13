@@ -6,7 +6,7 @@ import { FolioLink } from '../shared';
 
 const timeComplexities = {
     bubble: 'O(n^2)',
-    insertion: 'O(n)',
+    insertion: 'O(n^2)',
     selection: 'O(n^2)',
     // merge: 'O(nlog(n))',
     // quick: 'O(nlog(n))',
