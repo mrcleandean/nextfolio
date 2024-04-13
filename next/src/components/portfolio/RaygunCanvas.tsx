@@ -7,7 +7,7 @@ import { LocalLoader } from '@/components/shared';
 import type { CanvasPropTypes } from 'demdevvyshared/portfolio';
 
 const Raygun = () => {
-    const { scene } = useGLTF('/raygun/scene.gltf')
+    const { scene } = useGLTF('/raygun/compressed_raygun.glb');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
     const baseWidth = 1280;

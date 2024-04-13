@@ -1,15 +1,14 @@
 "use client";
 import { MeshStandardMaterial } from "three";
-import { Canvas, PrimitiveProps, useFrame, useLoader, useThree } from "@react-three/fiber"
-import { Environment, Preload } from "@react-three/drei"
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
+import { Canvas, PrimitiveProps, useFrame, useThree } from "@react-three/fiber"
+import { Environment, Preload, useGLTF } from "@react-three/drei"
 import { useRef, useState, useEffect } from "react"
 import { LocalLoader } from '@/components/shared'
 import { CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);
-    const headModel = useLoader(OBJLoader, '/buddha/buddha.mtl');
+    const { scene } = useGLTF('/buddha/compressed_buddha.glb');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
 
@@ -32,7 +31,7 @@ const Buddha = () => {
     return (
         <primitive
             ref={headRef}
-            object={headModel}
+            object={scene}
             scale={scale * 21}
             position={[0, -0.24 * scale, 0]}
             children-0-material={new MeshStandardMaterial({
