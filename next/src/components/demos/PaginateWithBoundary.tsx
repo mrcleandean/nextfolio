@@ -7,8 +7,14 @@ const getDisplay = (dblist: number[], pageNum: number, pageSize: number, pivotId
     const pivotIndex = dblist.indexOf(pivotId); // Index to find others from
     const boundaryIndex = pivotIndex + dblist.length; // If we circle, we cannot go on or past this index
     const startIndex = pivotIndex + pageNum * pageSize; // pageNum * pageSize is the offset from pivotIndex
-    const endIndex = Math.min(startIndex + pageSize, boundaryIndex); // endIndex cannot go past boundary
-    if (startIndex >= boundaryIndex) return { result: [], colors: {}, pivotIndex }; // If false, we can iterate from start to boundary - 1
+    let endIndex = startIndex + pageSize;
+    if (endIndex > boundaryIndex) { // If end is greater than boundary, we have exluded values on or after boundary
+        for (let i = startIndex; i < endIndex; i++) {
+            colors[i % dblist.length] = 'bg-red-400' // Fill all red and overwrite to green if we include
+        }
+    }
+    endIndex = Math.min(endIndex, boundaryIndex); // endIndex cannot go past boundary
+    if (startIndex >= boundaryIndex) return { result: [], colors, pivotIndex }; // If false, we can iterate from start to boundary - 1
     for (let i = startIndex; i < endIndex; i++) {
         colors[i % dblist.length] = 'bg-lime-400'
         result.push(dblist[i % dblist.length]);
@@ -58,7 +64,7 @@ const PaginateWithBoudary = () => {
                 </h1>
             </div>
             <div className="flex items-center gap-2">
-                <p className="text-black">Page Num: </p>
+                <p className="text-black select-none">Page Num: </p>
                 <div onClick={() => {
                     setPageNum(prev => prev <= 0 ? prev : prev - 1);
                 }} className="bg-red-300 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">-</div>
@@ -68,7 +74,7 @@ const PaginateWithBoudary = () => {
                 }} className="bg-lime-400 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">+</div>
             </div>
             <div className="flex items-center gap-2">
-                <p className="text-black">Page Size: </p>
+                <p className="text-black select-none">Page Size: </p>
                 <div onClick={() => {
                     setPageSize(prev => prev <= 0 ? prev : prev - 1);
                 }} className="bg-red-300 select-none cursor-pointer h-6 w-6 text-xl rounded-lg text-black flex items-center justify-center">-</div>
@@ -79,7 +85,7 @@ const PaginateWithBoudary = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
                 <p className="text-black select-none">Pivot Id: {pivotId}</p>
-                <p className="text-black text-xs">{"(Click on dblist to change pivod Id)"}</p>
+                <p className="text-black text-xs select-none">{"(Click on dblist to change pivod Id)"}</p>
             </div>
         </>
     )
