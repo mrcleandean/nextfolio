@@ -10,13 +10,13 @@ const getDisplay = (dblist: number[], pageNum: number, pageSize: number, pivotId
     let endIndex = startIndex + pageSize;
     if (endIndex > boundaryIndex) { // If end is greater than boundary, we have exluded values on or after boundary
         for (let i = startIndex; i < endIndex; i++) {
-            colors[i % dblist.length] = 'bg-red-400' // Fill all red and overwrite to green if we include
+            colors[i % dblist.length] = 'bg-red-400'; // Fill all red and overwrite to green if we include
         }
     }
     endIndex = Math.min(endIndex, boundaryIndex); // endIndex cannot go past boundary
     if (startIndex >= boundaryIndex) return { result: [], colors, pivotIndex }; // If false, we can iterate from start to boundary - 1
     for (let i = startIndex; i < endIndex; i++) {
-        colors[i % dblist.length] = 'bg-lime-400'
+        colors[i % dblist.length] = 'bg-lime-400';
         result.push(dblist[i % dblist.length]);
     }
     return { result, colors, pivotIndex };
