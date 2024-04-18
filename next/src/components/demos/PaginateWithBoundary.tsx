@@ -85,7 +85,7 @@ const PaginateWithBoudary = () => {
             </div>
             <div className="flex flex-col items-center gap-2">
                 <p className="text-black select-none">Pivot Id: {pivotId}</p>
-                <p className="text-black text-xs select-none">{"(Click on dblist to change pivod Id)"}</p>
+                <p className="text-black text-xs select-none">{"(Click on dblist to change pivot Id)"}</p>
             </div>
         </>
     )
