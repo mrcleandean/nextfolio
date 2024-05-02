@@ -16,6 +16,9 @@ const DevDemos = () => {
                 <Link href="/demos/paginate-with-boundary">
                     <p className="text-blue-500 underline cursor-pointer">Paginate with boundary</p>
                 </Link>
+                <Link href="/demos/views">
+                    <p className="text-blue-500 underline cursor-pointer">Scalable Views</p>
+                </Link>
             </div>
         </div>
     )
