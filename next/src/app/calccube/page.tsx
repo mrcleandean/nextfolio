@@ -6,6 +6,9 @@ import type { CameraType, ObjVectorType } from "demdevvyshared/calccube";
 import { Vector3 } from "three";
 import gsap from "gsap";
 import { FolioLink, Loader, LocalLoader } from '@/components/shared';
+import dynamic from "next/dynamic";
+const SpinningBackground = dynamic(() => import('@/components/calccube/SpinningBackground'), { ssr: false });
+
 const CalcCube = () => {
     const [camera, retrieveCamera] = useState<CameraType>(null)
     const lookAtVector = useRef<Vector3>(new Vector3(0, 0, 0));
@@ -39,11 +42,10 @@ const CalcCube = () => {
         setLoadingStates(prevStates => ({ ...prevStates, [canvasId]: isLoading }));
     }, []);
     const globalLoading = Object.values(loadingStates).some(isLoading => isLoading);
-    const bgDem = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2)
     return (
         <>
             <div className="w-full h-screen flex justify-center items-center relative overflow-hidden">
-                <div className="absolute bg-gradient-to-tr from-[#0bd1ff] via-[#ffa3ff] to-[#ffd34e] animate-calc-cube" style={{ width: bgDem, height: bgDem }} />
+                <SpinningBackground />
                 <div className="absolute top-3 left-3 flex justify-center items-start gap-3 flex-col z-[1]">
                     <FolioLink title="Calc Cube" />
                     <div className="flex gap-2 items-center justify-center select-none">
