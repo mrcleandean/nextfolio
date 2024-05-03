@@ -10,8 +10,7 @@ const Screen = ({ calc }: { calc: CalcType }) => {
             position={[-6, 1.43, 0]}
             rotation={[-Math.PI * 0.5, 0, Math.PI * 0.5]}
             transform
-            occlude
-            zIndexRange={[40]}
+            zIndexRange={[0]}
         >
             <div className="w-[17.75rem] h-[5.45rem] bg-black flex justify-center items-center select-none">
                 <motion.div

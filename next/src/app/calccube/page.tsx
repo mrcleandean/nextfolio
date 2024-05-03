@@ -6,7 +6,6 @@ import type { CameraType, ObjVectorType } from "demdevvyshared/calccube";
 import { Vector3 } from "three";
 import gsap from "gsap";
 import { FolioLink, Loader, LocalLoader } from '@/components/shared';
-
 const CalcCube = () => {
     const [camera, retrieveCamera] = useState<CameraType>(null)
     const lookAtVector = useRef<Vector3>(new Vector3(0, 0, 0));
@@ -40,12 +39,14 @@ const CalcCube = () => {
         setLoadingStates(prevStates => ({ ...prevStates, [canvasId]: isLoading }));
     }, []);
     const globalLoading = Object.values(loadingStates).some(isLoading => isLoading);
+    const bgDem = Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2)
     return (
         <>
-            <div className="w-full h-screen flex justify-center items-center relative">
-                <div className="absolute top-3 left-3 flex justify-center items-start gap-3 flex-col">
+            <div className="w-full h-screen flex justify-center items-center relative overflow-hidden">
+                <div className="absolute bg-gradient-to-tr from-[#0bd1ff] via-[#ffa3ff] to-[#ffd34e] animate-calc-cube" style={{ width: bgDem, height: bgDem }} />
+                <div className="absolute top-3 left-3 flex justify-center items-start gap-3 flex-col z-[1]">
                     <FolioLink title="Calc Cube" />
-                    <div className="flex gap-2 items-center justify-center z-10 select-none">
+                    <div className="flex gap-2 items-center justify-center select-none">
                         <button onClick={() => camAnim({ x: -5, y: 5.5, z: 0 }, { x: -7, y: 0, z: 0 })} className="bg-white border-none py-0.5 px-1.5 rounded-xl text-black cursor-pointer">View 1</button>
                         <button onClick={() => camAnim({ x: 1.2, y: 12, z: 0 }, { x: 0, y: 0, z: 0 })} className="bg-white border-none py-0.5 px-1.5 rounded-xl text-black cursor-pointer">View 2</button>
                         <button onClick={() => camAnim({ x: 4, y: 9.6, z: 7 }, { x: 0, y: 0, z: 0 })} className="bg-white border-none py-0.5 px-1.5 rounded-xl text-black cursor-pointer">View 3</button>

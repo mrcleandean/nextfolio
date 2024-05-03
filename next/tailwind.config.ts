@@ -7,6 +7,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'calc-cube': 'spin 10s infinite',
+      },
       colors: {
         primary: "#11151c",
         secondary: "#83cbe3",

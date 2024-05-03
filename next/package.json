@@ -20,6 +20,7 @@
     "framer-motion": "^10.16.4",
     "gltfjsx": "^6.2.16",
     "gsap": "^3.12.2",
+    "leva": "^0.9.35",
     "lodash.clamp": "^4.0.3",
     "moment": "^2.29.4",
     "mongoose": "^8.0.3",
