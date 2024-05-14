@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Development } from "@/components/portfolio";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education } from "@/components/portfolio";
 import { useState, useCallback, useEffect } from "react";
 import { Loader } from '@/components/shared'
 
