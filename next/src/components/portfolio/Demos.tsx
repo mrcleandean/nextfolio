@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { fadeIn, titleVariant } from '@/util';
 import { styles, demos, ProjectCard } from '.';
+import { Tilt } from 'react-tilt';
 
 const Demos = () => {
     return (
@@ -19,11 +20,21 @@ const Demos = () => {
             <div className="mt-20 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {demos.map((demo, i) => {
                     return (
-                        <ProjectCard
+                        <Tilt
+                            options={{
+                                max: 45,
+                                scale: 1,
+                                speed: 450
+                            }}
+                            className="md:w-[344px] lg:w-[370px] w-full"
                             key={`demo-${i}`}
-                            index={i}
-                            {...demo}
-                        />
+                        >
+                            <ProjectCard
+                                index={i}
+                                {...demo}
+                            />
+                        </Tilt>
+
                     )
                 })}
             </div>

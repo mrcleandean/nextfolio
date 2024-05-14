@@ -19,11 +19,12 @@ const Projects = () => {
             <div className="mt-20 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {projects.map((project, i) => {
                     return (
-                        <ProjectCard
-                            key={`project-${i}`}
-                            index={i}
-                            {...project}
-                        />
+                        <div key={`project-${i}`} className="md:w-[344px] lg:w-[370px] w-full">
+                            <ProjectCard
+                                index={i}
+                                {...project}
+                            />
+                        </div>
                     )
                 })}
             </div>

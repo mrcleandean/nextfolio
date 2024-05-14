@@ -6,7 +6,7 @@ import { BiSolidLeftArrowAlt, BiSolidRightArrowAlt } from 'react-icons/bi'
 import { SiYoutube } from 'react-icons/si'
 import { audioObjects } from ".";
 
-const AudioPlayer = ({ entered }: { entered: boolean }) => {
+const AudioPlayer = () => {
     const [audioDisplay, setAudioDisplay] = useState<boolean>(false);
     const [isPlaying, setIsPlaying] = useState<boolean>(false);
     const [audioObject, setAudioObject] = useState<typeof audioObjects[0]>(audioObjects[0]);

@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <div className={`${entered ? '' : 'pointer-events-none h-screen overflow-hidden'}`}>
-        <AudioPlayer entered={entered} />
+        <AudioPlayer />
         <Navbar />
         <Hero id="buddha" setLoadingState={setLoadingState} />
         <SectionWrapper idName="projects">
