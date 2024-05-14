@@ -1,5 +1,5 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Loader } from "@/components/portfolio";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Loader, Demos } from "@/components/portfolio";
 import { useState, useCallback, useEffect } from "react";
 
 export default function Home() {
@@ -33,6 +33,9 @@ export default function Home() {
         <Hero id="buddha" setLoadingState={setLoadingState} />
         <SectionWrapper idName="projects">
           <Projects />
+        </SectionWrapper>
+        <SectionWrapper>
+          <Demos />
         </SectionWrapper>
         <SectionWrapper idName="about">
           <About />

@@ -13,6 +13,9 @@ import click from './projects/click.png';
 import solo from './projects/solo.png';
 import voxer from './projects/voxer.png';
 
+import paginate from './demos/paginate.png';
+import roomvo from './demos/roomvo.png';
+
 import demdevvy from './personal/demdevvy.png';
 
 import css from "./tech/css.png";
@@ -51,6 +54,9 @@ export {
     click,
     solo,
     voxer,
+
+    paginate,
+    roomvo,
 
     demdevvy,
 

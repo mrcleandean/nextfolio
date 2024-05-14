@@ -18,9 +18,12 @@ import RaygunCanvas from "./RaygunCanvas";
 import SectionWrapper from "./SectionWrapper";
 import Techs from "./Techs";
 import Education from "./Education";
+import Demos from "./Demos";
+import ProjectCard from "./ProjectCard";
 
 import Loader from "./Loader";
 import LocalLoader from "./LocalLoader";
+import demos from "./templates/demos";
 
 export {
     audioObjects,
@@ -43,5 +46,8 @@ export {
     Education,
     Techs,
     Loader,
-    LocalLoader
+    LocalLoader,
+    Demos,
+    ProjectCard,
+    demos
 }
