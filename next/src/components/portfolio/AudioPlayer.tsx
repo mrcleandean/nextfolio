@@ -12,19 +12,6 @@ const AudioPlayer = ({ entered }: { entered: boolean }) => {
     const [audioObject, setAudioObject] = useState<typeof audioObjects[0]>(audioObjects[0]);
     const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
-    // useEffect(() => {
-    //     setAudioDisplay(true);
-    // }, []);
-
-    // useEffect(() => {
-    //     if (entered && audio) {
-    //         audio.play();
-    //         audio.loop = true;
-    //         audio.volume = 0.08;
-    //         setIsPlaying(true);
-    //     }
-    // }, [entered]);
-
     useEffect(() => {
         audio?.pause();
         const next = new Audio(audioObject.src);
