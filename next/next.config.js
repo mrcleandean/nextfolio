@@ -14,7 +14,19 @@ const nextConfig = {
                 destination: 'https://voxer-ten.vercel.app/',
                 permanent: false,
                 basePath: false
-            }
+            },
+            {
+                source: '/flappybirdclone',
+                destination: 'https://flappybirdclone-pi.vercel.app/',
+                permanent: false,
+                basePath: false
+            },
+            {
+                source: '/calccube',
+                destination: 'https://calccube.vercel.app/',
+                permanent: false,
+                basePath: false
+            },
         ]
     },
     webpack: (config) => {
