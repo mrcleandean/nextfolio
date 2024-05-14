@@ -1,4 +1,3 @@
-"use client";
 import { AudioObjectType } from "demdevvyshared/portfolio";
 
 const audioObjects: AudioObjectType[] = [

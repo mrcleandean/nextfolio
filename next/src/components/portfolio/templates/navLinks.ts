@@ -1,4 +1,3 @@
-"use client";
 import { NavLinkType } from "demdevvyshared/portfolio";
 
 const navLinks: NavLinkType[] = [

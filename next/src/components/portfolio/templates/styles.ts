@@ -1,4 +1,3 @@
-"use client";
 import { StylesType } from "demdevvyshared/portfolio";
 
 const styles: StylesType = {

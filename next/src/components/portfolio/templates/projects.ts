@@ -1,4 +1,3 @@
-"use client";
 import { sortviz, chadchess, flappybird, calccube, af, folio, click, solo, voxer } from "@/assets/portfolio";
 import { ProjectsType } from "demdevvyshared/portfolio";
 
