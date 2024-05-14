@@ -118,7 +118,7 @@ const projects: ProjectsType[] = [
     ],
     image: voxer.src,
     source_code_link: 'https://github.com/mrcleandean/voxer',
-    site_link: "/freeforums",
+    site_link: "/voxer",
   },
   {
     name: "Flappy Bird Clone",
