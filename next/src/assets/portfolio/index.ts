@@ -1,21 +1,19 @@
-"use client";
 import web from './about/web.png';
 import mobile from './about/mobile.png';
 import creator from './about/creator.png';
 
-import sortviz from './projects/sortviz-min.png';
-import github from './projects/github-min.png';
-import chadchess from './projects/chadchess-min.png';
-import minecraft from './projects/minecraft-min.png';
-import flappybird from './projects/flappybird-min.png';
-import calccube from './projects/calccube-min.png';
-import af from './projects/af-min.png';
-import folio from './projects/folio-min.png';
-import click from './projects/click-min.png';
-import solo from './projects/solo-min.png';
+import sortviz from './projects/sortviz.png';
+import github from './projects/github.png';
+import chadchess from './projects/chadchess.png';
+import flappybird from './projects/flappybird.png';
+import calccube from './projects/calccube.png';
+import af from './projects/af.png';
+import folio from './projects/folio.png';
+import click from './projects/click.png';
+import solo from './projects/solo.png';
 import voxer from './projects/voxer.png';
 
-import demdevvy from './personal/demdevvy-min.png';
+import demdevvy from './personal/demdevvy.png';
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -31,12 +29,12 @@ import threejs from "./tech/threejs.svg";
 import npm from './tech/npm.png';
 import nextjs from './tech/nextjs.png';
 
-import backendffc from './education/backenddevelopmentandapis-min.png';
-import frontendffc from './education/frontenddevelopmentlibraries-min.png';
-import responsiveffc from './education/responsivewebdesign-min.png';
-import javascriptffc from './education/javascriptalgorithmsanddatastructures-min.png';
-import dataffc from './education/datavisualization-min.png';
-import threejourney from './education/threejourney-min.png';
+import backendffc from './education/backenddevelopmentandapis.png';
+import frontendffc from './education/frontenddevelopmentlibraries.png';
+import responsiveffc from './education/responsivewebdesign.png';
+import javascriptffc from './education/javascriptalgorithmsanddatastructures.png';
+import dataffc from './education/datavisualization.png';
+import threejourney from './education/threejourney.png';
 
 export {
     web,
@@ -46,7 +44,6 @@ export {
     sortviz,
     github,
     chadchess,
-    minecraft,
     flappybird,
     calccube,
     af,

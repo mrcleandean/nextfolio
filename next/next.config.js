@@ -27,6 +27,12 @@ const nextConfig = {
                 permanent: false,
                 basePath: false
             },
+            {
+                source: '/sortviz',
+                destination: 'https://sortviz-tau.vercel.app/',
+                permanent: false,
+                basePath: false
+            }
         ]
     },
     webpack: (config) => {
