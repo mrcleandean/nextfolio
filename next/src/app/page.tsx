@@ -1,7 +1,6 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education } from "@/components/portfolio";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Loader } from "@/components/portfolio";
 import { useState, useCallback, useEffect } from "react";
-import { Loader } from '@/components/shared'
 
 export default function Home() {
   const [loadingStates, setLoadingStates] = useState({

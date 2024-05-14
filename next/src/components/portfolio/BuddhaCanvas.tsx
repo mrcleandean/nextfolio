@@ -3,8 +3,8 @@ import { MeshStandardMaterial } from "three";
 import { Canvas, PrimitiveProps, useFrame, useThree } from "@react-three/fiber"
 import { Environment, Preload, useGLTF } from "@react-three/drei"
 import { useRef, useState, useEffect } from "react"
-import { LocalLoader } from '@/components/shared'
 import { CanvasPropTypes } from "demdevvyshared/portfolio";
+import LocalLoader from "./LocalLoader";
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);

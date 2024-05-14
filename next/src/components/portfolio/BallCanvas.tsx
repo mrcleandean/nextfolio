@@ -1,9 +1,9 @@
 "use client";
 import { Canvas } from "@react-three/fiber"
 import { Bounds, Decal, Float, OrbitControls, PerspectiveCamera, Preload, View, useTexture } from "@react-three/drei"
-import { LocalLoader } from '@/components/shared'
 import type { CanvasPropTypes, TechnologyType } from "demdevvyshared/portfolio";
 import { type LegacyRef, type MutableRefObject, useRef } from "react";
+import LocalLoader from "./LocalLoader";
 
 const BallCanvas = ({ technologies, id, setLoadingState }: CanvasPropTypes & { technologies: TechnologyType[] }) => {
     const ref = useRef(null);

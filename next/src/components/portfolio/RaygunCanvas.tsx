@@ -3,8 +3,8 @@ import { Mesh } from 'three';
 import { useEffect, useState } from "react"
 import { Canvas, useThree } from "@react-three/fiber"
 import { Float, Preload, useGLTF, Environment, Text } from "@react-three/drei"
-import { LocalLoader } from '@/components/shared';
 import type { CanvasPropTypes } from 'demdevvyshared/portfolio';
+import LocalLoader from './LocalLoader';
 
 const Raygun = () => {
     const { scene } = useGLTF('/raygun/compressed_raygun.glb');

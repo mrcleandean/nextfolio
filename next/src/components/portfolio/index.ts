@@ -19,6 +19,9 @@ import SectionWrapper from "./SectionWrapper";
 import Techs from "./Techs";
 import Education from "./Education";
 
+import Loader from "./Loader";
+import LocalLoader from "./LocalLoader";
+
 export {
     audioObjects,
     education,
@@ -38,5 +41,7 @@ export {
     RaygunCanvas,
     SectionWrapper,
     Education,
-    Techs
+    Techs,
+    Loader,
+    LocalLoader
 }
