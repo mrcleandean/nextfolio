@@ -8,6 +8,12 @@ const nextConfig = {
                 destination: 'https://m4z62t-5173.csb.app/',
                 permanent: false,
                 basePath: false
+            },
+            {
+                source: '/voxer',
+                destination: 'https://voxer-ten.vercel.app/',
+                permanent: false,
+                basePath: false
             }
         ]
     },
