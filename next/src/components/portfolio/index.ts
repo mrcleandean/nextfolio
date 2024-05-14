@@ -1,4 +1,3 @@
-"use client";
 import audioObjects from "./templates/audioObjects";
 import education from "./templates/education";
 import navLinks from "./templates/navLinks";
@@ -19,7 +18,6 @@ import RaygunCanvas from "./RaygunCanvas";
 import SectionWrapper from "./SectionWrapper";
 import Techs from "./Techs";
 import Education from "./Education";
-import Development from "./Development";
 import PhoneCanvas from "./PhoneCanvas";
 
 export {
@@ -41,7 +39,6 @@ export {
     RaygunCanvas,
     SectionWrapper,
     Education,
-    Development,
     PhoneCanvas,
     Techs
 }
