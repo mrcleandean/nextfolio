@@ -13,7 +13,7 @@ const demos: ProjectsType[] = [
         ],
         image: paginate.src,
         source_code_link: '',
-        site_link: "/paginate-with-boundary",
+        site_link: "/demos/paginate-with-boundary",
     },
     {
         name: 'Roomvo Views',

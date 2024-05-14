@@ -32,7 +32,13 @@ const nextConfig = {
                 destination: 'https://sortviz-tau.vercel.app/',
                 permanent: false,
                 basePath: false
-            }
+            },
+            {
+                source: '/roomvo-views',
+                destination: 'https://m4z62t-5173.csb.app/',
+                permanent: false,
+                basePath: false
+            },
         ]
     },
     webpack: (config) => {
