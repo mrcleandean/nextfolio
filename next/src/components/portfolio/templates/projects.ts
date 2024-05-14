@@ -1,5 +1,5 @@
 "use client";
-import { sortviz, chadchess, flappybird, calccube, af, folio, click, solo } from "@/assets/portfolio";
+import { sortviz, chadchess, flappybird, calccube, af, folio, click, solo, voxer } from "@/assets/portfolio";
 import { ProjectsType } from "demdevvyshared/portfolio";
 
 
@@ -23,7 +23,7 @@ const projects: ProjectsType[] = [
       }
     ],
     image: sortviz.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/sortviz',
     site_link: "/sortviz",
   },
   {
@@ -49,7 +49,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: calccube.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/calccube',
     site_link: "calccube",
   },
   {
@@ -83,32 +83,32 @@ const projects: ProjectsType[] = [
       }
     ],
     image: chadchess.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/chadchess',
     site_link: "/chadchess",
   },
   {
-    name: "Free Forums",
+    name: "Voxer",
     description:
-      "Post freely on Free Forums. This is a self moderating platform where posts are automatically banished based on community votes. No sign up or required.",
+      "This is a unique social experiment where the community holds the power. Engage in discussions, share your views, and use your votes to directly moderate content, steering the platform away from centralized control. Join Voxer and shape the conversation in a truly democratic space.",
     tags: [
       {
         name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "Express.js",
+        name: "Upload Thing",
         color: "green-text-gradient",
       },
       {
-        name: "MongoDB",
+        name: "PostgreSQL",
         color: "pink-text-gradient",
       },
       {
-        name: "Mongoose.js",
+        name: "Prisma",
         color: "orange-text-gradient",
       },
       {
-        name: 'Moment.js',
+        name: 'Next Auth',
         color: "blue-text-gradient",
       },
       {
@@ -116,8 +116,8 @@ const projects: ProjectsType[] = [
         color: "green-text-gradient"
       }
     ],
-    image: af.src,
-    source_code_link: '',
+    image: voxer.src,
+    source_code_link: 'https://github.com/mrcleandean/voxer',
     site_link: "/freeforums",
   },
   {
@@ -134,7 +134,7 @@ const projects: ProjectsType[] = [
       },
     ],
     image: flappybird.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/flappybirdclone',
     site_link: "/flappybirdclone",
   },
   {
@@ -163,7 +163,7 @@ const projects: ProjectsType[] = [
       }
     ],
     image: click.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/click',
     site_link: "development"
   },
   {
@@ -188,7 +188,7 @@ const projects: ProjectsType[] = [
       }
     ],
     image: solo.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/solo',
     site_link: "development"
   },
   {

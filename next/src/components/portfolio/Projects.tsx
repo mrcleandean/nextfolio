@@ -6,6 +6,7 @@ import { styles, projects } from "."
 import Image from "next/image"
 import Link from "next/link";
 import { ProjectCardPropTypes } from "demdevvyshared/portfolio";
+import { github } from '@/assets/portfolio';
 
 const Projects = () => {
     return (
@@ -54,20 +55,22 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                         className="rounded-2xl object-contain"
                     />
-                    {/* <div className="absolute inset-0 flex justify-end items-end m-3 card-img_hover">
-                        <div
-                            onClick={() => window.open(source_code_link, '_blank')}
-                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-2 border-white"
-                        >
-                            <Image
-                                src={github.src}
-                                alt="github"
-                                width={20}
-                                height={20}
-                                className="object-contain"
-                            />
+                    {source_code_link && (
+                        <div className="absolute inset-0 flex justify-end items-end m-3 card-img_hover">
+                            <div
+                                onClick={() => window.open(source_code_link, '_blank')}
+                                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-2 border-white"
+                            >
+                                <Image
+                                    src={github.src}
+                                    alt="github"
+                                    width={20}
+                                    height={20}
+                                    className="object-contain"
+                                />
+                            </div>
                         </div>
-                    </div> */}
+                    )}
                 </div>
                 <div className="mt-5">
                     {

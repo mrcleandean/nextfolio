@@ -13,6 +13,7 @@ import af from './projects/af-min.png';
 import folio from './projects/folio-min.png';
 import click from './projects/click-min.png';
 import solo from './projects/solo-min.png';
+import voxer from './projects/voxer.png';
 
 import demdevvy from './personal/demdevvy-min.png';
 
@@ -52,6 +53,7 @@ export {
     folio,
     click,
     solo,
+    voxer,
 
     demdevvy,
 
