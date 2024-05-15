@@ -17,7 +17,7 @@ const demos: ProjectsType[] = [
     },
     {
         name: 'Roomvo Views',
-        description: 'A demo which allows the user to enter and exit view mode on an image carousel. Watch the images nicely animate and scale when toggling modes, and animate on deletion, add and swipe.',
+        description: 'A demo which allows the user to enter and exit view mode on an image carousel. Watch the images nicely animate and scale when toggling modes, and animate on deletion, add and swipe. Credit to Roomvo by Leap Tools for the mock up.',
         tags: [
             {
                 name: 'React.js',
