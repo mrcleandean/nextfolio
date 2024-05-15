@@ -20,9 +20,9 @@ const DevDemos = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/demos/views">
+                        <a href="roomvodemo.vercel.app" target="_blank">
                             <p className="text-blue-500 underline cursor-pointer">Roomvo views feature</p>
-                        </Link>
+                        </a>
                         <ul className="list-disc list-inside decoration">
                             <li className="text-black break-all">
                                 <a className="text-blue-500 underline cursor-pointer" href="https://codesandbox.io/p/github/mrcleandean/roomvodemo/main?embed=1&file=%2Fsrc%2FApp.tsx">
@@ -38,7 +38,7 @@ const DevDemos = () => {
                     </li>
                 </ol>
             </div>
-        </div>
+        </div >
     )
 }
 
