@@ -20,7 +20,7 @@ const DevDemos = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="roomvodemo.vercel.app" target="_blank">
+                        <a href="https://roomvodemo.vercel.app/" target="_blank">
                             <p className="text-blue-500 underline cursor-pointer">Roomvo views feature</p>
                         </a>
                         <ul className="list-disc list-inside decoration">
