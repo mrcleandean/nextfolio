@@ -5,7 +5,7 @@ import type { CanvasPropTypes } from "demdevvyshared/portfolio";
 
 const Hero = ({ id, setLoadingState }: CanvasPropTypes) => {
     return (
-        <div className="relative w-[100vw] h-[100vh] flex items-center justify-center" id="hero">
+        <div className="relative w-screen h-screen flex items-center justify-center" id="hero">
             <div className="absolute inset-0 top-20 flex items-center justify-center pointer-events-none touch-none">
                 <div className={`${styles.titleText} ${styles.mainText} text-white z-10`}>DEAN<br />KADRI</div>
                 <div className={`${styles.titleText} ${styles.mainText} text-white blur-[7.5px] z-0`}>DEAN<br />KADRI</div>
