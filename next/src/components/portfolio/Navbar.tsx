@@ -24,7 +24,7 @@ const Navbar = () => {
             ">
                 <Link href="/#hero" className="flex justify-center items-center" onClick={() => setActive('')}>
                     <Image
-                        src={'/demdevvy-min.png'}
+                        src={'/demdevvy.png'}
                         alt="logo"
                         width={96}
                         height={96}

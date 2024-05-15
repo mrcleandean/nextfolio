@@ -19,7 +19,7 @@ const Header = () => {
                 <div className='w-6 h-6 mr-1 rounded-full bg-black relative'>
                     <Image
                         alt='dev logo'
-                        src={'/demdevvy-min.png'}
+                        src={'/demdevvy.png'}
                         fill={true}
                         className='object-contain translate-y-[0.06rem]'
                     />

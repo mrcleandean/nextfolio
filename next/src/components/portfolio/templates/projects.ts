@@ -1,6 +1,17 @@
-import { sortviz, chadchess, flappybird, calccube, af, folio, click, solo, voxer } from "@/assets/portfolio";
-import { ProjectsType } from "demdevvyshared/portfolio";
+import { sortviz, chadchess, flappybird, calccube, folio, click, solo, voxer } from "@/assets/portfolio";
 
+export type ProjectsType = {
+  name: string;
+  description: string;
+  tags: {
+    name: string;
+    color: string;
+  }[];
+  image: string;
+  source_code_link: string;
+  site_link: string;
+  model?: string;
+}
 
 const projects: ProjectsType[] = [
   {

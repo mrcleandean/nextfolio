@@ -1,5 +1,5 @@
 import { paginate, roomvo } from "@/assets/portfolio";
-import { ProjectsType } from "demdevvyshared/portfolio";
+import { ProjectsType } from "./projects";
 
 const demos: ProjectsType[] = [
     {
