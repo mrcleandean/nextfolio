@@ -34,7 +34,7 @@ const demos: ProjectsType[] = [
         ],
         image: roomvo.src,
         source_code_link: 'https://github.com/mrcleandean/roomvodemo',
-        site_link: '/roomvo-views'
+        site_link: 'https://m4z62t-5173.csb.app/'
     }
 ]
 

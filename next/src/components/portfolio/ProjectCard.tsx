@@ -36,15 +36,20 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
             </div>
             <div className="mt-5">
                 {
-                    site_link !== 'development' ? (
-                        <Link href={site_link}>
-                            <h3 className=" text-blue-200 font-bold text-[24px] underline underline-offset-2">{name}</h3>
-                        </Link>
-                    ) : (
+                    site_link === 'development' ? (
                         <h3
                             onClick={() => alert('This project is currently in development or pending app store deployment. Please come back later to try it out!')}
                             className="text-blue-200 font-bold text-[24px] underline underline-offset-2 cursor-pointer"
                         >{name}</h3>
+
+                    ) : site_link[0] === '/' ? (
+                        <Link href={site_link}>
+                            <h3 className=" text-blue-200 font-bold text-[24px] underline underline-offset-2">{name}</h3>
+                        </Link>
+                    ) : (
+                        <a href={site_link} target="_blank">
+                            <h3 className=" text-blue-200 font-bold text-[24px] underline underline-offset-2">{name}</h3>
+                        </a>
                     )
                 }
                 <p className="mt-2 text-white text-[14px]">{description}</p>

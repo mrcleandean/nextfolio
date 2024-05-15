@@ -23,7 +23,7 @@ const projects: ProjectsType[] = [
     ],
     image: sortviz.src,
     source_code_link: 'https://github.com/mrcleandean/sortviz',
-    site_link: "/sortviz",
+    site_link: "https://sortviz-tau.vercel.app/",
   },
   {
     name: "CalcCube",
@@ -49,7 +49,7 @@ const projects: ProjectsType[] = [
     ],
     image: calccube.src,
     source_code_link: 'https://github.com/mrcleandean/calccube',
-    site_link: "calccube",
+    site_link: "https://calccube.vercel.app/",
   },
   {
     name: "ChadChess",
@@ -117,7 +117,7 @@ const projects: ProjectsType[] = [
     ],
     image: voxer.src,
     source_code_link: 'https://github.com/mrcleandean/voxer',
-    site_link: "/voxer",
+    site_link: "https://voxer-ten.vercel.app/",
   },
   {
     name: "Flappy Bird Clone",
@@ -134,7 +134,7 @@ const projects: ProjectsType[] = [
     ],
     image: flappybird.src,
     source_code_link: 'https://github.com/mrcleandean/flappybirdclone',
-    site_link: "/flappybirdclone",
+    site_link: "https://flappybirdclone-pi.vercel.app/",
   },
   {
     name: "Click",
