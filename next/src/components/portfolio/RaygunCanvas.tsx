@@ -1,10 +1,8 @@
 "use client";
 import { Mesh } from 'three';
 import { useEffect, useState } from "react"
-import { Canvas, useThree } from "@react-three/fiber"
-import { Float, Preload, useGLTF, Environment, Text } from "@react-three/drei"
-import type { CanvasPropTypes } from 'demdevvyshared/portfolio';
-import LocalLoader from './LocalLoader';
+import { useThree } from "@react-three/fiber"
+import { Float, useGLTF, Environment, Text, View, PerspectiveCamera } from "@react-three/drei"
 
 const Raygun = () => {
     const { scene } = useGLTF('/raygun/compressed_raygun.glb');
@@ -50,24 +48,21 @@ const Raygun = () => {
     )
 }
 
-const RaygunCanvas = ({ id, setLoadingState }: CanvasPropTypes) => {
+const RaygunCanvas = () => {
     return (
         <>
-            <Canvas
-                gl={{ preserveDrawingBuffer: true }}
-                camera={{
-                    fov: 45,
-                    near: 0.1,
-                    far: 1000,
-                    position: [0, 0, 10],
-                    rotation: [0, 0, Math.PI * 0.2]
-                }}
-            >
+            <View className='w-full h-full'>
+                <PerspectiveCamera
+                    makeDefault
+                    fov={45}
+                    near={0.1}
+                    far={1000}
+                    position={[0, 0, 10]}
+                    rotation={[0, 0, Math.PI * 0.2]}
+                />
                 <Environment files="freebie1.hdr" />
                 <Raygun />
-                <Preload all />
-            </Canvas>
-            <LocalLoader id={id} setLoadingState={setLoadingState} />
+            </View>
         </>
     )
 }

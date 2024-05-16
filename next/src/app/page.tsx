@@ -1,24 +1,19 @@
 "use client";
-import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Loader, Demos } from "@/components/portfolio";
-import { useState, useCallback, useEffect } from "react";
+import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrapper, Education, Loader, Demos, LocalLoader } from "@/components/portfolio";
+import { Preload, View } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
-  const [loadingStates, setLoadingStates] = useState({
-    buddha: true,
-    raygun: true,
-    ball: true
-  });
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [entered, setEntered] = useState(false);
-  const setLoadingState = useCallback((canvasId: string, isLoading: boolean) => {
-    setLoadingStates(prevStates => ({ ...prevStates, [canvasId]: isLoading }));
-  }, []);
-  const globalLoading = Object.values(loadingStates).some(isLoading => isLoading);
   const handleResize = () => {
     const zoomLevel = window.outerWidth / window.innerWidth;
     if (zoomLevel !== 1) {
       alert('For the best viewing experience, please press Ctrl+0 (Windows) or Command+0 (Mac) to set your zoom level to 100%.')
     }
   };
+  const viewsRef = useRef<HTMLDivElement>(null!);
   useEffect(() => {
     window.addEventListener('resize', handleResize, { once: true });
     return () => {
@@ -27,10 +22,10 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div className={`${entered ? '' : 'pointer-events-none h-screen overflow-hidden'}`}>
+      <div ref={viewsRef} className={`${entered ? 'overflow-auto' : 'pointer-events-none'} absolute h-screen w-screen`}>
         <AudioPlayer />
         <Navbar />
-        <Hero id="buddha" setLoadingState={setLoadingState} />
+        <Hero />
         <SectionWrapper idName="projects">
           <Projects />
         </SectionWrapper>
@@ -44,14 +39,27 @@ export default function Home() {
           <Education />
         </SectionWrapper>
         <SectionWrapper idName="technologies">
-          <Techs id="ball" setLoadingState={setLoadingState} /> {/* Concats index of ball canvas to ball id */}
+          <Techs />
         </SectionWrapper>
         <SectionWrapper idName="contact">
-          <Contact id="raygun" setLoadingState={setLoadingState} />
+          <Contact />
         </SectionWrapper>
+        <Canvas
+          frameloop="always"
+          eventSource={viewsRef}
+          className="!fixed inset-0 z-10"
+          gl={{
+            antialias: true,
+            alpha: true,
+          }}
+        >
+          <View.Port />
+          <Preload all />
+        </Canvas>
+        <LocalLoader setIsLoading={setIsLoading} />
       </div>
       <Loader
-        globalLoading={globalLoading}
+        isLoading={isLoading}
         entered={entered}
         setEntered={setEntered}
         letters={['C', 'L', 'E', 'A', 'N', ' ', 'D', 'E', 'A', 'N']}

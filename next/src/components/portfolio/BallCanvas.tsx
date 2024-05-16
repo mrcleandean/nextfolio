@@ -1,18 +1,18 @@
 "use client";
-import { Canvas } from "@react-three/fiber"
-import { Bounds, Decal, Float, OrbitControls, PerspectiveCamera, Preload, View, useTexture } from "@react-three/drei"
-import type { CanvasPropTypes, TechnologyType } from "demdevvyshared/portfolio";
-import { type LegacyRef, type MutableRefObject, useRef } from "react";
-import LocalLoader from "./LocalLoader";
+import { Bounds, Decal, Float, OrbitControls, PerspectiveCamera, View, useTexture } from "@react-three/drei"
+import type { TechnologyType } from "demdevvyshared/portfolio";
 
-const BallCanvas = ({ technologies, id, setLoadingState }: CanvasPropTypes & { technologies: TechnologyType[] }) => {
-    const ref = useRef(null);
+const BallCanvas = ({ technologies }: { technologies: TechnologyType[] }) => {
     return (
-        <div className="relative w-full" ref={ref as unknown as LegacyRef<HTMLDivElement>}>
+        <div className="relative w-full">
             <div className="w-full flex flex-row justify-center items-center flex-wrap">
                 {technologies.map((tech, i) => {
                     return (
-                        <View track={ref as unknown as MutableRefObject<HTMLElement>} key={`technology-view-${i}`} index={i} className="w-32 h-32 flex justify-center items-center">
+                        <View
+                            key={`technology-view-${i}`}
+                            index={i}
+                            className="w-32 h-32 flex justify-center items-center"
+                        >
                             <PerspectiveCamera makeDefault position={[0, 0, 3]} />
                             <Bounds fit clip observe margin={1.2}>
                                 <Ball imgUrl={tech.icon} />
@@ -20,15 +20,6 @@ const BallCanvas = ({ technologies, id, setLoadingState }: CanvasPropTypes & { t
                         </View>
                     )
                 })}
-                <Canvas
-                    frameloop="always"
-                    eventSource={ref.current as unknown as HTMLElement}
-                    className="!fixed inset-0 pointer-events-none"
-                >
-                    <View.Port />
-                    <Preload all />
-                </Canvas>
-                <LocalLoader id={id} setLoadingState={setLoadingState} />
             </div>
         </div>
     )

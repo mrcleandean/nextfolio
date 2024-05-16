@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/*
-ASSET SOURCES
-<a href="https://www.freepik.com/free-photo/3d-futuristic-particle-waves-network-communication_45244852.htm#page=2&query=vector%20wave%20lines&position=14&from_view=search&track=ais">Image by kjpargeter</a> on Freepik
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,14 +5,13 @@ ASSET SOURCES
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 html,
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   font-family: sans-serif;
   color: rgba(255, 255, 255, 0.5);
   background-color: #11151c;
@@ -29,18 +21,6 @@ body {
   margin-top: -100px;
   padding-bottom: 100px;
   display: block;
-}
-
-/* canvas- styles */
-.canvas-loader {
-  font-size: 10px;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999em;
-  animation: mulShdSpin 1.1s infinite ease;
-  transform: translateZ(0);
 }
 
 .stroked {
@@ -117,13 +97,4 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.glass {
-  background: rgba(0, 0, 0, 0.21);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }

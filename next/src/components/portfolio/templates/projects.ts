@@ -1,5 +1,15 @@
 import { sortviz, chadchess, flappybird, calccube, folio, click, solo, voxer } from "@/assets/portfolio";
 
+export type ProjectModelType = {
+  src: string;
+  position: [number, number, number];
+  rotation: [number, number, number];
+  scale: number;
+  color?: string;
+  axis?: 'x' | 'y' | 'z';
+  invert?: boolean;
+}
+
 export type ProjectsType = {
   name: string;
   description: string;
@@ -10,7 +20,7 @@ export type ProjectsType = {
   image: string;
   source_code_link: string;
   site_link: string;
-  model?: string;
+  model?: ProjectModelType;
 }
 
 const projects: ProjectsType[] = [
@@ -35,6 +45,12 @@ const projects: ProjectsType[] = [
     image: sortviz.src,
     source_code_link: 'https://github.com/mrcleandean/sortviz',
     site_link: "https://sortviz-tau.vercel.app/",
+    model: {
+      src: '/sortviz.glb',
+      position: [0, 0.2, 0],
+      rotation: [0, 0, 0],
+      scale: 1
+    }
   },
   {
     name: "CalcCube",
@@ -61,6 +77,14 @@ const projects: ProjectsType[] = [
     image: calccube.src,
     source_code_link: 'https://github.com/mrcleandean/calccube',
     site_link: "https://calccube.vercel.app/",
+    model: {
+      src: '/calc.glb',
+      position: [0, -0.4, 0],
+      rotation: [Math.PI * 0.5, 0, 0],
+      scale: 3.4,
+      axis: 'z',
+      invert: true
+    }
   },
   {
     name: "ChadChess",
@@ -95,6 +119,13 @@ const projects: ProjectsType[] = [
     image: chadchess.src,
     source_code_link: 'https://github.com/mrcleandean/chadchess',
     site_link: "/chadchess",
+    model: {
+      src: '/rook/scene.gltf',
+      position: [0, -1.5, 0],
+      rotation: [0.5, 0, 0.2],
+      scale: 0.8,
+      color: "#6380e4"
+    }
   },
   {
     name: "Voxer",
@@ -129,6 +160,14 @@ const projects: ProjectsType[] = [
     image: voxer.src,
     source_code_link: 'https://github.com/mrcleandean/voxer',
     site_link: "https://voxer-ten.vercel.app/",
+    model: {
+      src: '/voxer.glb',
+      position: [0, 0, 0],
+      rotation: [Math.PI * 0.5, 0, 0],
+      scale: 315,
+      axis: 'z',
+      invert: true
+    }
   },
   {
     name: "Flappy Bird Clone",
@@ -146,6 +185,12 @@ const projects: ProjectsType[] = [
     image: flappybird.src,
     source_code_link: 'https://github.com/mrcleandean/flappybirdclone',
     site_link: "https://flappybirdclone-pi.vercel.app/",
+    model: {
+      src: '/flappy.glb',
+      position: [0, -4, 0],
+      rotation: [0, 0, 0],
+      scale: 2
+    }
   },
   {
     name: "Click",
@@ -174,7 +219,13 @@ const projects: ProjectsType[] = [
     ],
     image: click.src,
     source_code_link: 'https://github.com/mrcleandean/click',
-    site_link: "development"
+    site_link: "development",
+    model: {
+      src: '/earth.glb',
+      position: [0, 0, 0],
+      rotation: [0, 0, 0],
+      scale: 1.75
+    }
   },
   {
     name: "Solo",
@@ -199,7 +250,13 @@ const projects: ProjectsType[] = [
     ],
     image: solo.src,
     source_code_link: 'https://github.com/mrcleandean/solo',
-    site_link: "development"
+    site_link: "development",
+    model: {
+      src: '/solo.glb',
+      position: [0, 0, 0],
+      rotation: [0, 0, 0],
+      scale: 0.5
+    }
   },
   {
     name: 'This Portfolio',
@@ -231,8 +288,14 @@ const projects: ProjectsType[] = [
       }
     ],
     image: folio.src,
-    source_code_link: '',
-    site_link: "/"
+    source_code_link: 'https://github.com/mrcleandean/nextfolio',
+    site_link: "/",
+    model: {
+      src: '/a.glb',
+      position: [0.145, 0.135, 0],
+      rotation: [0, 0, 0],
+      scale: 0.65
+    }
   }
 ];
 

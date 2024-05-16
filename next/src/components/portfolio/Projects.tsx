@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion"
 import { titleVariant, fadeIn } from "@/util/motion"
-import { styles, projects, ProjectCard } from "."
+import { styles, projects, ProjectCard, LocalLoader } from "."
+import { useRef } from "react";
 
 const Projects = () => {
+    const projectViewsRef = useRef<HTMLDivElement>(null!);
     return (
         <>
             <motion.div variants={titleVariant()}>
@@ -16,7 +18,7 @@ const Projects = () => {
             >
                 Welcome to my corner of creativity and tech. I&apos;ve put together a bunch of projects that blend smart design with a personal touch. I like building fun things, so take a look around and try things out!
             </motion.p>
-            <div className="mt-20 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
+            <div ref={projectViewsRef} className="mt-20 flex flex-wrap gap-7 md:gap-3 lg:gap-7">
                 {projects.map((project, i) => {
                     return (
                         <div key={`project-${i}`} className="md:w-[344px] lg:w-[370px] w-full">

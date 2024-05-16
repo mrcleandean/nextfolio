@@ -3,9 +3,9 @@ import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { slideIn } from "@/util/motion"
 import { styles, RaygunCanvas } from "@/components/portfolio";
-import type { FormDataType, CanvasPropTypes } from "demdevvyshared/portfolio";
+import type { FormDataType } from "demdevvyshared/portfolio";
 
-const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
+const Contact = () => {
     const formRef = useRef<HTMLFormElement | null>(null)
     const [form, setForm] = useState<FormDataType>({
         name: '',
@@ -121,7 +121,7 @@ const Contact = ({ id, setLoadingState }: CanvasPropTypes) => {
                 variants={slideIn('right', 'tween', 0.2, 1)}
                 className="xl:w-1/2 w-full h-[560px]"
             >
-                <RaygunCanvas id={id} setLoadingState={setLoadingState} />
+                <RaygunCanvas />
             </motion.div>
         </div>
     )

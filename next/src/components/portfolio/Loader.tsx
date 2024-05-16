@@ -1,7 +1,15 @@
 "use client";
 import { ImSpinner2 } from "react-icons/im";
 import { AnimatePresence, motion } from 'framer-motion';
-import { LoaderPropTypes } from "demdevvyshared/base";
+import { Dispatch, FC, SetStateAction } from "react";
+
+export type LoaderPropTypes = {
+    isLoading: boolean;
+    entered: boolean;
+    setEntered: Dispatch<SetStateAction<boolean>>;
+    letters: string[];
+    subTitle?: string;
+}
 
 const TitleSpan = ({ char, i, length }: { char: string, i: number, length: number }) => {
     const animationDuration = 2 * 1.75;
@@ -39,7 +47,7 @@ const TitleSpan = ({ char, i, length }: { char: string, i: number, length: numbe
     )
 }
 
-const Loader = ({ globalLoading, entered, setEntered, letters, subTitle = null }: LoaderPropTypes) => {
+const Loader: FC<LoaderPropTypes> = ({ isLoading, entered, setEntered, letters, subTitle = null }) => {
     let adjustedLetterIndex = 0;
 
     return (
@@ -73,7 +81,7 @@ const Loader = ({ globalLoading, entered, setEntered, letters, subTitle = null }
                             </div>
 
                             {
-                                globalLoading
+                                isLoading
                                     ? (
                                         <div className="flex justify-center items-center flex-col">
                                             <AnimatePresence>

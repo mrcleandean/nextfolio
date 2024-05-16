@@ -1,22 +1,33 @@
 "use client";
 import Link from "next/link"
-import { ProjectCardPropTypes } from "demdevvyshared/portfolio"
+import { ProjectsType } from "./templates/projects";
 import { motion } from 'framer-motion';
 import { fadeIn } from "@/util";
 import Image from "next/image";
 import { github } from "@/assets/portfolio";
+import ProjectModel from "./ProjectModel";
+import { useState } from "react";
 
-const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description, tags, image, source_code_link, site_link }) => {
+const ProjectCard: React.FC<ProjectsType & { index: number }> = ({ index, name, description, tags, image, source_code_link, site_link, model }) => {
+    const [isVisible, setIsVisible] = useState(false);
     return (
-        <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)} className="bg-tertiary p-5 rounded-2xl">
-            <div className="relative w-full h-[230px]">
+        <motion.div onAnimationComplete={() => setIsVisible(true)} variants={fadeIn('up', 'spring', index * 0.5, 0.75)} className="bg-tertiary p-5 rounded-2xl">
+            <div className="relative w-full h-[230px] rounded-2xl overflow-hidden bg-black">
                 <Image
                     src={image}
                     alt="Description"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    className="rounded-2xl object-contain"
+                    className="object-cover"
                 />
+                {model && (
+                    <div className="absolute inset-0">
+                        <ProjectModel
+                            isVisible={isVisible}
+                            {...model}
+                        />
+                    </div>
+                )}
                 {source_code_link && (
                     <div className="absolute inset-0 flex justify-end items-end m-3 card-img_hover">
                         <div
@@ -34,12 +45,12 @@ const ProjectCard: React.FC<ProjectCardPropTypes> = ({ index, name, description,
                     </div>
                 )}
             </div>
-            <div className="mt-5">
+            <div className="mt-5 cursor-pointer">
                 {
                     site_link === 'development' ? (
                         <h3
                             onClick={() => alert('This project is currently in development or pending app store deployment. Please come back later to try it out!')}
-                            className="text-blue-200 font-bold text-[24px] underline underline-offset-2 cursor-pointer"
+                            className="text-blue-200 font-bold text-[24px] underline underline-offset-2"
                         >{name}</h3>
 
                     ) : site_link[0] === '/' ? (

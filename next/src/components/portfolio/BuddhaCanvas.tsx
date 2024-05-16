@@ -1,10 +1,8 @@
 "use client";
 import { MeshStandardMaterial } from "three";
-import { Canvas, PrimitiveProps, useFrame, useThree } from "@react-three/fiber"
-import { Environment, Preload, useGLTF } from "@react-three/drei"
+import { PrimitiveProps, useFrame, useThree } from "@react-three/fiber"
+import { Environment, PerspectiveCamera, View, useGLTF } from "@react-three/drei"
 import { useRef, useState, useEffect } from "react"
-import { CanvasPropTypes } from "demdevvyshared/portfolio";
-import LocalLoader from "./LocalLoader";
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);
@@ -44,30 +42,21 @@ const Buddha = () => {
     )
 }
 
-const BuddhaCanvas = ({ id, setLoadingState }: CanvasPropTypes) => {
+const BuddhaCanvas = () => {
     return (
-        <>
-            <Canvas
-                gl={{
-                    antialias: true,
-                    alpha: true,
-                    preserveDrawingBuffer: true
-                }}
-                camera={{
-                    fov: 45,
-                    near: 0.1,
-                    far: 1000,
-                    position: [0, 0, 10],
-                }}
-            >
-                <Environment files="freebie1.hdr" />
-                <pointLight args={['#85ccb8', 7.5, 20]} position={[0, 3, 2]} />
-                <pointLight args={['#9f85cc', 7.5, 20]} position={[0, 3, 2]} />
-                <Buddha />
-                <Preload all />
-            </Canvas>
-            <LocalLoader id={id} setLoadingState={setLoadingState} />
-        </>
+        <View className="w-full h-full">
+            <PerspectiveCamera
+                makeDefault
+                fov={45}
+                near={0.1}
+                far={1000}
+                position={[0, 0, 10]}
+            />
+            <Environment files="freebie1.hdr" />
+            <pointLight args={['#85ccb8', 7.5, 20]} position={[0, 3, 2]} />
+            <pointLight args={['#9f85cc', 7.5, 20]} position={[0, 3, 2]} />
+            <Buddha />
+        </View>
     )
 }
 

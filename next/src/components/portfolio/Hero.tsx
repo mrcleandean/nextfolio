@@ -1,9 +1,8 @@
 "use client";
 import { styles, BuddhaCanvas } from "."
 import { motion } from "framer-motion"
-import type { CanvasPropTypes } from "demdevvyshared/portfolio";
 
-const Hero = ({ id, setLoadingState }: CanvasPropTypes) => {
+const Hero = () => {
     return (
         <div className="relative w-screen h-screen flex items-center justify-center" id="hero">
             <div className="absolute inset-0 top-20 flex items-center justify-center pointer-events-none touch-none">
@@ -12,7 +11,7 @@ const Hero = ({ id, setLoadingState }: CanvasPropTypes) => {
                 <div className={`${styles.titleText} ${styles.mainText} stroked z-30`}>DEAN<br />KADRI</div>
             </div>
             <div className="absolute inset-0 top-20 z-20 flex items-center justify-center">
-                <BuddhaCanvas id={id} setLoadingState={setLoadingState} />
+                <BuddhaCanvas />
             </div>
             <a href="#projects">
                 <div className="absolute bottom-5 rounded-2xl z-40 border-2 w-6 h-14 flex justify-center hover:cursor-pointer">
