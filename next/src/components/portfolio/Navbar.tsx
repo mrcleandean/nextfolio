@@ -1,6 +1,6 @@
 "use client";
 import { navLinks } from "."
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from "next/image";
