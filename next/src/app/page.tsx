@@ -3,6 +3,7 @@ import { Navbar, Projects, About, Techs, Contact, AudioPlayer, Hero, SectionWrap
 import { Preload, View } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useState, useEffect, useRef } from "react";
+import { ReactLenis } from '@studio-freight/react-lenis';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -21,8 +22,8 @@ export default function Home() {
     }
   }, []);
   return (
-    <>
-      <div ref={viewsRef} className={`${entered ? 'overflow-auto' : 'pointer-events-none'} absolute h-screen w-screen`}>
+    <ReactLenis root>
+      <div ref={viewsRef} className={`${entered ? '' : ''} absolute h-full w-full`}>
         <AudioPlayer />
         <Navbar />
         <Hero />
@@ -65,7 +66,7 @@ export default function Home() {
         letters={['C', 'L', 'E', 'A', 'N', ' ', 'D', 'E', 'A', 'N']}
         subTitle={'Dev Portfolio'}
       />
-    </>
+    </ReactLenis>
   );
 }
 

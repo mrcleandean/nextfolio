@@ -5,10 +5,13 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from "next/image";
 import Link from "next/link";
+import { useLenis } from '@studio-freight/react-lenis';
 
 const Navbar = () => {
     const [active, setActive] = useState('')
-    const [mobileOpen, setMobileOpen] = useState(false)
+    const [mobileOpen, setMobileOpen] = useState(false);
+    const lenis = useLenis()
+
     return (
         <div className="
         w-full h-[77.5px] 
@@ -22,7 +25,10 @@ const Navbar = () => {
             w-full max-w-7xl 
             flex justify-between items-center 
             ">
-                <Link href="/#hero" className="flex justify-center items-center" onClick={() => setActive('')}>
+                <div className="flex justify-center items-center" onClick={() => {
+                    setActive('')
+                    lenis?.scrollTo('#hero')
+                }}>
                     <Image
                         src={'/demdevvy.png'}
                         alt="logo"
@@ -32,28 +38,27 @@ const Navbar = () => {
                         className="object-contain relative top-1 w-auto"
                     />
                     <h1 className="font-sans font-[800] tracking-wide folionav:text-xl text-sm text-white">Creative Dev</h1>
-                </Link>
+                </div>
                 <ul className="
                 hidden folionav:flex flex-row justify-evenly gap-5
                 list-none 
                 ">
                     {navLinks.map(navLink => {
                         return (
-                            <Link
-                                href={navLink.href}
+                            <li
+                                onClick={() => {
+                                    setActive(navLink.href)
+                                    lenis?.scrollTo(navLink.href)
+                                }}
                                 key={navLink.title}
-                                onClick={() => setActive(navLink.href)}
-                            >
-                                <li
-                                    className={`
+                                className={`
                                 ${active === navLink.href ? 'text-secondary' : 'text-white'} hover:text-secondary 
                                 hover:cursor-pointer 
                                 text-[18px] font-medium
                                 `}
-                                >
-                                    {navLink.title}
-                                </li>
-                            </Link>
+                            >
+                                {navLink.title}
+                            </li>
                         )
                     })}
                 </ul>
