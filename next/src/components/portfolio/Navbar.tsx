@@ -1,16 +1,24 @@
 "use client";
 import { navLinks } from "."
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from "next/image";
-import Link from "next/link";
 import { useLenis } from '@studio-freight/react-lenis';
+import { NavLinkType } from "demdevvyshared/portfolio";
+import { addEffect } from "@react-three/fiber";
 
 const Navbar = () => {
     const [active, setActive] = useState('')
     const [mobileOpen, setMobileOpen] = useState(false);
-    const lenis = useLenis()
+    const lenis = useLenis();
+
+    const handleClick = (navProp: NavLinkType) => {
+        setActive(navProp.href)
+        lenis?.scrollTo(navProp.href)
+    }
+
+    addEffect((t) => lenis?.raf(t));
 
     return (
         <div className="
@@ -25,10 +33,7 @@ const Navbar = () => {
             w-full max-w-7xl 
             flex justify-between items-center 
             ">
-                <div className="flex justify-center items-center" onClick={() => {
-                    setActive('')
-                    lenis?.scrollTo('#hero')
-                }}>
+                <div className="flex justify-center items-center" onClick={() => handleClick({ href: '#hero', title: '' })}>
                     <Image
                         src={'/demdevvy.png'}
                         alt="logo"
@@ -46,10 +51,7 @@ const Navbar = () => {
                     {navLinks.map(navLink => {
                         return (
                             <li
-                                onClick={() => {
-                                    setActive(navLink.href)
-                                    lenis?.scrollTo(navLink.href)
-                                }}
+                                onClick={() => handleClick(navLink)}
                                 key={navLink.title}
                                 className={`
                                 ${active === navLink.href ? 'text-secondary' : 'text-white'} hover:text-secondary 
@@ -100,21 +102,17 @@ const Navbar = () => {
                 >
                     {navLinks.map(navLink => {
                         return (
-                            <Link
-                                href={navLink.href}
+                            <li
+                                onClick={() => handleClick(navLink)}
                                 key={navLink.title}
-                                onClick={() => setActive(navLink.href)}
-                            >
-                                <li
-                                    className={`
+                                className={`
                                 ${active === navLink.href ? 'text-secondary' : 'text-black'}
                                 hover:cursor-pointer 
                                 text-[18px] font-medium
                                 `}
-                                >
-                                    {navLink.title}
-                                </li>
-                            </Link>
+                            >
+                                {navLink.title}
+                            </li>
                         )
                     })}
                 </motion.ul>
