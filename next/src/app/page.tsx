@@ -22,7 +22,9 @@ export default function Home() {
     }
   }, []);
   return (
-    <ReactLenis root>
+    <ReactLenis root options={{
+      syncTouch: true
+    }}>
       <div ref={viewsRef} className={`${entered ? '' : ''} absolute h-full w-full`}>
         <AudioPlayer />
         <Navbar />
