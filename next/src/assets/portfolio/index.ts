@@ -7,7 +7,6 @@ import github from './projects/github.png';
 import chadchess from './projects/chadchess.png';
 import flappybird from './projects/flappybird.png';
 import calccube from './projects/calccube.png';
-import af from './projects/af.png';
 import folio from './projects/folio.png';
 import click from './projects/click.png';
 import solo from './projects/solo.png';
@@ -49,7 +48,6 @@ export {
     chadchess,
     flappybird,
     calccube,
-    af,
     folio,
     click,
     solo,

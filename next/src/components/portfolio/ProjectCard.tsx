@@ -2,7 +2,7 @@
 import Link from "next/link"
 import type { ProjectsType } from "./templates/projects";
 import { motion } from 'framer-motion';
-import { fadeIn } from "@/util";
+import { fadeIn } from "@/util/motion";
 import Image from "next/image";
 import { github } from "@/assets/portfolio";
 import ProjectModel from "./ProjectModel";

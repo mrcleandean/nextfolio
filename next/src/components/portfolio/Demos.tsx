@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { fadeIn, titleVariant } from '@/util';
+import { fadeIn, titleVariant } from '@/util/motion';
 import { styles, demos, ProjectCard } from '.';
 import { Tilt } from 'react-tilt';
 

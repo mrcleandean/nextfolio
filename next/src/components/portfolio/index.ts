@@ -5,6 +5,7 @@ import projects from "./templates/projects";
 import skills from "./templates/skills";
 import styles from "./templates/styles";
 import technologies from "./templates/technologies";
+import demos from "./templates/demos";
 
 import About from "./About";
 import AudioPlayer from "./AudioPlayer";
@@ -20,10 +21,10 @@ import Techs from "./Techs";
 import Education from "./Education";
 import Demos from "./Demos";
 import ProjectCard from "./ProjectCard";
+import ServiceCard from "./ServiceCard";
 
 import Loader from "./Loader";
 import LocalLoader from "./LocalLoader";
-import demos from "./templates/demos";
 
 export {
     audioObjects,
@@ -33,6 +34,8 @@ export {
     skills,
     styles,
     technologies,
+    demos,
+
     About,
     AudioPlayer,
     BallCanvas,
@@ -45,9 +48,10 @@ export {
     SectionWrapper,
     Education,
     Techs,
-    Loader,
-    LocalLoader,
     Demos,
     ProjectCard,
-    demos
+    ServiceCard,
+
+    Loader,
+    LocalLoader
 }

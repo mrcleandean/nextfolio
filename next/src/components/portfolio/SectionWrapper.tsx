@@ -2,8 +2,14 @@
 import { staggerVariant } from "@/util/motion"
 import { styles } from "."
 import { motion } from "framer-motion"
+import type { FC } from "react";
 
-const SectionWrapper = ({ children, idName }: { children: React.ReactNode, idName?: string }) => {
+export type SectionWrapperProps = {
+    children: React.ReactNode,
+    idName?: string
+}
+
+const SectionWrapper: FC<SectionWrapperProps> = ({ children, idName }) => {
     return (
         <motion.section
             variants={staggerVariant(0.125)}

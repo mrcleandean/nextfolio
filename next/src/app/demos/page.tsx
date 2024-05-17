@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 
+// TODO: Template file once this gets more complex
+
 const DevDemos = () => {
     return (
         <div className="w-full min-h-screen bg-white flex">

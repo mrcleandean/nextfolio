@@ -11,7 +11,13 @@ export type LoaderPropTypes = {
     subTitle?: string;
 }
 
-const TitleSpan = ({ char, i, length }: { char: string, i: number, length: number }) => {
+export type TitleSpanProps = {
+    char: string,
+    i: number,
+    length: number
+}
+
+const TitleSpan: FC<TitleSpanProps> = ({ char, i, length }) => {
     const animationDuration = 2 * 1.75;
     const mergeFactor = 0.06 * 1.75;
     const totalAnimationTime = length * animationDuration * mergeFactor;

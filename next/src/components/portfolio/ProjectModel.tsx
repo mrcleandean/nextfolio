@@ -7,18 +7,11 @@ import { Color, Mesh } from "three";
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 
-const ProjectModel: FC<ProjectModelType & { isVisible: boolean }> = ({ src, position, rotation, scale, color, axis, invert, isVisible }) => {
+const ProjectModel: FC<ProjectModelType & { isVisible: boolean }> = (props) => {
     return (
         <View className="w-full h-full">
             <Primitive
-                src={src}
-                position={position}
-                rotation={rotation}
-                scale={scale}
-                color={color}
-                axis={axis}
-                invert={invert}
-                isVisible={isVisible}
+                {...props}
             />
         </View>
     )
@@ -63,7 +56,6 @@ const Primitive: FC<ProjectModelType & { isVisible: boolean }> = ({ src, positio
             </Suspense>
             <ambientLight intensity={0.7} />
             <pointLight intensity={350} position={[1, 5, 5]} />
-            {/* <Preload all /> */}
         </>
 
 

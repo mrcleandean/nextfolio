@@ -9,7 +9,7 @@ const NotFound = () => {
                 <div className={`${styles.titleText} ${styles.mainText} text-white blur-[7.5px] z-0`}>NOT<br />FOUND</div>
                 <div className={`${styles.titleText} ${styles.mainText} stroked z-30`}>NOT<br />FOUND</div>
                 <div className="absolute -bottom-20 flex flex-col justify-center items-center">
-                    <p className="text-white italic font-bold text-lg">You sneaky beaky... </p>
+                    <p className="text-white italic font-bold text-lg">You sneaky beaky...</p>
                     <Link
                         href="/"
                         className=" text-blue-200 font-bold text-lg cursor-pointer underline underline-offset-2"

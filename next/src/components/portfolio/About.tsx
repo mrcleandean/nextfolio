@@ -1,9 +1,7 @@
 "use client";
 import { motion } from "framer-motion"
 import { titleVariant, fadeIn } from "@/util/motion"
-import { styles, skills } from "."
-import { Tilt } from "react-tilt"
-import Image from "next/image"
+import { styles, skills, ServiceCard } from "."
 
 const About = () => {
     return (
@@ -29,35 +27,6 @@ const About = () => {
     )
 }
 
-const ServiceCard = ({ index, title, icon }: { index: number, title: string, icon: string }) => {
-    return (
-        <Tilt
-            className="xs:w-[250px] w-full"
-            options={{
-                max: 45,
-                scale: 1,
-                speed: 450
-            }}
-        >
-            <motion.div
-                variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-                className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-            >
-                <div
-                    className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-                >
-                    <Image
-                        src={icon}
-                        alt={title}
-                        width={64}
-                        height={64}
-                        className="object-contain"
-                    />
-                    <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-                </div>
-            </motion.div>
-        </Tilt>
-    )
-}
+
 
 export default About

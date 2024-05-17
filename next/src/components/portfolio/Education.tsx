@@ -1,9 +1,10 @@
 "use client"
 import { motion } from "framer-motion";
 import { styles, education } from ".";
-import { fadeIn, titleVariant } from "@/util";
+import { fadeIn, titleVariant } from "@/util/motion";
 import Image from "next/image";
 import { Tilt } from "react-tilt";
+import type { FC } from "react";
 
 const Education = () => {
     return (
@@ -35,14 +36,16 @@ const Education = () => {
     )
 }
 
-const EducationCard = ({ index, name, issuer, description, imageSrc, download_name }: {
+export type EducationCardProps = {
     index: number;
     name: string;
     issuer: string;
     description: string;
     imageSrc: string;
     download_name: string;
-}) => {
+}
+
+const EducationCard: FC<EducationCardProps> = ({ index, name, issuer, description, imageSrc, download_name }) => {
     return (
         <Tilt
             options={{
