@@ -1,6 +1,4 @@
-# --- MRCLEANDEAN | FOLIO ---
-
-## My most cherished project
+# mrcleandean - folio
 
 ```
 _      `-._     `-.     `.   \      :      /   .'     .-'     _.-'      _
@@ -19,7 +17,7 @@ __    `--.__    `--._  `-._ `-. `. \:/ .' .-' _.-'  _.--'    __.--'    __
 ||  \\_||  ___||___  ||     \\   \\___//   ||     ||  ||  \\_||  ||     ||
 ```
 
-## Run 
+### Run
 
 ```bash
 npm install
