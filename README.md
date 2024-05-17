@@ -1,45 +1,24 @@
-# --- Demdevvy Portfolio ---
+# --- MRCLEANDEAN | FOLIO ---
 
-## /demdevvyshared 
-An a npm package for shared modules between **/next** and **/server**.
+## My most cherished project
 
-### To update
-Delete the current **/dist** and **.tar**.
-Increment the version of the package.json.
-```
-cd demdevvyshared
-npm run build
-npm pack
-git add .
-git commit -m [new version from package.json]
-git push -u origin main
-```
-Then, copy paste the current package.json to the **/dist** and modify it to include the bare minimum. Add a files
-key which defines ./*.ts and ./*.js.
-```
-cd dist
-npm publish
-```
+_      `-._     `-.     `.   \      :      /   .'     .-'     _.-'      _
+ `--._     `-._    `-.    `.  `.    :    .'  .'    .-'    _.-'     _.--'
+      `--._    `-._   `-.   `.  \   :   /  .'   .-'   _.-'    _.--'
+`--.__     `--._   `-._  `-.  `. `. : .' .'  .-'  _.-'   _.--'     __.--'
+__    `--.__    `--._  `-._ `-. `. \:/ .' .-' _.-'  _.--'    __.--'    __
+  `--..__   `--.__   `--._ `-._`-.`_=_'.-'_.-' _.--'   __.--'   __..--'
+--..__   `--..__  `--.__  `--._`-q(-_-)p-'_.--'  __.--'  __..--'   __..--
+      ``--..__  `--..__ `--.__ `-'_) (_`-' __.--' __..--'  __..--''
+...___        ``--..__ `--..__`--/__/  \--'__..--' __..--''        ___...
+      ```---...___    ``--..__`_(<_   _/)_'__..--''    ___...---'''
+```-----....._____```---...___(__\_\_|_/__)___...---'''_____.....-----'''
+ ___   __  ________   _______   _       _   _______    ___   __   _______
+|| \\  ||     ||     ||_____))  \\     //  ||_____||  || \\  ||  ||_____||
+||  \\_||  ___||___  ||     \\   \\___//   ||     ||  ||  \\_||  ||     ||
 
-## /next
-The Next.js frontend.
-Uses serverless route.ts definitions for most data fetching and other server tasks.
-
-### To run
-```
-npm run dev
-npm run build
-npm run start
-```
-
-## /server 
-The Express.js backend.
-For tasks which are easier with Express, such as socket connections and other future features.
-
-### To run
-```
-npm run start
-npm run build
+```bash
+npm install
 npm run dev
 ```
 
