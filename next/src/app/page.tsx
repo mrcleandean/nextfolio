@@ -28,7 +28,7 @@ export default function Home() {
         syncTouch: true
       }}
     >
-      <div ref={viewsRef} className="absolute h-fit w-full">
+      <div ref={viewsRef} className="relative h-fit w-full">
         <AudioPlayer />
         <Navbar />
         <Hero />
