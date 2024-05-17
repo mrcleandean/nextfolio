@@ -89,7 +89,7 @@ const projects: ProjectsType[] = [
   {
     name: "ChadChess",
     description:
-      "Are you a Chad? Do you like chess? Play with a friend on ChadChess! Sigma Chads with no friends can play against the ChadBot.",
+      "Are you a Chad? Do you like chess? Play with a friend on ChadChess!",
     tags: [
       {
         name: "Socket.io",
