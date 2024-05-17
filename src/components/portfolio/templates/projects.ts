@@ -288,7 +288,7 @@ const projects: ProjectsType[] = [
       }
     ],
     image: folio.src,
-    source_code_link: '',
+    source_code_link: 'https://github.com/mrcleandean/nextfolio',
     site_link: "/",
     model: {
       src: '/folio.glb',
