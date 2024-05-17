@@ -24,7 +24,9 @@ export default function Home() {
   return (
     <ReactLenis root options={{
       syncTouch: true,
-    }}>
+      lerp: 0.45
+    }}
+    >
       <div ref={viewsRef} className={`${entered ? '' : ''} absolute h-full w-full`}>
         <AudioPlayer />
         <Navbar />
