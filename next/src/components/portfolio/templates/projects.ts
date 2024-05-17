@@ -118,7 +118,7 @@ const projects: ProjectsType[] = [
     ],
     image: chadchess.src,
     source_code_link: 'https://github.com/mrcleandean/chadchess',
-    site_link: "/chadchess",
+    site_link: "https://chadchess.vercel.app",
     model: {
       src: '/rook/scene.gltf',
       position: [0, -1.5, 0],
