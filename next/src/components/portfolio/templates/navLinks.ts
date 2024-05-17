@@ -1,4 +1,7 @@
-import { NavLinkType } from "demdevvyshared/portfolio";
+export type NavLinkType = {
+    href: string;
+    title: string;
+}
 
 const navLinks: NavLinkType[] = [
     {

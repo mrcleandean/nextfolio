@@ -1,6 +1,6 @@
 "use client";
 import { Bounds, Decal, Float, OrbitControls, PerspectiveCamera, View, useTexture } from "@react-three/drei"
-import type { TechnologyType } from "demdevvyshared/portfolio";
+import type { TechnologyType } from "./templates/technologies";
 
 const BallCanvas = ({ technologies }: { technologies: TechnologyType[] }) => {
     return (

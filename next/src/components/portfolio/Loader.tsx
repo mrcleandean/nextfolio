@@ -1,7 +1,7 @@
 "use client";
 import { ImSpinner2 } from "react-icons/im";
 import { AnimatePresence, motion } from 'framer-motion';
-import { Dispatch, FC, SetStateAction } from "react";
+import type { Dispatch, FC, SetStateAction } from "react";
 
 export type LoaderPropTypes = {
     isLoading: boolean;

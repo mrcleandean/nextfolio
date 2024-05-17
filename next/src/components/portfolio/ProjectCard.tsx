@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link"
-import { ProjectsType } from "./templates/projects";
+import type { ProjectsType } from "./templates/projects";
 import { motion } from 'framer-motion';
 import { fadeIn } from "@/util";
 import Image from "next/image";

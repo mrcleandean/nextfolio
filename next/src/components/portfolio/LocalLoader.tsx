@@ -1,7 +1,6 @@
 "use client";
 import { useProgress } from "@react-three/drei";
-import { Dispatch, FC, SetStateAction, useEffect } from "react";
-import type { CanvasPropTypes } from "demdevvyshared/portfolio";
+import { type Dispatch, type FC, type SetStateAction, useEffect } from "react";
 
 export type LocalLoaderProps = {
     setIsLoading: Dispatch<SetStateAction<boolean>>;

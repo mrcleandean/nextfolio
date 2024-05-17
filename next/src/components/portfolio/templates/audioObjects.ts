@@ -1,4 +1,8 @@
-import { AudioObjectType } from "demdevvyshared/portfolio";
+export type AudioObjectType = {
+    src: string;
+    title: string;
+    link: string;
+}
 
 const audioObjects: AudioObjectType[] = [
     {

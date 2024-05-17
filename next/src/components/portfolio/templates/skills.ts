@@ -4,7 +4,10 @@ import {
     creator
 } from "@/assets/portfolio"
 
-import { SkillType } from "demdevvyshared/portfolio";
+export type SkillType = {
+    title: string;
+    icon: string;
+}
 
 const skills: SkillType[] = [
     {

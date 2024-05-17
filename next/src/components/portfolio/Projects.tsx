@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion"
 import { titleVariant, fadeIn } from "@/util/motion"
-import { styles, projects, ProjectCard, LocalLoader } from "."
+import { styles, projects, ProjectCard } from "."
 import { useRef } from "react";
 
 const Projects = () => {

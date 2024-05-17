@@ -1,7 +1,7 @@
 "use client";
-import { Center, View, useGLTF } from "@react-three/drei"
-import { FC, Suspense, useEffect, useRef } from "react"
-import { ProjectModelType } from "./templates/projects"
+import { View, useGLTF } from "@react-three/drei"
+import { type FC, Suspense, useEffect, useRef } from "react"
+import type { ProjectModelType } from "./templates/projects"
 import { PrimitiveProps, useFrame } from "@react-three/fiber";
 import { Color, Mesh } from "three";
 import { useGSAP } from '@gsap/react';
@@ -29,7 +29,7 @@ const Primitive: FC<ProjectModelType & { isVisible: boolean }> = ({ src, positio
     const { scene } = useGLTF(src);
     useFrame((state) => {
         if (ref.current === null) return;
-        ref.current.rotation[axis ?? 'y'] = state.clock.elapsedTime * 0.25 * (invert ? -1 : 1)
+        ref.current.rotation[axis ?? 'y'] = state.clock.elapsedTime * 0.6 * (invert ? -1 : 1)
     });
     useEffect(() => {
         if (!color) return;
@@ -49,6 +49,7 @@ const Primitive: FC<ProjectModelType & { isVisible: boolean }> = ({ src, positio
             });
         }
     }, [isVisible]);
+
     return (
         <>
             <Suspense fallback={<p>Loading...</p>}>

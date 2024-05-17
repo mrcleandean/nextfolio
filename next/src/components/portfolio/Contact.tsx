@@ -3,7 +3,12 @@ import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { slideIn } from "@/util/motion"
 import { styles, RaygunCanvas } from "@/components/portfolio";
-import type { FormDataType } from "demdevvyshared/portfolio";
+
+export type FormDataType = {
+    name: string;
+    email: string;
+    message: string;
+}
 
 const Contact = () => {
     const formRef = useRef<HTMLFormElement | null>(null)

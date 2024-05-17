@@ -1,4 +1,11 @@
-import { StylesType } from "demdevvyshared/portfolio";
+export type StylesType = {
+    paddingX: string;
+    paddingY: string;
+    padding: string;
+    mainText: string;
+    titleText: string;
+    subtitleText: string;
+}
 
 const styles: StylesType = {
     paddingX: "sm:px-8 px-4",

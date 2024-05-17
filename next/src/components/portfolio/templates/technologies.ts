@@ -14,7 +14,10 @@ import {
     nextjs
 } from "@/assets/portfolio"
 
-import { TechnologyType } from "demdevvyshared/portfolio";
+export type TechnologyType = {
+    name: string;
+    icon: string;
+}
 
 const technologies: TechnologyType[] = [
     {
