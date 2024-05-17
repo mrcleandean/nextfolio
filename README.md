@@ -25,5 +25,6 @@ npm run dev
 ```
 
 ### Note
+
 If you're wondering why this is in Next.js, it's because all of my projects were previously in Next.js routes and I migrated them into their own code bases.
 
