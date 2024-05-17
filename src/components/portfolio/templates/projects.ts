@@ -291,7 +291,7 @@ const projects: ProjectsType[] = [
     source_code_link: '',
     site_link: "/",
     model: {
-      src: '/a.glb',
+      src: '/folio.glb',
       position: [0.145, 0.135, 0],
       rotation: [0, 0, 0],
       scale: 0.65

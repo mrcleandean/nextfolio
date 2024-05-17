@@ -5,7 +5,7 @@ import { useThree } from "@react-three/fiber"
 import { Float, useGLTF, Environment, Text, View, PerspectiveCamera } from "@react-three/drei"
 
 const Raygun = () => {
-    const { scene } = useGLTF('/raygun/compressed_raygun.glb');
+    const { scene } = useGLTF('/raygun/raygun.glb');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
     const baseWidth = 1280;
@@ -60,7 +60,7 @@ const RaygunCanvas = () => {
                     position={[0, 0, 10]}
                     rotation={[0, 0, Math.PI * 0.2]}
                 />
-                <Environment files="freebie1.hdr" />
+                <Environment files="orange.hdr" />
                 <Raygun />
             </View>
         </>

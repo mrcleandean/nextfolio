@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import Image from "next/image";
 import { useLenis } from '@studio-freight/react-lenis';
 import type { NavLinkType } from "./templates/navLinks";
+import { demdevvy } from "@/assets/portfolio";
 
 const Navbar = () => {
     const [active, setActive] = useState('')
@@ -32,7 +33,7 @@ const Navbar = () => {
             ">
                 <div className="flex justify-center items-center" onClick={() => handleClick({ href: '#hero', title: '' })}>
                     <Image
-                        src={'/demdevvy.png'}
+                        src={demdevvy.src}
                         alt="logo"
                         width={96}
                         height={96}

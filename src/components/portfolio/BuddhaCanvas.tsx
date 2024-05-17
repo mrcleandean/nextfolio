@@ -6,7 +6,7 @@ import { useRef, useState, useEffect } from "react"
 
 const Buddha = () => {
     const headRef = useRef<PrimitiveProps | null>(null);
-    const { scene } = useGLTF('/buddha/compressed_buddha.glb');
+    const { scene } = useGLTF('/buddha/buddha.glb');
     const { size } = useThree();
     const [scale, setScale] = useState(1);
 
@@ -52,7 +52,7 @@ const BuddhaCanvas = () => {
                 far={1000}
                 position={[0, 0, 10]}
             />
-            <Environment files="freebie1.hdr" />
+            <Environment files="orange.hdr" />
             <pointLight args={['#85ccb8', 7.5, 20]} position={[0, 3, 2]} />
             <pointLight args={['#9f85cc', 7.5, 20]} position={[0, 3, 2]} />
             <Buddha />
