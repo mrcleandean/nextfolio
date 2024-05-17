@@ -25,5 +25,5 @@ npm run dev
 ```
 
 ### Note
-If you're wondering why this is in Next.js, it's because I migrated all of the projects into their own codebases and they were previously in app routes in this project. Now I can focus on building out new routes specifically for this portfolio as I develop my other projects separately.
+If you're wondering why this is in Next.js, it's because all of my projects were previously in Next.js routes and I migrated them into their own code bases.
 
