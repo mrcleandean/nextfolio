@@ -260,7 +260,7 @@ const projects: ProjectsType[] = [
   },
   {
     name: 'This Portfolio',
-    description: 'This portfolio is a Next.js app that showcases my projects and skills. It is a work in progress and will be updated with new projects and features. (GitHub repo going public after heavy ChadChess refactor)',
+    description: 'This portfolio is a Next.js app that showcases my projects and skills. It is a work in progress and will be updated with new projects and features.',
     tags: [
       {
         name: "Next.js",
