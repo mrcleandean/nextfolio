@@ -23,7 +23,8 @@ export default function Home() {
   }, []);
   return (
     <ReactLenis root options={{
-      syncTouch: true
+      syncTouch: true,
+      syncTouchLerp: 1
     }}>
       <div ref={viewsRef} className={`${entered ? '' : ''} absolute h-full w-full`}>
         <AudioPlayer />
