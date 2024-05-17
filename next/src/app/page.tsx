@@ -50,6 +50,7 @@ export default function Home() {
         <SectionWrapper idName="contact">
           <Contact />
         </SectionWrapper>
+        <span className="h-1 w-1" /> {/* Fixes bug where the last section is not fully visible */}
         <Canvas
           frameloop="always"
           eventSource={viewsRef}
