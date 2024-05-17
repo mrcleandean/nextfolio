@@ -23,11 +23,10 @@ export default function Home() {
   }, []);
   return (
     <ReactLenis root options={{
-      syncTouch: true,
-      lerp: 0.45
+      syncTouch: true
     }}
     >
-      <div ref={viewsRef} className={`${entered ? '' : ''} absolute h-full w-full`}>
+      <div ref={viewsRef} className={`${entered ? '' : 'overflow-hidden'} absolute h-full w-full`}>
         <AudioPlayer />
         <Navbar />
         <Hero />

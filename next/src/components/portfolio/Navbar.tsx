@@ -5,7 +5,6 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Image from "next/image";
 import { useLenis } from '@studio-freight/react-lenis';
-import { addEffect } from "@react-three/fiber";
 import type { NavLinkType } from "./templates/navLinks";
 
 const Navbar = () => {
@@ -17,8 +16,6 @@ const Navbar = () => {
         setActive(navProp.href)
         lenis?.scrollTo(navProp.href)
     }
-
-    addEffect((t) => lenis?.raf(t));
 
     return (
         <div className="
