@@ -25,10 +25,10 @@ export default function Home() {
     <ReactLenis
       root
       options={{
-        syncTouch: true
+        syncTouch: true,
       }}
     >
-      <div ref={viewsRef} className="relative h-fit w-full">
+      <div ref={viewsRef} className="relative h-fit w-full" style={{ pointerEvents: entered ? 'auto' : 'none' }}>
         <AudioPlayer />
         <Navbar />
         <Hero />
