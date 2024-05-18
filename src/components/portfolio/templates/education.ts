@@ -7,7 +7,15 @@ import {
     threejourney
 } from "@/assets/portfolio";
 
-const education = [
+export type EducationType = {
+    name: string;
+    issuer: string;
+    description: string;
+    imageSrc: string;
+    download_name: string;
+}
+
+const education: EducationType[] = [
     {
         name: 'Responsive Web Design',
         issuer: 'freeCodeCamp',
