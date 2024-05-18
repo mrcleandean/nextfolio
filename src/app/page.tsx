@@ -26,6 +26,7 @@ export default function Home() {
       root
       options={{
         syncTouch: true,
+        touchInertiaMultiplier: 18
       }}
     >
       <div ref={viewsRef} className="relative h-fit w-full" style={{ pointerEvents: entered ? 'auto' : 'none' }}>
