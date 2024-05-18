@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useLenis } from '@studio-freight/react-lenis';
 import type { NavLinkType } from "./templates/navLinks";
 import { demdevvy } from "@/assets/portfolio";
+import { scrollToOptions } from "@/util/lenis";
 
 const Navbar = () => {
     const [active, setActive] = useState('')
@@ -15,7 +16,7 @@ const Navbar = () => {
 
     const handleClick = (navProp: NavLinkType) => {
         setActive(navProp.href)
-        lenis?.scrollTo(navProp.href)
+        lenis?.scrollTo(navProp.href, scrollToOptions)
     }
 
     return (

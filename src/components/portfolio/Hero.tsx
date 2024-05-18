@@ -2,6 +2,7 @@
 import { useLenis } from "@studio-freight/react-lenis";
 import { styles, BuddhaCanvas } from "."
 import { motion } from "framer-motion"
+import { scrollToOptions } from "@/util/lenis";
 
 const Hero = () => {
     const lenis = useLenis();
@@ -17,7 +18,7 @@ const Hero = () => {
             </div>
             <div
                 className="absolute bottom-5 rounded-2xl z-40 border-2 w-6 h-14 flex justify-center hover:cursor-pointer"
-                onClick={() => lenis?.scrollTo('#projects')}
+                onClick={() => lenis?.scrollTo('#projects', scrollToOptions)}
             >
                 <motion.div
                     animate={{
