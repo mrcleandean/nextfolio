@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/sortviz",
+            "destination": "https://sortviz-tau.vercel.app/"
+        }
+    ]
+}
