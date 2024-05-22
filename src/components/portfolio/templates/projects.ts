@@ -44,7 +44,7 @@ const projects: ProjectsType[] = [
     ],
     image: sortviz.src,
     source_code_link: 'https://github.com/mrcleandean/sortviz',
-    site_link: "https://sortviz-tau.vercel.app/",
+    site_link: "https://www.sortingviz.com/",
     model: {
       src: '/sortviz.glb',
       position: [0, 0.2, 0],
@@ -159,7 +159,7 @@ const projects: ProjectsType[] = [
     ],
     image: voxer.src,
     source_code_link: 'https://github.com/mrcleandean/voxer',
-    site_link: "https://voxer-ten.vercel.app/",
+    site_link: "https://www.voxerforums.com/",
     model: {
       src: '/voxer.glb',
       position: [0, 0, 0],
