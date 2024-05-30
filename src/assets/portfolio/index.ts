@@ -11,6 +11,7 @@ import folio from './projects/folio.png';
 import click from './projects/click.png';
 import solo from './projects/solo.png';
 import voxer from './projects/voxer.png';
+import rubiks from './projects/rubiks.png';
 
 import paginate from './demos/paginate.png';
 import roomvo from './demos/roomvo.png';
@@ -52,6 +53,7 @@ export {
     click,
     solo,
     voxer,
+    rubiks,
 
     paginate,
     roomvo,

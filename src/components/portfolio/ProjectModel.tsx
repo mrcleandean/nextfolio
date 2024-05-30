@@ -20,10 +20,12 @@ const ProjectModel: FC<ProjectModelType & { isVisible: boolean }> = (props) => {
 const Primitive: FC<ProjectModelType & { isVisible: boolean }> = ({ src, position, rotation, scale, color, axis, invert, isVisible }) => {
     const ref = useRef<PrimitiveProps | null>(null);
     const { scene } = useGLTF(src);
+
     useFrame((state) => {
         if (ref.current === null) return;
         ref.current.rotation[axis ?? 'y'] = state.clock.elapsedTime * 0.6 * (invert ? -1 : 1)
     });
+
     useEffect(() => {
         if (!color) return;
         const fill = new Color(color)
@@ -54,11 +56,10 @@ const Primitive: FC<ProjectModelType & { isVisible: boolean }> = ({ src, positio
                     scale={0}
                 />
             </Suspense>
-            <ambientLight intensity={0.7} />
+            <ambientLight intensity={0.4} />
             <pointLight intensity={350} position={[1, 5, 5]} />
+            <pointLight intensity={30} position={[-4, -1.5, 6]} />
         </>
-
-
     )
 }
 

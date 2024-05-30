@@ -1,4 +1,4 @@
-import { sortviz, chadchess, flappybird, calccube, folio, click, solo, voxer } from "@/assets/portfolio";
+import { sortviz, chadchess, flappybird, calccube, folio, click, solo, voxer, rubiks } from "@/assets/portfolio";
 
 export type ProjectModelType = {
   src: string;
@@ -167,6 +167,33 @@ const projects: ProjectsType[] = [
       scale: 315,
       axis: 'z',
       invert: true
+    }
+  },
+  {
+    name: "Rubik's Cube",
+    description: "Dive into a realistic 3D environment where you can manipulate, solve, and experiment with a Rubik's Cube right from your browser. Features include arrow controls for clockwise and counterclockwise rotation, a randomizer, and an axis helper to rotate the camera with ease.",
+    tags: [
+      {
+        name: 'TypeScript',
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React Three Fiber",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React Spring",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: rubiks.src,
+    source_code_link: 'https://github.com/mrcleandean/rubikscube',
+    site_link: 'https://rubikscube-xi.vercel.app/',
+    model: {
+      src: '/rubiks.glb',
+      position: [0, 0.25, 0],
+      rotation: [Math.PI / 6, 0, 0],
+      scale: 0.9
     }
   },
   {
