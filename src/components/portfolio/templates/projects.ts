@@ -34,12 +34,8 @@ const projects: ProjectsType[] = [
         color: "blue-text-gradient",
       },
       {
-        name: "D3.js",
-        color: "green-text-gradient",
-      },
-      {
         name: "TypeScript",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       }
     ],
     image: sortviz.src,
