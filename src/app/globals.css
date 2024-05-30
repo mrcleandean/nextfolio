@@ -4,19 +4,18 @@
 
 * {
   box-sizing: border-box;
+  color-scheme: dark;
+  overscroll-behavior: none;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: sans-serif;
   color: rgba(255, 255, 255, 0.5);
   background-color: #11151c;
-}
-
-body {
-  overscroll-behavior-y: none;
 }
 
 .hash-span {
